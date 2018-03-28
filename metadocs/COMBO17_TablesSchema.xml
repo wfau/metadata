@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>COMBO17</Name>
+   <Description></Description>
+
+   <Table ID="combo17CDFSSource">
+      <Name>combo17CDFSSource</Name>
+      <Description><![CDATA[ Contains the parameters provided for each source in the Chandra Deep Field South source catalogue from COMBO-17]]></Description>
+      <Column ID="combo17CDFSSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension with respect to the ICRS]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination with respect to the ICRS]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.x" indexed="false">
+         <Name>x</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[x-coordinate on image cdfs_r.fit]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.y" indexed="false">
+         <Name>y</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[y-coordinate on image cdfs_r.fit]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.Rmag" indexed="false">
+         <Name>Rmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[total magnitude in R]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_Rmag" indexed="false">
+         <Name>e_Rmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of Rmag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.Ap_Rmag" indexed="false">
+         <Name>Ap_Rmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[aperture magnitude in R]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.ApD_Rmag" indexed="false">
+         <Name>ApD_Rmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[aperture difference of Rmag (=Rmag-Ap_Rmag, zero for point sources)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.mu_max" indexed="false">
+         <Name>mu_max</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[central surface brightness in Rmag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.MajAxis" indexed="false">
+         <Name>MajAxis</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[major axis (as observed in 1&quot; seeing)]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.MinAxis" indexed="false">
+         <Name>MinAxis</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[minor axis (as observed in 1&quot; seeing)]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.PA" indexed="false">
+         <Name>PA</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[position angle, measured West to North]]></Description>
+         <Units>deg</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.phot_flag" indexed="false">
+         <Name>phot_flag</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[flags on photometry: bit 0-7 (corresponding to values 0-128) are original SExtractor flags, bit 9-11 set by COMBO-17 photometry, bit 9 indicates only potential problem from bright neighbours or reflexes from the optics (check images), bit 10 indicates uncorrected hot pixels, bit 11 is set interactively when photometry is erroneous]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.var_flag" indexed="false">
+         <Name>var_flag</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[variability flag (0=not variable); flag only set for objects which are detected with high S/N and which show clear variability between different observing runs (magnitude difference greater 0.15 mag, at least one magnitude has to be measured with 10 sigma, difference has to be at least 6 sigma]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.stellarity" indexed="false">
+         <Name>stellarity</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[stellarity index from SExtractor]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.MC_class" indexed="false">
+         <Name>MC_class</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[multi-colour class: &quot;Star&quot;=stars (colour of star, stellar shape), &quot;WDwarf&quot;=WD/BHB/sdB star (colour of WD/BHB/sdB, stellar shape), &quot;Galaxy&quot;=galaxies (colour of galaxy, shape irrelevant), &quot;Galaxy (Star?)&quot;=most likely galaxy at z&lt;0.15 (but overlap in colour space with stars), &quot;Galaxy (Uncl!)&quot;=colour undecided (statistically almost always a galaxy), &quot;QSO&quot;=QSOs (colour of QSO, stellar shape), &quot;QSO (Gal?)&quot;=colour of QSOs, extended shape (usually Seyfert 1), &quot;Strange Objects&quot;=very strange spectrum (very unusual intrinsic spectrum or strong photometric artifacts or uncorrected strong variability)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.MC_z" indexed="false">
+         <Name>MC_z</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean redshift in distribution of p(z)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_MC_z" indexed="false">
+         <Name>e_MC_z</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of MC_z]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.MC_z2" indexed="false">
+         <Name>MC_z2</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[alternative redshift if p(z) bimodal]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_MC_z2" indexed="false">
+         <Name>e_MC_z2</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of MC_z2]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.MC_z_ml" indexed="false">
+         <Name>MC_z_ml</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[peak of redshift distribution p(z)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.dl" indexed="false">
+         <Name>dl</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[luminosity distance of MC_z (H0=100km/s/Mpc, Omega_m=0.3, Omega_Lambda=0.7)]]></Description>
+         <Units>Mpc</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.chi2red" indexed="false">
+         <Name>chi2red</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[reduced Chi^2 of best-fitting template]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.UjMag" indexed="false">
+         <Name>UjMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in Johnson U (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_UjMag" indexed="false">
+         <Name>e_UjMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of UjMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.BjMag" indexed="false">
+         <Name>BjMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in Johnson B (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_BjMag" indexed="false">
+         <Name>e_BjMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of BjMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.VjMag" indexed="false">
+         <Name>VjMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in Johnson V (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_VjMag" indexed="false">
+         <Name>e_VjMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of VjMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.usMag" indexed="false">
+         <Name>usMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in SDSS u (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_usMag" indexed="false">
+         <Name>e_usMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of usMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.gsMag" indexed="false">
+         <Name>gsMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in SDSS g (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_gsMag" indexed="false">
+         <Name>e_gsMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of gsMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.rsMag" indexed="false">
+         <Name>rsMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in SDSS r (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_rsMag" indexed="false">
+         <Name>e_rsMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of rsMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.UbMag" indexed="false">
+         <Name>UbMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in Bessell U (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_UbMag" indexed="false">
+         <Name>e_UbMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of UbMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.BbMag" indexed="false">
+         <Name>BbMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in Bessell B (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_BbMag" indexed="false">
+         <Name>e_BbMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of BbMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.VbMag" indexed="false">
+         <Name>VbMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in Bessell V (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_VbMag" indexed="false">
+         <Name>e_VbMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of VbMag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.S280Mag" indexed="false">
+         <Name>S280Mag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in 280/40 (calculated from redshifted best_fit template, depending on redshift and filter extrapolation outside the COMBO-17 filter set can be necessary, only calculated for objects classified as galaxies; synthetic UV continuum rectangular passband at 260-300 nm)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_S280Mag" indexed="false">
+         <Name>e_S280Mag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of S280Mag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.S145Mag" indexed="false">
+         <Name>S145Mag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Absolute restframe magnitude in 145/10 (synthetic narrow rectangular passband at 140-150 nm calculated from redshifted best_fit template, only calculated for objects classified as quasars)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_S145Mag" indexed="false">
+         <Name>e_S145Mag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of S145Mag]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W420F_E" indexed="false">
+         <Name>W420F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 420/30 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W420F_E" indexed="false">
+         <Name>e_W420F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W420F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W462F_E" indexed="false">
+         <Name>W462F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 462/14 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W462F_E" indexed="false">
+         <Name>e_W462F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W462F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W485F_D" indexed="false">
+         <Name>W485F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 485/31 in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W485F_D" indexed="false">
+         <Name>e_W485F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W485F_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W518F_E" indexed="false">
+         <Name>W518F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 518/16 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W518F_E" indexed="false">
+         <Name>e_W518F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W518F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W571F_D" indexed="false">
+         <Name>W571F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 571/25 in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W571F_D" indexed="false">
+         <Name>e_W571F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W571F_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W571F_E" indexed="false">
+         <Name>W571F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 571/25 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W571F_E" indexed="false">
+         <Name>e_W571F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W571F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W571F_S" indexed="false">
+         <Name>W571F_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[combined flux in filter 571/25; corrected for the gain of the CCD and only applied to objects without variability flag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W571F_S" indexed="false">
+         <Name>e_W571F_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W571F_S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W604F_E" indexed="false">
+         <Name>W604F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 604/21 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W604F_E" indexed="false">
+         <Name>e_W604F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W604F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W646F_D" indexed="false">
+         <Name>W646F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 646/27 in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W646F_D" indexed="false">
+         <Name>e_W646F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W646F_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W696F_E" indexed="false">
+         <Name>W696F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 696/20 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W696F_E" indexed="false">
+         <Name>e_W696F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W696F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W753F_E" indexed="false">
+         <Name>W753F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 753/18 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W753F_E" indexed="false">
+         <Name>e_W753F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W753F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W815F_E" indexed="false">
+         <Name>W815F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 815/20 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W815F_E" indexed="false">
+         <Name>e_W815F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W815F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W815F_G" indexed="false">
+         <Name>W815F_G</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 815/20 in run G (19.01.-20.01.2001)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W815F_G" indexed="false">
+         <Name>e_W815F_G</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W815F_G]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W815F_S" indexed="false">
+         <Name>W815F_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[combined flux in filter 815/20; corrected for the gain of the CCD and only applied to objects without variability flag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W815F_S" indexed="false">
+         <Name>e_W815F_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W815F_S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W856F_D" indexed="false">
+         <Name>W856F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 856/14 in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W856F_D" indexed="false">
+         <Name>e_W856F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W856F_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W914F_D" indexed="false">
+         <Name>W914F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 914/27 in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W914F_D" indexed="false">
+         <Name>e_W914F_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W914F_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.W914F_E" indexed="false">
+         <Name>W914F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter 914/27 in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_W914F_E" indexed="false">
+         <Name>e_W914F_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of W914F_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.UF_F" indexed="false">
+         <Name>UF_F</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter U in run F (21.09.-30.09.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_UF_F" indexed="false">
+         <Name>e_UF_F</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of UF_F]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.UF_G" indexed="false">
+         <Name>UF_G</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter U in run G (19.01.-20.01.2001)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_UF_G" indexed="false">
+         <Name>e_UF_G</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of UF_G]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.UF_S" indexed="false">
+         <Name>UF_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[combined flux in filter U; corrected for the gain of the CCD and only applied to objects without variability flag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_UF_S" indexed="false">
+         <Name>e_UF_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of UF_S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.BF_D" indexed="false">
+         <Name>BF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter B in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_BF_D" indexed="false">
+         <Name>e_BF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of BF_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.BF_F" indexed="false">
+         <Name>BF_F</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter B in run F (21.09.-30.09.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_BF_F" indexed="false">
+         <Name>e_BF_F</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of BF_F]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.BF_S" indexed="false">
+         <Name>BF_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[combined flux in filter B; corrected for the gain of the CCD and only applied to objects without variability flag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_BF_S" indexed="false">
+         <Name>e_BF_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of BF_S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.VF_D" indexed="false">
+         <Name>VF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter V in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_VF_D" indexed="false">
+         <Name>e_VF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of VF_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.RF_D" indexed="false">
+         <Name>RF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter R in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_RF_D" indexed="false">
+         <Name>e_RF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of RF_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.RF_E" indexed="false">
+         <Name>RF_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter R in run E (28.01.-11.02.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_RF_E" indexed="false">
+         <Name>e_RF_E</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of RF_E]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.RF_F" indexed="false">
+         <Name>RF_F</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter R in run F (21.09.-30.09.2000)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_RF_F" indexed="false">
+         <Name>e_RF_F</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of RF_F]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.RF_G" indexed="false">
+         <Name>RF_G</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter R in run G (19.01.-20.01.2001)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_RF_G" indexed="false">
+         <Name>e_RF_G</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of RF_G]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.RF_S" indexed="false">
+         <Name>RF_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[combined flux in filter R; corrected for the gain of the CCD and only applied to objects without variability flag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_RF_S" indexed="false">
+         <Name>e_RF_S</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of RF_S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.IF_D" indexed="false">
+         <Name>IF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[flux in filter I in run D (07.10.-22.10.1999)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="combo17CDFSSource.e_IF_D" indexed="false">
+         <Name>e_IF_D</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[mean error (1-sigma) of IF_D]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+

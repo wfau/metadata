@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>EXTINCT</Name>
+   <Description></Description>
+
+   <Table ID="FilterExtinctionCoefficients">
+      <Name>FilterExtinctionCoefficients</Name>
+      <Description><![CDATA[ Contains the ratios of extinction to colour excess for various filter]]></Description>
+      <Column ID="FilterExtinctionCoefficients.filterID" indexed="true">
+         <Name>filterID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of filter]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.telescope" indexed="false">
+         <Name>telescope</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Name of the telescope / instrument]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.shortName" indexed="false">
+         <Name>shortName</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Short name of the filter]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.description" indexed="false">
+         <Name>description</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[a concise description of the filter]]></Description>
+         <Units> </Units>
+         <UCD version="1">NOTE</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.cutOn" indexed="false">
+         <Name>cutOn</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 50% cut-on wavelength of the filter]]></Description>
+         <Units>microns</Units>
+         <UCD version="1">??</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.cutOff" indexed="false">
+         <Name>cutOff</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 50% cut-off wavelength of the filter]]></Description>
+         <Units>microns</Units>
+         <UCD version="1">??</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.aEJKsNish" indexed="false">
+         <Name>aEJKsNish</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The constant to multiply the E(J-Ks) value by to get the extinction in the Nishiyama et al. (2009) system.]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.aEHKsNish" indexed="false">
+         <Name>aEHKsNish</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The constant to multiply the E(H-Ks) value by to get the extinction in the Nishiyama et al. (2009) system.]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.aEJKsCard" indexed="false">
+         <Name>aEJKsCard</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The constant to multiply the E(J-Ks) value by to get the extinction in the Cardelli et al. (1989) system.]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.aEHKsCard" indexed="false">
+         <Name>aEHKsCard</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The constant to multiply the E(H-Ks) value by to get the extinction in the Cardelli et al. (1989) system.]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="FilterExtinctionCoefficients.aEBVCard" indexed="false">
+         <Name>aEBVCard</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The constant to multiply the E(B-V) value by to get the extinction in the Cardelli et al. (1989) system.]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="ThreeDimExtinctionMaps">
+      <Name>ThreeDimExtinctionMaps</Name>
+      <Description><![CDATA[ Contains metadata details of the 3D Galactic Extinction Map]]></Description>
+      <Column ID="ThreeDimExtinctionMaps.mapID" indexed="true">
+         <Name>mapID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the map]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.mapName" indexed="false">
+         <Name>mapName</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Name of map]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.description" indexed="false">
+         <Name>description</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Description of map.]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.bib</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.minGalLong" indexed="false">
+         <Name>minGalLong</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Minimum Galactic Longitude]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">stat.min;pos.galactic.lon</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.maxGalLong" indexed="false">
+         <Name>maxGalLong</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Maximum Galactic Longitude]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">stat.max;pos.galactic.lon</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.minGalLat" indexed="false">
+         <Name>minGalLat</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Minimum Galactic Latitude]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">stat.min;pos.galactic.lat</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.maxGalLat" indexed="false">
+         <Name>maxGalLat</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Maximum Galactic Latitude]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">stat.max;pos.galactic.lat</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.tableNames" indexed="false">
+         <Name>tableNames</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Names of tables containing extinction map data: pixel map, 3d extinction val table]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.reference" indexed="false">
+         <Name>reference</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Reference of paper which describes the map.]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.pixSizeAng" indexed="false">
+         <Name>pixSizeAng</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Angular resolution of extinction map]]></Description>
+         <Units>Arcminutes</Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ThreeDimExtinctionMaps.pixSizeRad" indexed="false">
+         <Name>pixSizeRad</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Radial resolution of extinction map]]></Description>
+         <Units>kpc</Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="vvvBulge3DExtinctVals">
+      <Name>vvvBulge3DExtinctVals</Name>
+      <Description><![CDATA[ Contains the extinction values of the VVV Bulge 3D extinction Ma]]></Description>
+      <Column ID="vvvBulge3DExtinctVals.extID" indexed="true">
+         <Name>extID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[UID of the 3D spatial position]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulge3DExtinctVals.pixelID" indexed="false">
+         <Name>pixelID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulge3DExtinctVals.r" indexed="false">
+         <Name>r</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distance to map pixel]]></Description>
+         <Units>kpc</Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulge3DExtinctVals.eJKs" indexed="false">
+         <Name>eJKs</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[E(J-Ks) calculated from the stellar population model at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulge3DExtinctVals.eJKsErr" indexed="false">
+         <Name>eJKsErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error on E(J-Ks) calculated from the stellar population model at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1">star.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulge3DExtinctVals.eHKs" indexed="false">
+         <Name>eHKs</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[E(H-Ks) calculated from the stellar population model at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulge3DExtinctVals.eHKsErr" indexed="false">
+         <Name>eHKsErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error on E(H-Ks) calculated from the stellar population model at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1">star.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="vvvBulgeExtMapCoords">
+      <Name>vvvBulgeExtMapCoords</Name>
+      <Description><![CDATA[ Contains details of the 2D pixels positions of the VVV Bulge 3D extinction Ma]]></Description>
+      <Column ID="vvvBulgeExtMapCoords.pixelID" indexed="true">
+         <Name>pixelID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the 2D pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.mapID" indexed="false">
+         <Name>mapID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the map]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.l" indexed="false">
+         <Name>l</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic longitude of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.galactic.lon</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.b" indexed="false">
+         <Name>b</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic latitude of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.galactic.lat</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Right Ascension of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Declination of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.x;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.z;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vvvBulgeExtMapCoords.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+

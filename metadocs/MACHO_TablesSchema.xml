@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>MACHO</Name>
+   <Description></Description>
+
+   <Table ID="machoLMCSource">
+      <Name>machoLMCSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the MACHO Lightcurve Statistical Summary Table for each source in the LMC fields]]></Description>
+      <Column ID="machoLMCSource.id" indexed="false">
+         <Name>id</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[MACHO star identification (field.tile.seq)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.npoints" indexed="false">
+         <Name>npoints</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[number of observations on the MACHO tile containing this star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rN" indexed="false">
+         <Name>rN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of good points on Lightcurve (LC)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rmagave" indexed="false">
+         <Name>rmagave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: median magnitude of LC in instrumental units]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rerrave" indexed="false">
+         <Name>rerrave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average error of measurements on LC in units of A, where A is the the measured flux divided by the median flux.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rsig" indexed="false">
+         <Name>rsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: sqrt of variance of A-1 measurements over LC.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rchi2w" indexed="false">
+         <Name>rchi2w</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: chi^2 per degree of freedom of fit to &quot;constant flux&quot; hypothesis weighted by flux errors]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rqw" indexed="false">
+         <Name>rqw</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: probability of getting value as large as rchi2w by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rNr" indexed="false">
+         <Name>rNr</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of points on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rerraver" indexed="false">
+         <Name>rerraver</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average error on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rchi2r" indexed="false">
+         <Name>rchi2r</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: chi^2 per degree of freedom for robustified LC (variable star search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rqr" indexed="false">
+         <Name>rqr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: probability of getting value as large as rchi2r by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rs5" indexed="false">
+         <Name>rs5</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of points on LC 5-sigma above median]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rs5d" indexed="false">
+         <Name>rs5d</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of points on LC 5-sigma below median (eclipsing binary search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rmagaveu" indexed="false">
+         <Name>rmagaveu</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: median magnitude in instrumental units before removing bad points]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rdskyave" indexed="false">
+         <Name>rdskyave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of red dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rdskysig" indexed="false">
+         <Name>rdskysig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: sqrt of variance of red dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rpsfave" indexed="false">
+         <Name>rpsfave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average over LC of sodophot measure of goodness of psf fit]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rpsfsig" indexed="false">
+         <Name>rpsfsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: sqrt of variance of red psf sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rcrdave" indexed="false">
+         <Name>rcrdave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of crowding sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rcosmave" indexed="false">
+         <Name>rcosmave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of cosmic ray sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rmissave" indexed="false">
+         <Name>rmissave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of missing pixel sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bN" indexed="false">
+         <Name>bN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of good points on Lightcurve (LC)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmagave" indexed="false">
+         <Name>bmagave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: median magnitude of LC in instrumental units]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.berrave" indexed="false">
+         <Name>berrave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average error of measurements on LC in units of A, where A is the the measured flux divided by the median flux.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bsig" indexed="false">
+         <Name>bsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: sqrt of variance of A-1 measurements over LC.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bchi2w" indexed="false">
+         <Name>bchi2w</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: chi^2 per degree of freedom of fit to &quot;constant flux&quot; hypothesis weighted by flux errors]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bqw" indexed="false">
+         <Name>bqw</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: probability of getting value as large as rchi2w by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bNr" indexed="false">
+         <Name>bNr</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of points on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.berraver" indexed="false">
+         <Name>berraver</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average error on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bchi2r" indexed="false">
+         <Name>bchi2r</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: chi^2 per degree of freedom for robustified LC (variable star search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bqr" indexed="false">
+         <Name>bqr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: probability of getting value as large as rchi2r by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bs5" indexed="false">
+         <Name>bs5</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of points on LC 5-sigma above median]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bs5d" indexed="false">
+         <Name>bs5d</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of points on LC 5-sigma below median (eclipsing binary search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmagaveu" indexed="false">
+         <Name>bmagaveu</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: median magnitude in instrumental units before removing bad points]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bdskyave" indexed="false">
+         <Name>bdskyave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of blue dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bdskysig" indexed="false">
+         <Name>bdskysig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: sqrt of variance of blue dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bpsfave" indexed="false">
+         <Name>bpsfave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average over LC of sodophot measure of goodness of psf fit]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bpsfsig" indexed="false">
+         <Name>bpsfsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: sqrt of variance of blue psf sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bcrdave" indexed="false">
+         <Name>bcrdave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of crowding sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bcosmave" indexed="false">
+         <Name>bcosmave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of cosmic ray sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmissave" indexed="false">
+         <Name>bmissave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of missing pixel sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmrN" indexed="false">
+         <Name>bmrN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[number of points on the B-R LC [aka simultaneous R/B pts]]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmrsig" indexed="false">
+         <Name>bmrsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[sqrt of variance of B-R LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmrchi2w" indexed="false">
+         <Name>bmrchi2w</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[chi^2 per degree of freedom for B-R LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmrave" indexed="false">
+         <Name>bmrave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[average of B-R]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bmrprobspear" indexed="false">
+         <Name>bmrprobspear</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[B-R ?]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rbcross" indexed="false">
+         <Name>rbcross</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red/blue A-1 robustified measurements over LC cross correlation coefficient [Welch-Stetson; see AJ 105, 1813]]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.rauto" indexed="false">
+         <Name>rauto</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: A-1 robustified measurements over LC autocorrelation (lag=0) coefficient]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.bauto" indexed="false">
+         <Name>bauto</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: A-1 robustified measurements over LC autocorrelation (lag=0) coefficient]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filterN" indexed="false">
+         <Name>filterN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[number of filters applied; always 3]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter1_rfilmax" indexed="false">
+         <Name>filter1_rfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, red: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter1_rfiltime" indexed="false">
+         <Name>filter1_rfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, red: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter1_rNhi" indexed="false">
+         <Name>filter1_rNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 1, red: number points sigmathreshold high within duration of filter at peak (rfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter1_bfilmax" indexed="false">
+         <Name>filter1_bfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, blue: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter1_bfiltime" indexed="false">
+         <Name>filter1_bfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, blue: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter1_bNhi" indexed="false">
+         <Name>filter1_bNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 1, blue: number points sigmathreshold high within duration of filter at peak (bfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter2_rfilmax" indexed="false">
+         <Name>filter2_rfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, red: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter2_rfiltime" indexed="false">
+         <Name>filter2_rfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, red: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter2_rNhi" indexed="false">
+         <Name>filter2_rNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 2, red: number points sigmathreshold high within duration of filter at peak (rfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter2_bfilmax" indexed="false">
+         <Name>filter2_bfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, blue: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter2_bfiltime" indexed="false">
+         <Name>filter2_bfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, blue: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter2_bNhi" indexed="false">
+         <Name>filter2_bNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 2, blue: number points sigmathreshold high within duration of filter at peak (bfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter3_rfilmax" indexed="false">
+         <Name>filter3_rfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, red: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter3_rfiltime" indexed="false">
+         <Name>filter3_rfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, red: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter3_rNhi" indexed="false">
+         <Name>filter3_rNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 3, red: number points sigmathreshold high within duration of filter at peak (rfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter3_bfilmax" indexed="false">
+         <Name>filter3_bfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, blue: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter3_bfiltime" indexed="false">
+         <Name>filter3_bfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, blue: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoLMCSource.filter3_bNhi" indexed="false">
+         <Name>filter3_bNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 3, blue: number points sigmathreshold high within duration of filter at peak (bfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="machoSMCSource">
+      <Name>machoSMCSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the MACHO Lightcurve Statistical Summary Table for each source in the SMC fields]]></Description>
+      <Column ID="machoSMCSource.id" indexed="false">
+         <Name>id</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[MACHO star identification (field.tile.seq)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.npoints" indexed="false">
+         <Name>npoints</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[number of observations on the MACHO tile containing this star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rN" indexed="false">
+         <Name>rN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of good points on Lightcurve (LC)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rmagave" indexed="false">
+         <Name>rmagave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: median magnitude of LC in instrumental units]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rerrave" indexed="false">
+         <Name>rerrave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average error of measurements on LC in units of A, where A is the the measured flux divided by the median flux.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rsig" indexed="false">
+         <Name>rsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: sqrt of variance of A-1 measurements over LC.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rchi2w" indexed="false">
+         <Name>rchi2w</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: chi^2 per degree of freedom of fit to &quot;constant flux&quot; hypothesis weighted by flux errors]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rqw" indexed="false">
+         <Name>rqw</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: probability of getting value as large as rchi2w by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rNr" indexed="false">
+         <Name>rNr</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of points on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rerraver" indexed="false">
+         <Name>rerraver</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average error on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rchi2r" indexed="false">
+         <Name>rchi2r</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: chi^2 per degree of freedom for robustified LC (variable star search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rqr" indexed="false">
+         <Name>rqr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: probability of getting value as large as rchi2r by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rs5" indexed="false">
+         <Name>rs5</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of points on LC 5-sigma above median]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rs5d" indexed="false">
+         <Name>rs5d</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[red: number of points on LC 5-sigma below median (eclipsing binary search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rmagaveu" indexed="false">
+         <Name>rmagaveu</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: median magnitude in instrumental units before removing bad points]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rdskyave" indexed="false">
+         <Name>rdskyave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of red dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rdskysig" indexed="false">
+         <Name>rdskysig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: sqrt of variance of red dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rpsfave" indexed="false">
+         <Name>rpsfave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average over LC of sodophot measure of goodness of psf fit]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rpsfsig" indexed="false">
+         <Name>rpsfsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: sqrt of variance of red psf sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rcrdave" indexed="false">
+         <Name>rcrdave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of crowding sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rcosmave" indexed="false">
+         <Name>rcosmave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of cosmic ray sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rmissave" indexed="false">
+         <Name>rmissave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: average of missing pixel sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bN" indexed="false">
+         <Name>bN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of good points on Lightcurve (LC)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmagave" indexed="false">
+         <Name>bmagave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: median magnitude of LC in instrumental units]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.berrave" indexed="false">
+         <Name>berrave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average error of measurements on LC in units of A, where A is the the measured flux divided by the median flux.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bsig" indexed="false">
+         <Name>bsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: sqrt of variance of A-1 measurements over LC.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bchi2w" indexed="false">
+         <Name>bchi2w</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: chi^2 per degree of freedom of fit to &quot;constant flux&quot; hypothesis weighted by flux errors]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bqw" indexed="false">
+         <Name>bqw</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: probability of getting value as large as rchi2w by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bNr" indexed="false">
+         <Name>bNr</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of points on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.berraver" indexed="false">
+         <Name>berraver</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average error on robustified LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bchi2r" indexed="false">
+         <Name>bchi2r</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: chi^2 per degree of freedom for robustified LC (variable star search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bqr" indexed="false">
+         <Name>bqr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: probability of getting value as large as rchi2r by chance]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bs5" indexed="false">
+         <Name>bs5</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of points on LC 5-sigma above median]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bs5d" indexed="false">
+         <Name>bs5d</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[blue: number of points on LC 5-sigma below median (eclipsing binary search)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmagaveu" indexed="false">
+         <Name>bmagaveu</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: median magnitude in instrumental units before removing bad points]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bdskyave" indexed="false">
+         <Name>bdskyave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of blue dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bdskysig" indexed="false">
+         <Name>bdskysig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: sqrt of variance of blue dsky sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bpsfave" indexed="false">
+         <Name>bpsfave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average over LC of sodophot measure of goodness of psf fit]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bpsfsig" indexed="false">
+         <Name>bpsfsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: sqrt of variance of blue psf sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bcrdave" indexed="false">
+         <Name>bcrdave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of crowding sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bcosmave" indexed="false">
+         <Name>bcosmave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of cosmic ray sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmissave" indexed="false">
+         <Name>bmissave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: average of missing pixel sodophot measure]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmrN" indexed="false">
+         <Name>bmrN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[number of points on the B-R LC [aka simultaneous R/B pts]]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmrsig" indexed="false">
+         <Name>bmrsig</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[sqrt of variance of B-R LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmrchi2w" indexed="false">
+         <Name>bmrchi2w</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[chi^2 per degree of freedom for B-R LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmrave" indexed="false">
+         <Name>bmrave</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[average of B-R]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bmrprobspear" indexed="false">
+         <Name>bmrprobspear</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[B-R ?]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rbcross" indexed="false">
+         <Name>rbcross</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red/blue A-1 robustified measurements over LC cross correlation coefficient [Welch-Stetson; see AJ 105, 1813]]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.rauto" indexed="false">
+         <Name>rauto</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[red: A-1 robustified measurements over LC autocorrelation (lag=0) coefficient]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.bauto" indexed="false">
+         <Name>bauto</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[blue: A-1 robustified measurements over LC autocorrelation (lag=0) coefficient]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filterN" indexed="false">
+         <Name>filterN</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[number of filters applied; always 3]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter1_rfilmax" indexed="false">
+         <Name>filter1_rfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, red: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter1_rfiltime" indexed="false">
+         <Name>filter1_rfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, red: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter1_rNhi" indexed="false">
+         <Name>filter1_rNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 1, red: number points sigmathreshold high within duration of filter at peak (rfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter1_bfilmax" indexed="false">
+         <Name>filter1_bfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, blue: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter1_bfiltime" indexed="false">
+         <Name>filter1_bfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 1, blue: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter1_bNhi" indexed="false">
+         <Name>filter1_bNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 1, blue: number points sigmathreshold high within duration of filter at peak (bfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter2_rfilmax" indexed="false">
+         <Name>filter2_rfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, red: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter2_rfiltime" indexed="false">
+         <Name>filter2_rfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, red: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter2_rNhi" indexed="false">
+         <Name>filter2_rNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 2, red: number points sigmathreshold high within duration of filter at peak (rfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter2_bfilmax" indexed="false">
+         <Name>filter2_bfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, blue: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter2_bfiltime" indexed="false">
+         <Name>filter2_bfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 2, blue: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter2_bNhi" indexed="false">
+         <Name>filter2_bNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 2, blue: number points sigmathreshold high within duration of filter at peak (bfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter3_rfilmax" indexed="false">
+         <Name>filter3_rfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, red: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter3_rfiltime" indexed="false">
+         <Name>filter3_rfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, red: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter3_rNhi" indexed="false">
+         <Name>filter3_rNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 3, red: number points sigmathreshold high within duration of filter at peak (rfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter3_bfilmax" indexed="false">
+         <Name>filter3_bfilmax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, blue: max value of optimum filter for LC]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter3_bfiltime" indexed="false">
+         <Name>filter3_bfiltime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Filter 3, blue: LC time at which maximum occurred]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="machoSMCSource.filter3_bNhi" indexed="false">
+         <Name>filter3_bNhi</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter 3, blue: number points sigmathreshold high within duration of filter at peak (bfiltime)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+

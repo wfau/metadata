@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>AKARI</Name>
+   <Description></Description>
+
+   <Table ID="akari_lmc_psc_v1">
+      <Name>akari_lmc_psc_v1</Name>
+      <Description><![CDATA[ Contains the parameters provided for each source in the AKARI-LMC point source catalogue (Version 1)]]></Description>
+      <Column ID="akari_lmc_psc_v1.OBJID" indexed="true">
+         <Name>OBJID</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Internal Object ID]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.OBJNAME1" indexed="false">
+         <Name>OBJNAME1</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Source identifier(an acronym of the catalog)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.OBJNAME2" indexed="false">
+         <Name>OBJNAME2</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Source identifier(Jhhmmss.ss-ddmmss.s)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.RA" indexed="false">
+         <Name>RA</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension J2000]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.DEC" indexed="false">
+         <Name>DEC</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination J2000]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index for equatorial co-ordinates (computed to level 20)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.FLAGEQ" indexed="false">
+         <Name>FLAGEQ</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Eqband flag that indicates the band at which the coordinates are determined (0:N3, 1:S7, 2:S11, 3:L15, 4:L24)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.XPIXN3" indexed="false">
+         <Name>XPIXN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.YPIXN3" indexed="false">
+         <Name>YPIXN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MAGN3" indexed="false">
+         <Name>MAGN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERRN3" indexed="false">
+         <Name>MERRN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERR2N3" indexed="false">
+         <Name>MERR2N3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.CHIN3" indexed="false">
+         <Name>CHIN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.SHARPN3" indexed="false">
+         <Name>SHARPN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.TIMEN3" indexed="false">
+         <Name>TIMEN3</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.PIDN3" indexed="false">
+         <Name>PIDN3</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.FLAGSN3" indexed="false">
+         <Name>FLAGSN3</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MATS7" indexed="false">
+         <Name>MATS7</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with S7]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.DRS7" indexed="false">
+         <Name>DRS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.XPIXS7" indexed="false">
+         <Name>XPIXS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.YPIXS7" indexed="false">
+         <Name>YPIXS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MAGS7" indexed="false">
+         <Name>MAGS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERRS7" indexed="false">
+         <Name>MERRS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERR2S7" indexed="false">
+         <Name>MERR2S7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.CHIS7" indexed="false">
+         <Name>CHIS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.SHARPS7" indexed="false">
+         <Name>SHARPS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.TIMES7" indexed="false">
+         <Name>TIMES7</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.PIDS7" indexed="false">
+         <Name>PIDS7</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.FLAGSS7" indexed="false">
+         <Name>FLAGSS7</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MATS11" indexed="false">
+         <Name>MATS11</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with S11]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.DRS11" indexed="false">
+         <Name>DRS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.XPIXS11" indexed="false">
+         <Name>XPIXS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.YPIXS11" indexed="false">
+         <Name>YPIXS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MAGS11" indexed="false">
+         <Name>MAGS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERRS11" indexed="false">
+         <Name>MERRS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERR2S11" indexed="false">
+         <Name>MERR2S11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.CHIS11" indexed="false">
+         <Name>CHIS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.SHARPS11" indexed="false">
+         <Name>SHARPS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.TIMES11" indexed="false">
+         <Name>TIMES11</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.PIDS11" indexed="false">
+         <Name>PIDS11</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.FLAGSS11" indexed="false">
+         <Name>FLAGSS11</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MATL15" indexed="false">
+         <Name>MATL15</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with L15]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.DRL15" indexed="false">
+         <Name>DRL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.XPIXL15" indexed="false">
+         <Name>XPIXL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.YPIXL15" indexed="false">
+         <Name>YPIXL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MAGL15" indexed="false">
+         <Name>MAGL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERRL15" indexed="false">
+         <Name>MERRL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERR2L15" indexed="false">
+         <Name>MERR2L15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.CHIL15" indexed="false">
+         <Name>CHIL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.SHARPL15" indexed="false">
+         <Name>SHARPL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.TIMEL15" indexed="false">
+         <Name>TIMEL15</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.PIDL15" indexed="false">
+         <Name>PIDL15</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.FLAGSL15" indexed="false">
+         <Name>FLAGSL15</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MATL24" indexed="false">
+         <Name>MATL24</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with L24]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.DRL24" indexed="false">
+         <Name>DRL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.XPIXL24" indexed="false">
+         <Name>XPIXL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.YPIXL24" indexed="false">
+         <Name>YPIXL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MAGL24" indexed="false">
+         <Name>MAGL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERRL24" indexed="false">
+         <Name>MERRL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.MERR2L24" indexed="false">
+         <Name>MERR2L24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.CHIL24" indexed="false">
+         <Name>CHIL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.SHARPL24" indexed="false">
+         <Name>SHARPL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.TIMEL24" indexed="false">
+         <Name>TIMEL24</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.PIDL24" indexed="false">
+         <Name>PIDL24</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.FLAGSL24" indexed="false">
+         <Name>FLAGSL24</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psc_v1.SEQNUM" indexed="false">
+         <Name>SEQNUM</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="akari_lmc_psa_v1">
+      <Name>akari_lmc_psa_v1</Name>
+      <Description><![CDATA[ Contains the parameters provided for each source in the AKARI-LMC point source archive (Version 1)]]></Description>
+      <Column ID="akari_lmc_psa_v1.OBJID" indexed="true">
+         <Name>OBJID</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Internal Object ID]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.OBJNAME1" indexed="false">
+         <Name>OBJNAME1</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Source identifier(an acronym of the catalog)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.OBJNAME2" indexed="false">
+         <Name>OBJNAME2</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Source identifier(Jhhmmss.ss-ddmmss.s)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.RA" indexed="false">
+         <Name>RA</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension J2000]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.DEC" indexed="false">
+         <Name>DEC</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination J2000]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index for equatorial co-ordinates (computed to level 20)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.FLAGEQ" indexed="false">
+         <Name>FLAGEQ</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Eqband flag that indicates the band at which the coordinates are determined (0:N3, 1:S7, 2:S11, 3:L15, 4:L24)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.XPIXN3" indexed="false">
+         <Name>XPIXN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.YPIXN3" indexed="false">
+         <Name>YPIXN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MAGN3" indexed="false">
+         <Name>MAGN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERRN3" indexed="false">
+         <Name>MERRN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERR2N3" indexed="false">
+         <Name>MERR2N3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.CHIN3" indexed="false">
+         <Name>CHIN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.SHARPN3" indexed="false">
+         <Name>SHARPN3</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.TIMEN3" indexed="false">
+         <Name>TIMEN3</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.PIDN3" indexed="false">
+         <Name>PIDN3</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.FLAGSN3" indexed="false">
+         <Name>FLAGSN3</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MATS7" indexed="false">
+         <Name>MATS7</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with S7]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.DRS7" indexed="false">
+         <Name>DRS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.XPIXS7" indexed="false">
+         <Name>XPIXS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.YPIXS7" indexed="false">
+         <Name>YPIXS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MAGS7" indexed="false">
+         <Name>MAGS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERRS7" indexed="false">
+         <Name>MERRS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERR2S7" indexed="false">
+         <Name>MERR2S7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.CHIS7" indexed="false">
+         <Name>CHIS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.SHARPS7" indexed="false">
+         <Name>SHARPS7</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.TIMES7" indexed="false">
+         <Name>TIMES7</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.PIDS7" indexed="false">
+         <Name>PIDS7</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.FLAGSS7" indexed="false">
+         <Name>FLAGSS7</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MATS11" indexed="false">
+         <Name>MATS11</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with S11]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.DRS11" indexed="false">
+         <Name>DRS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.XPIXS11" indexed="false">
+         <Name>XPIXS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.YPIXS11" indexed="false">
+         <Name>YPIXS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MAGS11" indexed="false">
+         <Name>MAGS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERRS11" indexed="false">
+         <Name>MERRS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERR2S11" indexed="false">
+         <Name>MERR2S11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.CHIS11" indexed="false">
+         <Name>CHIS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.SHARPS11" indexed="false">
+         <Name>SHARPS11</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.TIMES11" indexed="false">
+         <Name>TIMES11</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.PIDS11" indexed="false">
+         <Name>PIDS11</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.FLAGSS11" indexed="false">
+         <Name>FLAGSS11</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MATL15" indexed="false">
+         <Name>MATL15</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with L15]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.DRL15" indexed="false">
+         <Name>DRL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.XPIXL15" indexed="false">
+         <Name>XPIXL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.YPIXL15" indexed="false">
+         <Name>YPIXL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MAGL15" indexed="false">
+         <Name>MAGL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERRL15" indexed="false">
+         <Name>MERRL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERR2L15" indexed="false">
+         <Name>MERR2L15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.CHIL15" indexed="false">
+         <Name>CHIL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.SHARPL15" indexed="false">
+         <Name>SHARPL15</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.TIMEL15" indexed="false">
+         <Name>TIMEL15</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.PIDL15" indexed="false">
+         <Name>PIDL15</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.FLAGSL15" indexed="false">
+         <Name>FLAGSL15</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MATL24" indexed="false">
+         <Name>MATL24</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the number of matching with L24]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.DRL24" indexed="false">
+         <Name>DRL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[distance between matched sources]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.XPIXL24" indexed="false">
+         <Name>XPIXL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (x)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.YPIXL24" indexed="false">
+         <Name>YPIXL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Pixel-Coordinate (y)]]></Description>
+         <Units>pix</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MAGL24" indexed="false">
+         <Name>MAGL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERRL24" indexed="false">
+         <Name>MERRL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.MERR2L24" indexed="false">
+         <Name>MERR2L24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[magnitude error]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.CHIL24" indexed="false">
+         <Name>CHIL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Chi]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.SHARPL24" indexed="false">
+         <Name>SHARPL24</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Sharpness]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.TIMEL24" indexed="false">
+         <Name>TIMEL24</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing time]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.PIDL24" indexed="false">
+         <Name>PIDL24</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Observing Pointing identifier]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.FLAGSL24" indexed="false">
+         <Name>FLAGSL24</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Star designation]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="akari_lmc_psa_v1.SEQNUM" indexed="false">
+         <Name>SEQNUM</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+
