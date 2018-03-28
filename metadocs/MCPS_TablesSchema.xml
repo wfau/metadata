@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>MCPS</Name>
+   <Description></Description>
+
+   <Table ID="mcps_smcSource">
+      <Name>mcps_smcSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the MCPS SMC stellar catalog]]></Description>
+      <Column ID="mcps_smcSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.Umag" indexed="false">
+         <Name>Umag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The U band magnitude. (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.e_Umag" indexed="false">
+         <Name>e_Umag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Umag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.Bmag" indexed="false">
+         <Name>Bmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The B band magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.e_Bmag" indexed="false">
+         <Name>e_Bmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Bmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.Vmag" indexed="false">
+         <Name>Vmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The V band magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.e_Vmag" indexed="false">
+         <Name>e_Vmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Vmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.Imag" indexed="false">
+         <Name>Imag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The I band magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.e_Imag" indexed="false">
+         <Name>e_Imag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Imag magnitude]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.qFlag" indexed="false">
+         <Name>qFlag</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Quality flag (unique sum of the following flags): 0 = no flag; 1 = star for which photometry was replaced with that from Massey's catalog (Massey P., 2001, ApJS, in press); 2 = star for which photometry was replaced with that from OGLE; 10 = star with a successful stellar atmosphere model (&Chi;&sup2;&lt;3) fit; 20 = star with an unsuccessful stellar atmosphere model fit.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.Jmag" indexed="false">
+         <Name>Jmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The J band magnitude (from 2MASS) (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.e_Jmag" indexed="false">
+         <Name>e_Jmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Jmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.Hmag" indexed="false">
+         <Name>Hmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The H band magnitude (from 2MASS) (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.e_Hmag" indexed="false">
+         <Name>e_Hmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Hmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.Kmag" indexed="false">
+         <Name>Kmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The K' band magnitude (from 2MASS) (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.e_Kmag" indexed="false">
+         <Name>e_Kmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Kmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_smcSource.offset" indexed="false">
+         <Name>offset</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[MCPS/2MASS astrometric offset]]></Description>
+         <Units>arcseconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="mcps_lmcSource">
+      <Name>mcps_lmcSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the MCPS LMC stellar catalog]]></Description>
+      <Column ID="mcps_lmcSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.Umag" indexed="false">
+         <Name>Umag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The U band magnitude. (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.e_Umag" indexed="false">
+         <Name>e_Umag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Umag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.Bmag" indexed="false">
+         <Name>Bmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The B band magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.e_Bmag" indexed="false">
+         <Name>e_Bmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Bmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.Vmag" indexed="false">
+         <Name>Vmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The V band magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.e_Vmag" indexed="false">
+         <Name>e_Vmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Vmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.Imag" indexed="false">
+         <Name>Imag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The I band magnitude]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.e_Imag" indexed="false">
+         <Name>e_Imag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Imag magnitude]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.qFlag" indexed="false">
+         <Name>qFlag</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Quality flag (unique sum of the following flags): 0 = no flag; 1 = star for which photometry was replaced with that from Massey's catalog (Massey P., 2001, ApJS, in press); 2 = star for which photometry was replaced with that from OGLE; 10 = star with a successful stellar atmosphere model (&Chi;&sup2;&lt;3) fit; 20 = star with an unsuccessful stellar atmosphere model fit.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.Jmag" indexed="false">
+         <Name>Jmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The J band magnitude (from 2MASS) (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.e_Jmag" indexed="false">
+         <Name>e_Jmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Jmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.Hmag" indexed="false">
+         <Name>Hmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The H band magnitude (from 2MASS) (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.e_Hmag" indexed="false">
+         <Name>e_Hmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Hmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.Kmag" indexed="false">
+         <Name>Kmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The K' band magnitude (from 2MASS) (0.00 if star not detected.)]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.e_Kmag" indexed="false">
+         <Name>e_Kmag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[The 1&sigma; error in Kmag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="mcps_lmcSource.offset" indexed="false">
+         <Name>offset</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[MCPS/2MASS astrometric offset]]></Description>
+         <Units>arcseconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+

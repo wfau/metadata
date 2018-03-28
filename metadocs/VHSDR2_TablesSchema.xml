@@ -2,7 +2,7 @@
 <DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <Catalog>
-   <Name>VHSDR1</Name>
+   <Name>VHSDR2</Name>
    <Description></Description>
 
    <Table ID="Release">
@@ -233,7 +233,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in UKIDSSDR5PLUS..lasSource (=sourceID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXDR5lasSource.distanceMins" indexed="false">
@@ -3757,7 +3757,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in UKIDSSDR8PLUS..lasSource (=sourceID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXDR8lasSource.distanceMins" indexed="false">
@@ -4317,7 +4317,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in SEGUEDR6..PhotoObj (=objID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXSegueDR6PhotoObj.distanceMins" indexed="false">
@@ -4361,38 +4361,10 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in vhsDetection table (=objID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXPawPrints.distanceMins" indexed="false">
-         <Name>distanceMins</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Angular separation between neighbours]]></Description>
-         <Units>arcminutes</Units>
-         <UCD version="1+">pos.angDistance</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="vhsSourceXwise_prelimsc">
-      <Name>vhsSourceXwise_prelimsc</Name>
-      <Description><![CDATA[ Cross-neighbours between vhs and wise_prelimsc]]></Description>
-      <Column ID="vhsSourceXwise_prelimsc.masterObjID" indexed="true">
-         <Name>masterObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID in vhsSource (=sourceID)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceXwise_prelimsc.slaveObjID" indexed="true">
-         <Name>slaveObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID of the neighbour in WISE..wise_prelimsc (=cntr)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceXwise_prelimsc.distanceMins" indexed="false">
          <Name>distanceMins</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Angular separation between neighbours]]></Description>
@@ -6141,7 +6113,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in ROSAT..rosat_bsc (=seqNo)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXrosat_bsc.distanceMins" indexed="false">
@@ -6169,7 +6141,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in SEGUEDR6..PhotoObjAll (=objID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXSegueDR6PhotoObjAll.distanceMins" indexed="false">
@@ -6213,7 +6185,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in TWOMASS..twomass_psc (=pts_key)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXtwomass_psc.distanceMins" indexed="false">
@@ -6393,554 +6365,6 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="vhsSourceRemeasurement">
-      <Name>vhsSourceRemeasurement</Name>
-      <Description><![CDATA[ Contains source remeasurements based on the merged source list for the VHS]]></Description>
-      <Column ID="vhsSourceRemeasurement.sourceID" indexed="true">
-         <Name>sourceID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[UID (unique over entire VSA via programme ID prefix) of this list remeasurement]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.cuEventID" indexed="false">
-         <Name>cuEventID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[UID of curation event giving rise to this record]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.bib</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.frameSetID" indexed="false">
-         <Name>frameSetID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[UID of the set of frames that this remeasured source comes from]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.bib</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ra" indexed="false">
-         <Name>ra</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Celestial Right Ascension]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.eq.ra;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.dec" indexed="false">
-         <Name>dec</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Celestial Declination]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.eq.dec;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.sigRa" indexed="false">
-         <Name>sigRa</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Uncertainty in RA]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.sigDec" indexed="false">
-         <Name>sigDec</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Uncertainty in Dec]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.epoch" indexed="false">
-         <Name>epoch</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Epoch of position measurement]]></Description>
-         <Units>Years</Units>
-         <UCD version="1+">time.epoch</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.cx" indexed="false">
-         <Name>cx</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
-         <Units> </Units>
-         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.cy" indexed="false">
-         <Name>cy</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
-         <Units> </Units>
-         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.cz" indexed="false">
-         <Name>cz</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
-         <Units> </Units>
-         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.htmID" indexed="false">
-         <Name>htmID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
-         <Units> </Units>
-         <UCD version="1+">pos.eq</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.l" indexed="false">
-         <Name>l</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Galactic longitude]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.galactic.lon</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.b" indexed="false">
-         <Name>b</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Galactic latitude]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.galactic.lat</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.lambda" indexed="false">
-         <Name>lambda</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[SDSS system spherical co-ordinate 1]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.eta" indexed="false">
-         <Name>eta</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[SDSS system spherical co-ordinate 2]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.priOrSec" indexed="false">
-         <Name>priOrSec</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Seam code for a unique (=0) or duplicated (!=0) source (eg. flags overlap duplicates)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ymj" indexed="false">
-         <Name>ymj</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Default colour Y-J (using appropriate mags)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1">PHOT_COLOR</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ymjErr" indexed="false">
-         <Name>ymjErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Error on colour Y-J]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jmh" indexed="false">
-         <Name>jmh</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Default colour J-H (using appropriate mags)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1">PHOT_COLOR</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jmhErr" indexed="false">
-         <Name>jmhErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Error on colour J-H]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hmks" indexed="false">
-         <Name>hmks</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Default colour H-Ks (using appropriate mags)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1">PHOT_COLOR</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hmksErr" indexed="false">
-         <Name>hmksErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Error on colour H-Ks]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.mergedClass" indexed="false">
-         <Name>mergedClass</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Class flag based on list remeasurement prescription]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yMag" indexed="false">
-         <Name>yMag</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Y mag (as appropriate for this merged source)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yMagErr" indexed="false">
-         <Name>yMagErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Error in Y mag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yGausig" indexed="false">
-         <Name>yGausig</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[RMS of axes of ellipse fit in Y]]></Description>
-         <Units>pixels</Units>
-         <UCD version="1+">src.morph.param</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yEll" indexed="false">
-         <Name>yEll</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[1-b/a, where a/b=semi-major/minor axes in Y]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.ellipticity</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yPA" indexed="false">
-         <Name>yPA</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[ellipse fit celestial orientation in Y]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.posAng</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yErrBits" indexed="false">
-         <Name>yErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[processing warning/error bitwise flags in Y]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yDeblend" indexed="false">
-         <Name>yDeblend</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[placeholder flag indicating parent/child relation in Y]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yClass" indexed="false">
-         <Name>yClass</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[discrete image classification flag in Y]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.class</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yClassStat" indexed="false">
-         <Name>yClassStat</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[N(0,1) stellarness-of-profile statistic in Y]]></Description>
-         <Units> </Units>
-         <UCD version="1+">stat</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.yppErrBits" indexed="false">
-         <Name>yppErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[additional WFAU post-processing error bits in Y]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ySeqNum" indexed="false">
-         <Name>ySeqNum</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[the running number of the Y remeasurement]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jMag" indexed="false">
-         <Name>jMag</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[J mag (as appropriate for this merged source)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jMagErr" indexed="false">
-         <Name>jMagErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Error in J mag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jGausig" indexed="false">
-         <Name>jGausig</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[RMS of axes of ellipse fit in J]]></Description>
-         <Units>pixels</Units>
-         <UCD version="1+">src.morph.param</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jEll" indexed="false">
-         <Name>jEll</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[1-b/a, where a/b=semi-major/minor axes in J]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.ellipticity</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jPA" indexed="false">
-         <Name>jPA</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[ellipse fit celestial orientation in J]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.posAng</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jErrBits" indexed="false">
-         <Name>jErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[processing warning/error bitwise flags in J]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jDeblend" indexed="false">
-         <Name>jDeblend</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[placeholder flag indicating parent/child relation in J]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jClass" indexed="false">
-         <Name>jClass</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[discrete image classification flag in J]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.class</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jClassStat" indexed="false">
-         <Name>jClassStat</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[N(0,1) stellarness-of-profile statistic in J]]></Description>
-         <Units> </Units>
-         <UCD version="1+">stat</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jppErrBits" indexed="false">
-         <Name>jppErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[additional WFAU post-processing error bits in J]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.jSeqNum" indexed="false">
-         <Name>jSeqNum</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[the running number of the J remeasurement]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hMag" indexed="false">
-         <Name>hMag</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[H mag (as appropriate for this merged source)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hMagErr" indexed="false">
-         <Name>hMagErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Error in H mag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hGausig" indexed="false">
-         <Name>hGausig</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[RMS of axes of ellipse fit in H]]></Description>
-         <Units>pixels</Units>
-         <UCD version="1+">src.morph.param</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hEll" indexed="false">
-         <Name>hEll</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[1-b/a, where a/b=semi-major/minor axes in H]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.ellipticity</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hPA" indexed="false">
-         <Name>hPA</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[ellipse fit celestial orientation in H]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.posAng</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hErrBits" indexed="false">
-         <Name>hErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[processing warning/error bitwise flags in H]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hDeblend" indexed="false">
-         <Name>hDeblend</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[placeholder flag indicating parent/child relation in H]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hClass" indexed="false">
-         <Name>hClass</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[discrete image classification flag in H]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.class</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hClassStat" indexed="false">
-         <Name>hClassStat</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[N(0,1) stellarness-of-profile statistic in H]]></Description>
-         <Units> </Units>
-         <UCD version="1+">stat</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hppErrBits" indexed="false">
-         <Name>hppErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[additional WFAU post-processing error bits in H]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.hSeqNum" indexed="false">
-         <Name>hSeqNum</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[the running number of the H remeasurement]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksMag" indexed="false">
-         <Name>ksMag</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Ks mag (as appropriate for this merged source)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksMagErr" indexed="false">
-         <Name>ksMagErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Error in Ks mag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">stat.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksGausig" indexed="false">
-         <Name>ksGausig</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[RMS of axes of ellipse fit in Ks]]></Description>
-         <Units>pixels</Units>
-         <UCD version="1+">src.morph.param</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksEll" indexed="false">
-         <Name>ksEll</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[1-b/a, where a/b=semi-major/minor axes in Ks]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.ellipticity</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksPA" indexed="false">
-         <Name>ksPA</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[ellipse fit celestial orientation in Ks]]></Description>
-         <Units>Degrees</Units>
-         <UCD version="1+">pos.posAng</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksErrBits" indexed="false">
-         <Name>ksErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[processing warning/error bitwise flags in Ks]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksDeblend" indexed="false">
-         <Name>ksDeblend</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[placeholder flag indicating parent/child relation in Ks]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksClass" indexed="false">
-         <Name>ksClass</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[discrete image classification flag in Ks]]></Description>
-         <Units> </Units>
-         <UCD version="1+">src.class</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksClassStat" indexed="false">
-         <Name>ksClassStat</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[N(0,1) stellarness-of-profile statistic in Ks]]></Description>
-         <Units> </Units>
-         <UCD version="1+">stat</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksppErrBits" indexed="false">
-         <Name>ksppErrBits</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[additional WFAU post-processing error bits in Ks]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceRemeasurement.ksSeqNum" indexed="false">
-         <Name>ksSeqNum</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[the running number of the Ks remeasurement]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
    <Table ID="RequiredDiffImage">
       <Name>RequiredDiffImage</Name>
       <Description><![CDATA[ Contains details of default difference image products curated in the archive]]></Description>
@@ -7009,7 +6433,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in TWOMASS..twomass_sixx2_xsc (=cntr)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXtwomass_sixx2_xsc.distanceMins" indexed="false">
@@ -7037,7 +6461,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in ROSAT..rosat_fsc (=seqNo)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXrosat_fsc.distanceMins" indexed="false">
@@ -7331,7 +6755,7 @@
    </Table>
    <Table ID="vhsSourceXtwoxmm">
       <Name>vhsSourceXtwoxmm</Name>
-      <Description><![CDATA[ Cross-neighbours between vhs and twoxmm]]></Description>
+      <Description><![CDATA[ Cross-neighbours between vhs and twoxmmi_dr3_v1_0]]></Description>
       <Column ID="vhsSourceXtwoxmm.masterObjID" indexed="true">
          <Name>masterObjID</Name>
          <Datatype>long</Datatype>
@@ -7343,9 +6767,9 @@
       <Column ID="vhsSourceXtwoxmm.slaveObjID" indexed="true">
          <Name>slaveObjID</Name>
          <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID of the neighbour in TWOXMM..twoxmm (=DETID)]]></Description>
+         <Description><![CDATA[The unique ID of the neighbour in TWOXMM..twoxmmi_dr3_v1_0 (=DETID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXtwoxmm.distanceMins" indexed="false">
@@ -7393,9 +6817,37 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
+   <Table ID="vhsSourceXAtlasDR1Source">
+      <Name>vhsSourceXAtlasDR1Source</Name>
+      <Description><![CDATA[ Cross-neighbours between vhs and AtlasDR1Source]]></Description>
+      <Column ID="vhsSourceXAtlasDR1Source.masterObjID" indexed="true">
+         <Name>masterObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[The unique ID in vhsSource (=sourceID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vhsSourceXAtlasDR1Source.slaveObjID" indexed="true">
+         <Name>slaveObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[The unique ID of the neighbour in ATLASDR1..atlasSource (=sourceID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.dataset</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vhsSourceXAtlasDR1Source.distanceMins" indexed="false">
+         <Name>distanceMins</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Angular separation between neighbours]]></Description>
+         <Units>arcminutes</Units>
+         <UCD version="1+">pos.angDistance</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
    <Table ID="vhsSourceXfirstSource">
       <Name>vhsSourceXfirstSource</Name>
-      <Description><![CDATA[ Cross-neighbours between vhs and firstSource]]></Description>
+      <Description><![CDATA[ Cross-neighbours between vhs and firstSource12Feb16]]></Description>
       <Column ID="vhsSourceXfirstSource.masterObjID" indexed="true">
          <Name>masterObjID</Name>
          <Datatype>long</Datatype>
@@ -7407,9 +6859,9 @@
       <Column ID="vhsSourceXfirstSource.slaveObjID" indexed="true">
          <Name>slaveObjID</Name>
          <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID of the neighbour in FIRST..firstSource (=seqNo)]]></Description>
+         <Description><![CDATA[The unique ID of the neighbour in FIRST..firstSource12Feb16 (=seqNo)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXfirstSource.distanceMins" indexed="false">
@@ -8197,7 +7649,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in MGC..mgcDetection (=MGCID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXmgcDetection.distanceMins" indexed="false">
@@ -8301,7 +7753,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in Stripe82..PhotoObjAll (=objID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXStripe82PhotoObjAll.distanceMins" indexed="false">
@@ -8345,7 +7797,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in IRAS..iras_psc (=seqNo)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXiras_psc.distanceMins" indexed="false">
@@ -8373,7 +7825,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in TWOMASS..twomass_xsc (=ext_key)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXtwomass_xsc.distanceMins" indexed="false">
@@ -9589,7 +9041,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in vhsSource (=sourceID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceNeighbours.distanceMins" indexed="false">
@@ -9681,6 +9133,34 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
+   <Table ID="vhsSourceXwise_allskysc">
+      <Name>vhsSourceXwise_allskysc</Name>
+      <Description><![CDATA[ Cross-neighbours between vhs and wise_allskysc]]></Description>
+      <Column ID="vhsSourceXwise_allskysc.masterObjID" indexed="true">
+         <Name>masterObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[The unique ID in vhsSource (=sourceID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vhsSourceXwise_allskysc.slaveObjID" indexed="true">
+         <Name>slaveObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[The unique ID of the neighbour in WISE..wise_allskysc (=cntr)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.dataset</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vhsSourceXwise_allskysc.distanceMins" indexed="false">
+         <Name>distanceMins</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Angular separation between neighbours]]></Description>
+         <Units>arcminutes</Units>
+         <UCD version="1+">pos.angDistance</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
    <Table ID="ExternalSurvey">
       <Name>ExternalSurvey</Name>
       <Description><![CDATA[ A list of all externally produced survey products held in the archive]]></Description>
@@ -9722,34 +9202,6 @@
          <Description><![CDATA[Pathname to the pixels (eg. for list-driven remeasurement)]]></Description>
          <Units> </Units>
          <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="vhsSourceXnvssSource">
-      <Name>vhsSourceXnvssSource</Name>
-      <Description><![CDATA[ Cross-neighbours between vhs and nvssSource]]></Description>
-      <Column ID="vhsSourceXnvssSource.masterObjID" indexed="true">
-         <Name>masterObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID in vhsSource (=sourceID)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceXnvssSource.slaveObjID" indexed="true">
-         <Name>slaveObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID of the neighbour in NVSS..nvssSource (=seqNo)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vhsSourceXnvssSource.distanceMins" indexed="false">
-         <Name>distanceMins</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Angular separation between neighbours]]></Description>
-         <Units>arcminutes</Units>
-         <UCD version="1+">pos.angDistance</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -10981,7 +10433,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in BestDR7..PhotoObjAll (=objID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXDR7PhotoObjAll.distanceMins" indexed="false">
@@ -11245,7 +10697,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in BestDR7..PhotoObj (=objID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXDR7PhotoObj.distanceMins" indexed="false">
@@ -11325,7 +10777,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique ID of the neighbour in SSA..Source (=objID)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
+         <UCD version="1+">meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vhsSourceXSSASource.distanceMins" indexed="false">

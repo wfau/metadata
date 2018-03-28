@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>EROS</Name>
+   <Description></Description>
+
+   <Table ID="erosLMCSource">
+      <Name>erosLMCSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the EROS Source Table for each source in the LMC fields]]></Description>
+      <Column ID="erosLMCSource.erosid" indexed="false">
+         <Name>erosid</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[EROS star identification]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.magR" indexed="false">
+         <Name>magR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.ErrMR" indexed="false">
+         <Name>ErrMR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.XR" indexed="false">
+         <Name>XR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.YR" indexed="false">
+         <Name>YR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.magB" indexed="false">
+         <Name>magB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.ErrMB" indexed="false">
+         <Name>ErrMB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.XB" indexed="false">
+         <Name>XB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.YB" indexed="false">
+         <Name>YB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosLMCSource.Var" indexed="false">
+         <Name>Var</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Variability flag: 1 if potentially variable star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="eros2LMCSource">
+      <Name>eros2LMCSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the revised EROS-2 Source Table for each source in the LMC fields]]></Description>
+      <Column ID="eros2LMCSource.erosid" indexed="false">
+         <Name>erosid</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[EROS star identification]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.magR" indexed="false">
+         <Name>magR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.ErrMR" indexed="false">
+         <Name>ErrMR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.XR" indexed="false">
+         <Name>XR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.YR" indexed="false">
+         <Name>YR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.magB" indexed="false">
+         <Name>magB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.ErrMB" indexed="false">
+         <Name>ErrMB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.XB" indexed="false">
+         <Name>XB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.YB" indexed="false">
+         <Name>YB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2LMCSource.Var" indexed="false">
+         <Name>Var</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Variability flag: 1 if potentially variable star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="eros2SMCSource">
+      <Name>eros2SMCSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the revised EROS-2 Source Table for each source in the SMC fields]]></Description>
+      <Column ID="eros2SMCSource.erosid" indexed="false">
+         <Name>erosid</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[EROS star identification]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.magR" indexed="false">
+         <Name>magR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.ErrMR" indexed="false">
+         <Name>ErrMR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.XR" indexed="false">
+         <Name>XR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.YR" indexed="false">
+         <Name>YR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.magB" indexed="false">
+         <Name>magB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.ErrMB" indexed="false">
+         <Name>ErrMB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.XB" indexed="false">
+         <Name>XB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.YB" indexed="false">
+         <Name>YB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="eros2SMCSource.Var" indexed="false">
+         <Name>Var</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Variability flag: 1 if potentially variable star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="erosSMCSource">
+      <Name>erosSMCSource</Name>
+      <Description><![CDATA[ Contains the parameters provided in the EROS Source Table for each source in the SMC fields]]></Description>
+      <Column ID="erosSMCSource.erosid" indexed="false">
+         <Name>erosid</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[EROS star identification]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.seqNum" indexed="true">
+         <Name>seqNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Sequential number (unique object ID)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 right ascension]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[J2000 declination]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.magR" indexed="false">
+         <Name>magR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.ErrMR" indexed="false">
+         <Name>ErrMR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in red channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.XR" indexed="false">
+         <Name>XR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.YR" indexed="false">
+         <Name>YR</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on red reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.magB" indexed="false">
+         <Name>magB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.ErrMB" indexed="false">
+         <Name>ErrMB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error of mean magnitude in blue channel]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.XB" indexed="false">
+         <Name>XB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[X pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.YB" indexed="false">
+         <Name>YB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Y pixel coordinate on blue reference images relative to rebined reference images in [klmn] frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="erosSMCSource.Var" indexed="false">
+         <Name>Var</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Variability flag: 1 if potentially variable star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+

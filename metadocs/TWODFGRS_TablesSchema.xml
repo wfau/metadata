@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>TWODFGRS</Name>
+   <Description></Description>
+
+   <Table ID="grs_ranSource">
+      <Name>grs_ranSource</Name>
+      <Description><![CDATA[ Contains the parameters provided for each source in the 2dFGRS random fields photometric catalogue]]></Description>
+      <Column ID="grs_ranSource.SEQNUM" indexed="true">
+         <Name>SEQNUM</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Assigned sequence number to this object; determines the FITS filename (SEQNUM.fits)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[R.A. (B1950) in HH MM SS.SS]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Dec. (B1950) in DD MM SS.S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.BJSEL" indexed="false">
+         <Name>BJSEL</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Final bj magnitude with extinction correction (i.e. with corrections for isophote, field-effects and plate-matching, then calibrated to total mags with saturation correction, and then extinction corrected)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.PROB" indexed="false">
+         <Name>PROB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[psi classification parameter: for eyeballed galaxies: psi*1000 = (10000 + abs(jon) + psi*100); for eyeballed non-galaxies: psi*1000 = -(10000 + abs(jon) + psi*100)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.PARK" indexed="false">
+         <Name>PARK</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[k classification parameter = k / k_star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.PARMU" indexed="false">
+         <Name>PARMU</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mu classification parameter = mu / mu_star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.IGAL" indexed="false">
+         <Name>IGAL</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Final classification: -4 = noise; -3 = star + star; -2 = star + fuzz; -1 = star; 0 = galaxy + star merger; 1 = galaxy; 2 = galaxy + galaxy merger]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.JON" indexed="false">
+         <Name>JON</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Eyeball classification, value &gt; 0 only for galaxies brighter than about 18th mag: 0 = noise; 1 = S0; 2 = elliptical; 3 = spiral; 4 = irregular; 5 = undetermined galaxy; 6 = star; 7 = star + star merger; 8 = galaxy + star merger; 9 = galaxy + galaxy merger]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.ORIENT" indexed="false">
+         <Name>ORIENT</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Orientation measured in degrees clockwise from E to W: orient = 180/pi * atan(2*sxy/((sxx + syy)*(1 + e)-syy))]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.ECCENT" indexed="false">
+         <Name>ECCENT</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Eccentricity (e) e*200 = 200*(((sxx-syy)**2 + 4sxy**2)**0.5)/(sxx + syy)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.AREA" indexed="false">
+         <Name>AREA</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Isophotal area in pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.X_BJ" indexed="false">
+         <Name>X_BJ</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Plate x_bj in 8 micron pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.Y_BJ" indexed="false">
+         <Name>Y_BJ</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Plate y_bj in 8 micron pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.DX" indexed="false">
+         <Name>DX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distortion corrected difference (x_bj - x_R)*100]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.DY" indexed="false">
+         <Name>DY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distortion corrected difference (y_bj - y_R)*100]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.BJG" indexed="false">
+         <Name>BJG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Final bj magnitude without extinction correction]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.RMAG" indexed="false">
+         <Name>RMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched APM 'total' mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.PMAG" indexed="false">
+         <Name>PMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw APM profile integrated mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.FMAG" indexed="false">
+         <Name>FMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw APM 2&quot; profile integrated mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.SMAG" indexed="false">
+         <Name>SMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw stellar mag (from APMCAL)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.REDMAG" indexed="false">
+         <Name>REDMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Not used]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.IFIELD" indexed="false">
+         <Name>IFIELD</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UKST field]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.IGFIELD" indexed="false">
+         <Name>IGFIELD</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Galaxy number in UKST field]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.NAME" indexed="false">
+         <Name>NAME</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[2dFGRS assigned name; if either (i) BJSELOLD is fainter than 19.45, or (ii) the object could not be allocated to a fibre by the configuration algorithm, then NAME is blank]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.BJG_OLD" indexed="false">
+         <Name>BJG_OLD</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Original bj magnitude without extinction correction (prior to re-calibration to BJG)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.BJSELOLD" indexed="false">
+         <Name>BJSELOLD</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Original bj magnitude with extinction correction (prior to re-calibration to BJSEL); used to select survey sample]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.BJG_100" indexed="false">
+         <Name>BJG_100</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[100k release bj magnitude without extinction correction (prior to re-calibration to BJG)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ranSource.BJSEL_100" indexed="false">
+         <Name>BJSEL_100</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[100k release bj magnitude with extinction correction (prior to re-calibration to BJSEL)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="grs_sgpSource">
+      <Name>grs_sgpSource</Name>
+      <Description><![CDATA[ Contains the parameters provided for each source in the 2dFGRS SGP photometric catalogue]]></Description>
+      <Column ID="grs_sgpSource.SEQNUM" indexed="true">
+         <Name>SEQNUM</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Assigned sequence number to this object; determines the FITS filename (SEQNUM.fits)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[R.A. (B1950) in HH MM SS.SS]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Dec. (B1950) in DD MM SS.S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.BJSEL" indexed="false">
+         <Name>BJSEL</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Final bj magnitude with extinction correction (i.e. with corrections for isophote, field-effects and plate-matching, then calibrated to total mags with saturation correction, and then extinction corrected)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.PROB" indexed="false">
+         <Name>PROB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[psi classification parameter: for eyeballed galaxies: psi*1000 = (10000 + abs(jon) + psi*100); for eyeballed non-galaxies: psi*1000 = -(10000 + abs(jon) + psi*100)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.PARK" indexed="false">
+         <Name>PARK</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[k classification parameter = k / k_star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.PARMU" indexed="false">
+         <Name>PARMU</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mu classification parameter = mu / mu_star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.IGAL" indexed="false">
+         <Name>IGAL</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Final classification: -4 = noise; -3 = star + star; -2 = star + fuzz; -1 = star; 0 = galaxy + star merger; 1 = galaxy; 2 = galaxy + galaxy merger]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.JON" indexed="false">
+         <Name>JON</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Eyeball classification, value &gt; 0 only for galaxies brighter than about 18th mag: 0 = noise; 1 = S0; 2 = elliptical; 3 = spiral; 4 = irregular; 5 = undetermined galaxy; 6 = star; 7 = star + star merger; 8 = galaxy + star merger; 9 = galaxy + galaxy merger]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.ORIENT" indexed="false">
+         <Name>ORIENT</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Orientation measured in degrees clockwise from E to W: orient = 180/pi * atan(2*sxy/((sxx + syy)*(1 + e)-syy))]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.ECCENT" indexed="false">
+         <Name>ECCENT</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Eccentricity (e) e*200 = 200*(((sxx-syy)**2 + 4sxy**2)**0.5)/(sxx + syy)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.AREA" indexed="false">
+         <Name>AREA</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Isophotal area in pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.X_BJ" indexed="false">
+         <Name>X_BJ</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Plate x_bj in 8 micron pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.Y_BJ" indexed="false">
+         <Name>Y_BJ</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Plate y_bj in 8 micron pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.DX" indexed="false">
+         <Name>DX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distortion corrected difference (x_bj - x_R)*100]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.DY" indexed="false">
+         <Name>DY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distortion corrected difference (y_bj - y_R)*100]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.BJG" indexed="false">
+         <Name>BJG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Final bj magnitude without extinction correction]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.RMAG" indexed="false">
+         <Name>RMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched APM 'total' mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.PMAG" indexed="false">
+         <Name>PMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw APM profile integrated mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.FMAG" indexed="false">
+         <Name>FMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw APM 2&quot; profile integrated mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.SMAG" indexed="false">
+         <Name>SMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw stellar mag (from APMCAL)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.REDMAG" indexed="false">
+         <Name>REDMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Not used]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.IFIELD" indexed="false">
+         <Name>IFIELD</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UKST field]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.IGFIELD" indexed="false">
+         <Name>IGFIELD</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Galaxy number in UKST field]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.NAME" indexed="false">
+         <Name>NAME</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[2dFGRS assigned name; if either (i) BJSELOLD is fainter than 19.45, or (ii) the object could not be allocated to a fibre by the configuration algorithm, then NAME is blank]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.BJG_OLD" indexed="false">
+         <Name>BJG_OLD</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Original bj magnitude without extinction correction (prior to re-calibration to BJG)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.BJSELOLD" indexed="false">
+         <Name>BJSELOLD</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Original bj magnitude with extinction correction (prior to re-calibration to BJSEL); used to select survey sample]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.BJG_100" indexed="false">
+         <Name>BJG_100</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[100k release bj magnitude without extinction correction (prior to re-calibration to BJG)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_sgpSource.BJSEL_100" indexed="false">
+         <Name>BJSEL_100</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[100k release bj magnitude with extinction correction (prior to re-calibration to BJSEL)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="grs_ngpSource">
+      <Name>grs_ngpSource</Name>
+      <Description><![CDATA[ Contains the parameters provided for each source in the 2dFGRS NGP photometric catalogue]]></Description>
+      <Column ID="grs_ngpSource.SEQNUM" indexed="true">
+         <Name>SEQNUM</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Assigned sequence number to this object; determines the FITS filename (SEQNUM.fits)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.distance;pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[R.A. (B1950) in HH MM SS.SS]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Dec. (B1950) in DD MM SS.S]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.BJSEL" indexed="false">
+         <Name>BJSEL</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Final bj magnitude with extinction correction (i.e. with corrections for isophote, field-effects and plate-matching, then calibrated to total mags with saturation correction, and then extinction corrected)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.PROB" indexed="false">
+         <Name>PROB</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[psi classification parameter: for eyeballed galaxies: psi*1000 = (10000 + abs(jon) + psi*100); for eyeballed non-galaxies: psi*1000 = -(10000 + abs(jon) + psi*100)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.PARK" indexed="false">
+         <Name>PARK</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[k classification parameter = k / k_star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.PARMU" indexed="false">
+         <Name>PARMU</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[mu classification parameter = mu / mu_star]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.IGAL" indexed="false">
+         <Name>IGAL</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Final classification: -4 = noise; -3 = star + star; -2 = star + fuzz; -1 = star; 0 = galaxy + star merger; 1 = galaxy; 2 = galaxy + galaxy merger]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.JON" indexed="false">
+         <Name>JON</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Eyeball classification, value &gt; 0 only for galaxies brighter than about 18th mag: 0 = noise; 1 = S0; 2 = elliptical; 3 = spiral; 4 = irregular; 5 = undetermined galaxy; 6 = star; 7 = star + star merger; 8 = galaxy + star merger; 9 = galaxy + galaxy merger]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.ORIENT" indexed="false">
+         <Name>ORIENT</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Orientation measured in degrees clockwise from E to W: orient = 180/pi * atan(2*sxy/((sxx + syy)*(1 + e)-syy))]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.ECCENT" indexed="false">
+         <Name>ECCENT</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Eccentricity (e) e*200 = 200*(((sxx-syy)**2 + 4sxy**2)**0.5)/(sxx + syy)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.AREA" indexed="false">
+         <Name>AREA</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Isophotal area in pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.X_BJ" indexed="false">
+         <Name>X_BJ</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Plate x_bj in 8 micron pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.Y_BJ" indexed="false">
+         <Name>Y_BJ</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Plate y_bj in 8 micron pixels]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.DX" indexed="false">
+         <Name>DX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distortion corrected difference (x_bj - x_R)*100]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.DY" indexed="false">
+         <Name>DY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distortion corrected difference (y_bj - y_R)*100]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.BJG" indexed="false">
+         <Name>BJG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Final bj magnitude without extinction correction]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.RMAG" indexed="false">
+         <Name>RMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched APM 'total' mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.PMAG" indexed="false">
+         <Name>PMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw APM profile integrated mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.FMAG" indexed="false">
+         <Name>FMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw APM 2&quot; profile integrated mag]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.SMAG" indexed="false">
+         <Name>SMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Unmatched raw stellar mag (from APMCAL)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.REDMAG" indexed="false">
+         <Name>REDMAG</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Not used]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.IFIELD" indexed="false">
+         <Name>IFIELD</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UKST field]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.IGFIELD" indexed="false">
+         <Name>IGFIELD</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Galaxy number in UKST field]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.NAME" indexed="false">
+         <Name>NAME</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[2dFGRS assigned name; if either (i) BJSELOLD is fainter than 19.45, or (ii) the object could not be allocated to a fibre by the configuration algorithm, then NAME is blank]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.BJG_OLD" indexed="false">
+         <Name>BJG_OLD</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Original bj magnitude without extinction correction (prior to re-calibration to BJG)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.BJSELOLD" indexed="false">
+         <Name>BJSELOLD</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Original bj magnitude with extinction correction (prior to re-calibration to BJSEL); used to select survey sample]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.BJG_100" indexed="false">
+         <Name>BJG_100</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[100k release bj magnitude without extinction correction (prior to re-calibration to BJG)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="grs_ngpSource.BJSEL_100" indexed="false">
+         <Name>BJSEL_100</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[100k release bj magnitude with extinction correction (prior to re-calibration to BJSEL)]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+
