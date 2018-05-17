@@ -13641,7 +13641,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Welch-Stetson statistic between Y and J. This assumes colour does not vary much and helps remove variation due to a few poor detections]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat.param&ColourUCD&</UCD>
+         <UCD version="1+">stat.param;ColourUCD;</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vmcVariability.jksiWS" indexed="false">
@@ -13649,7 +13649,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Welch-Stetson statistic between J and Ks. This assumes colour does not vary much and helps remove variation due to a few poor detections]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat.param&ColourUCD&</UCD>
+         <UCD version="1+">stat.param;ColourUCD;</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vmcVariability.variableClass" indexed="false">

@@ -8398,62 +8398,6 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="atlasSourceXGDR1gaia_source">
-      <Name>atlasSourceXGDR1gaia_source</Name>
-      <Description><![CDATA[ Cross-neighbours between atlas and gaia_source]]></Description>
-      <Column ID="atlasSourceXGDR1gaia_source.masterObjID" indexed="true">
-         <Name>masterObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID in atlasSource (=sourceID)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="atlasSourceXGDR1gaia_source.slaveObjID" indexed="true">
-         <Name>slaveObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID of the neighbour in GAIADR1..gaia_source (=source_id)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="atlasSourceXGDR1gaia_source.distanceMins" indexed="false">
-         <Name>distanceMins</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Angular separation between neighbours]]></Description>
-         <Units>arcminutes</Units>
-         <UCD version="1+">pos.angDistance</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="atlasSourceXGDR1tgas_source">
-      <Name>atlasSourceXGDR1tgas_source</Name>
-      <Description><![CDATA[ Cross-neighbours between atlas and tgas_source]]></Description>
-      <Column ID="atlasSourceXGDR1tgas_source.masterObjID" indexed="true">
-         <Name>masterObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID in atlasSource (=sourceID)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="atlasSourceXGDR1tgas_source.slaveObjID" indexed="true">
-         <Name>slaveObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The unique ID of the neighbour in GAIADR1..tgas_source (=source_id)]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="atlasSourceXGDR1tgas_source.distanceMins" indexed="false">
-         <Name>distanceMins</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Angular separation between neighbours]]></Description>
-         <Units>arcminutes</Units>
-         <UCD version="1+">pos.angDistance</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
    <Table ID="atlasSourceXGR6PhotoObjAll">
       <Name>atlasSourceXGR6PhotoObjAll</Name>
       <Description><![CDATA[ Cross-neighbours between atlas and PhotoObjAll]]></Description>
