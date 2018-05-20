@@ -40,66 +40,6 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="BestTarget2Sector">
-      <Name>BestTarget2Sector</Name>
-      <Description><![CDATA[ Map PhotoObj which are potential targets to sector]]></Description>
-      <Column ID="BestTarget2Sector.objID" indexed="false">
-         <Name>objID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[ID of the best PhotoObj]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="BestTarget2Sector.regionID" indexed="false">
-         <Name>regionID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[ID of the sector]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="BestTarget2Sector.status" indexed="false">
-         <Name>status</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Status of the object in the survey]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="BestTarget2Sector.primTarget" indexed="false">
-         <Name>primTarget</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Bit mask of primary target categories the object was selected in.]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="BestTarget2Sector.secTarget" indexed="false">
-         <Name>secTarget</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Bit mask of secondary target categories the object was selected in.]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="BestTarget2Sector.petroMag_r" indexed="false">
-         <Name>petroMag_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Petrosian flux]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="BestTarget2Sector.extinction_r" indexed="false">
-         <Name>extinction_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Extinction in each filter]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phys.absorption.gal</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
    <Table ID="Chunk">
       <Name>Chunk</Name>
       <Description><![CDATA[ Contains basic data for a Chun]]></Description>
@@ -219,14 +159,6 @@
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="DBColumns.rank" indexed="false">
-         <Name>rank</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Optional position of column in table column display]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
    </Table>
    <Table ID="DBObjects">
       <Name>DBObjects</Name>
@@ -269,14 +201,6 @@
          <Description><![CDATA[Detailed description of contents]]></Description>
          <Units> </Units>
          <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="DBObjects.rank" indexed="false">
-         <Name>rank</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Optional position of column in table display]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -341,34 +265,6 @@
          <Description><![CDATA[Short description]]></Description>
          <Units> </Units>
          <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="Dependency">
-      <Name>Dependency</Name>
-      <Description><![CDATA[ Contains the detailed inventory of database object]]></Description>
-      <Column ID="Dependency.filename" indexed="false">
-         <Name>filename</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[The name of the sql file]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Dependency.parent" indexed="false">
-         <Name>parent</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Name of caller]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Dependency.child" indexed="false">
-         <Name>child</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Name of called function]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -4301,93 +4197,9 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="HalfSpace">
-      <Name>HalfSpace</Name>
-      <Description><![CDATA[ The contraints for boundaries of the the different region]]></Description>
-      <Column ID="HalfSpace.regionid" indexed="false">
-         <Name>regionid</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[pointer to RegionDefs]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="HalfSpace.convexid" indexed="false">
-         <Name>convexid</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[unique id for the convex]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="HalfSpace.x" indexed="false">
-         <Name>x</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[x component of normal]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="HalfSpace.y" indexed="false">
-         <Name>y</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[y component of normal]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="HalfSpace.z" indexed="false">
-         <Name>z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[z component of normal]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="HalfSpace.c" indexed="false">
-         <Name>c</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[offset from center along normal]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
    <Table ID="History">
       <Name>History</Name>
       <Description><![CDATA[ Contains the detailed history of schema change]]></Description>
-      <Column ID="History.id" indexed="false">
-         <Name>id</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[The unique key for entry]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="History.filename" indexed="false">
-         <Name>filename</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[The name of the sql file]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="History.date" indexed="false">
-         <Name>date</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Date of change]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="History.name" indexed="false">
-         <Name>name</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Name of person making the change]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="History.description" indexed="false">
          <Name>description</Name>
          <Datatype>string</Datatype>
@@ -4546,34 +4358,6 @@
          <Description><![CDATA[the group id, one of ('PHOTO'|'TAG'|'SPECTRO'|'META'|'TILES'|'FINISH')]]></Description>
          <Units> </Units>
          <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="Inventory">
-      <Name>Inventory</Name>
-      <Description><![CDATA[ Contains the detailed inventory of database object]]></Description>
-      <Column ID="Inventory.filename" indexed="false">
-         <Name>filename</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[The name of the sql file]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Inventory.name" indexed="false">
-         <Name>name</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Name of DBObject]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Inventory.type" indexed="false">
-         <Name>type</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Detailed description of changes]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -4784,62 +4568,6 @@
    <Table ID="Match">
       <Name>Match</Name>
       <Description><![CDATA[ records what objects in one run are re-observed in other runs]]></Description>
-      <Column ID="Match.objID1" indexed="false">
-         <Name>objID1</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique ID of first object (points to photoObjAll)]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.objID2" indexed="false">
-         <Name>objID2</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique ID of matching object]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.run1" indexed="false">
-         <Name>run1</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Run number of first object]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.run2" indexed="false">
-         <Name>run2</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Run number of second object]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.type1" indexed="false">
-         <Name>type1</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[Object1 type (star, galaxy,..) .]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.type2" indexed="false">
-         <Name>type2</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[Object2 type (star, galaxy,..) .]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.mode1" indexed="false">
-         <Name>mode1</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[Object1 mode (primary,..) .]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Match.mode2" indexed="false">
          <Name>mode2</Name>
          <Datatype>short</Datatype>
@@ -4853,22 +4581,6 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Distance between objects.]]></Description>
          <Units>arcminutes</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.miss" indexed="false">
-         <Name>miss</Name>
-         <Datatype>char</Datatype>
-         <Description><![CDATA[Color: &quot; &quot; OK; bad ones: &quot;G&quot; green, &quot;Y&quot; yellow, &quot;R&quot; red]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Match.matchHead" indexed="false">
-         <Name>matchHead</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[of canonical object for this bundle (points to photoObjAll and MatchHead)]]></Description>
-         <Units> </Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
@@ -7968,14 +7680,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="PhotoObjAll.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoObjAll.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -8012,46 +7716,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObjAll.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObjAll.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObjAll.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObjAll.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObjAll.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
@@ -9254,14 +8918,6 @@
          <Description><![CDATA[Link to the field this object is in]]></Description>
          <Units> </Units>
          <UCD version="1+">obs.field</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoTag.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="PhotoTag.size" indexed="false">
@@ -10770,538 +10426,6 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="QuasarCatalog">
-      <Name>QuasarCatalog</Name>
-      <Description><![CDATA[ The Quasar Catalog from Don Schneider et al]]></Description>
-      <Column ID="QuasarCatalog.SDSSName" indexed="false">
-         <Name>SDSSName</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[SDSS Object Name, hhmmss.ss+ddmmss.s (J2000; truncated coordinates), see http://www.sdss.org/DR3/coverage/IAU.html]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.RA" indexed="false">
-         <Name>RA</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[J2000 R.A.]]></Description>
-         <Units>deg</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.dec" indexed="false">
-         <Name>dec</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[J2000 declination]]></Description>
-         <Units>deg</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.z" indexed="false">
-         <Name>z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Redshift]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmag_u" indexed="false">
-         <Name>psfmag_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[PSF-fitting magnitude in each band from]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmagerr_u" indexed="false">
-         <Name>psfmagerr_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[&quot;BEST&quot; version of data (latest photometry]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmag_g" indexed="false">
-         <Name>psfmag_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[and final target selection version).]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmagerr_g" indexed="false">
-         <Name>psfmagerr_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[asinhmag: Lupton,Gunn &#38; Szalay 1999, AJ, 118, 1406]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmag_r" indexed="false">
-         <Name>psfmag_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[SDSS photometry is close to AB in g,r,i (to 0.01 mag)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmagerr_r" indexed="false">
-         <Name>psfmagerr_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[u_AB = u_SDSS - 0.04; z_AB = z_SDSS + 0.02]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmag_i" indexed="false">
-         <Name>psfmag_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[(with some uncertainty about the true z shift)]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmagerr_i" indexed="false">
-         <Name>psfmagerr_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[AB: Oke and Gunn 1983, ApJ, 266, 713,]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmag_z" indexed="false">
-         <Name>psfmag_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[see Flux Calibration in Algorithms Help page.]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.psfmagerr_z" indexed="false">
-         <Name>psfmagerr_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.A_u" indexed="false">
-         <Name>A_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Galactic absorption in u band, A_g/A_r/A_i/A_z = 0.736/0.534/0.405/0.287 * A_u]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.lgNH" indexed="false">
-         <Name>lgNH</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.FIRSTmag" indexed="false">
-         <Name>FIRSTmag</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[FIRST Peak flux density (AB mag) at 20 cm of FIRST catalog match within 2 arcsec, AB mag = -2.5 log_10(f_nu / 3631 Jy); 0 ==&gt; no detection, -1 ==&gt; not in FIRST survey area]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.FIRST_sn" indexed="false">
-         <Name>FIRST_sn</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.FIRST_sep" indexed="false">
-         <Name>FIRST_sep</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.FIRST_flux_at_opt" indexed="false">
-         <Name>FIRST_flux_at_opt</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[1 ==&gt; no FIRST source within 2 arcsec, but &gt; 3 sigma FIRST flux detection at optical position]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.FIRST_extmatch" indexed="false">
-         <Name>FIRST_extmatch</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[For source with either FIRSTMAG &gt; 0 or FIRST_flux_at_opt 1 ==&gt; FIRST catalog source within 2 arcsec - 30 arcsec]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.lg_RASS_rate" indexed="false">
-         <Name>lg_RASS_rate</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[log_10 BSC/FSC full band count rate; 0 ==&gt; no detection ROSAT All Sky Survey Bright and Faint source catalogs]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.RASS_sn" indexed="false">
-         <Name>RASS_sn</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.RASS_sep" indexed="false">
-         <Name>RASS_sep</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.TWOMASSmag_J" indexed="false">
-         <Name>TWOMASSmag_J</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[2MASS All-Sky Point Source Catalog 2003 March 25; Note that 2MASS magnitues are Vega-based, not AB]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.TWOMASSmagerr_J" indexed="false">
-         <Name>TWOMASSmagerr_J</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.TWOMASSmag_H" indexed="false">
-         <Name>TWOMASSmag_H</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.TWOMASSmagerr_H" indexed="false">
-         <Name>TWOMASSmagerr_H</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.TWOMASSmag_K" indexed="false">
-         <Name>TWOMASSmag_K</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.TWOMASSmagerr_K" indexed="false">
-         <Name>TWOMASSmagerr_K</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.TWOMASS_sep" indexed="false">
-         <Name>TWOMASS_sep</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.M_i" indexed="false">
-         <Name>M_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Uses Ho=70 Omega_M=0.300 Omega_L= 0.700 alpha_Q=-0.50]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.morphology" indexed="false">
-         <Name>morphology</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[0 = point source 1 = extended]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.scienceprimary" indexed="false">
-         <Name>scienceprimary</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Used by CAS to resolve repeat spectra (if available) of a given object. 0 only in special cases.]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.mode" indexed="false">
-         <Name>mode</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[1 for primary object, 2 for secondary, 3 for family]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.bestprimtarget" indexed="false">
-         <Name>bestprimtarget</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Target selection flags in &quot;BEST&quot; version of data]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.ts_b_qso" indexed="false">
-         <Name>ts_b_qso</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Individual flags expanded from bestprimtarget]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.ts_b_hiz" indexed="false">
-         <Name>ts_b_hiz</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.ts_b_FIRST" indexed="false">
-         <Name>ts_b_FIRST</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.ts_b_ROSAT" indexed="false">
-         <Name>ts_b_ROSAT</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.ts_b_serendip" indexed="false">
-         <Name>ts_b_serendip</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.ts_b_star" indexed="false">
-         <Name>ts_b_star</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.ts_b_gal" indexed="false">
-         <Name>ts_b_gal</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.run_best" indexed="false">
-         <Name>run_best</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[SDSS Imaging run number for &quot;BEST&quot; data]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.mjd_best" indexed="false">
-         <Name>mjd_best</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Modified Julian Date of BEST imaging observation]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.mjd_spec" indexed="false">
-         <Name>mjd_spec</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Modified Julian Date of spectroscopic observation]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.plate" indexed="false">
-         <Name>plate</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.fiberid" indexed="false">
-         <Name>fiberid</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.rerun_best" indexed="false">
-         <Name>rerun_best</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[SDSS Imaging rerun, camcol, field, object number]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.camcol_best" indexed="false">
-         <Name>camcol_best</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.field_best" indexed="false">
-         <Name>field_best</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.obj_best" indexed="false">
-         <Name>obj_best</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.tilingchunk" indexed="false">
-         <Name>tilingchunk</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Tiling chunk number]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.targprimtarget" indexed="false">
-         <Name>targprimtarget</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Target selection flags in &quot;TARGET&quot; version of data]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmag_u" indexed="false">
-         <Name>t_psfmag_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[PSF magnitudes and errors in &quot;TARGET&quot; version of data]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmagerr_u" indexed="false">
-         <Name>t_psfmagerr_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmag_g" indexed="false">
-         <Name>t_psfmag_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmagerr_g" indexed="false">
-         <Name>t_psfmagerr_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmag_r" indexed="false">
-         <Name>t_psfmag_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmagerr_r" indexed="false">
-         <Name>t_psfmagerr_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmag_i" indexed="false">
-         <Name>t_psfmag_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmagerr_i" indexed="false">
-         <Name>t_psfmagerr_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmag_z" indexed="false">
-         <Name>t_psfmag_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.t_psfmagerr_z" indexed="false">
-         <Name>t_psfmagerr_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.object_name" indexed="false">
-         <Name>object_name</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Object Name if previously published; &quot;SDSS&quot; if previously published SDSS discovery]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QuasarCatalog.specObjId" indexed="false">
-         <Name>specObjId</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique SDSS ID of corresponding object in SpecObjAll table]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
    <Table ID="QueryResults">
       <Name>QueryResults</Name>
       <Description><![CDATA[ Store the results of performance tests her]]></Description>
@@ -11973,14 +11097,6 @@
          <UCD version="1+">phys.angSize</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="Region.regionString" indexed="false">
-         <Name>regionString</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[the string representation of the region]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Region.sql" indexed="false">
          <Name>sql</Name>
          <Datatype>string</Datatype>
@@ -11993,274 +11109,6 @@
          <Name>xml</Name>
          <Datatype>string</Datatype>
          <Description><![CDATA[the precompiled XML description of region]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="Region2Box">
-      <Name>Region2Box</Name>
-      <Description><![CDATA[ Tracks the parentage which regions contribute to which boxe]]></Description>
-      <Column ID="Region2Box.regionType" indexed="false">
-         <Name>regionType</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[type of parent, (TIGEOM)]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Region2Box.id" indexed="false">
-         <Name>id</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[the object id of the other parent region]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Region2Box.boxType" indexed="false">
-         <Name>boxType</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[type of child (TILEBOX, SKYBOX)]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Region2Box.boxid" indexed="false">
-         <Name>boxid</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[regionid of child]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="RegionArcs">
-      <Name>RegionArcs</Name>
-      <Description><![CDATA[ Contains the arcs of a Region with their endpoint]]></Description>
-      <Column ID="RegionArcs.regionid" indexed="false">
-         <Name>regionid</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[unique region identifier]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.convexid" indexed="false">
-         <Name>convexid</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[convex identifier]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.patch" indexed="false">
-         <Name>patch</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[id of the patch]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.state" indexed="false">
-         <Name>state</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[state (3: bounding circle, 2:root, 1: hole)]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.draw" indexed="false">
-         <Name>draw</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[0:hide, 1: draw]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.ra1" indexed="false">
-         <Name>ra1</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ra of starting point of arc]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.dec1" indexed="false">
-         <Name>dec1</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[dec of starting point of arc]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.ra2" indexed="false">
-         <Name>ra2</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[ra of end point of arc]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.dec2" indexed="false">
-         <Name>dec2</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[dec of end point of arc]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.x" indexed="false">
-         <Name>x</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[x of constraint normal vector]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.y" indexed="false">
-         <Name>y</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[y of constraint normal vector]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.z" indexed="false">
-         <Name>z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[z of constraint normal vector]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.c" indexed="false">
-         <Name>c</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[offset of constraint]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.length" indexed="false">
-         <Name>length</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[length of arc in arcmins]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionArcs.arcid" indexed="false">
-         <Name>arcid</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[unique id of the arc]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="RegionConvex">
-      <Name>RegionConvex</Name>
-      <Description><![CDATA[ Defines the attributes of a given convex of a given regio]]></Description>
-      <Column ID="RegionConvex.regionID" indexed="false">
-         <Name>regionID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique Region ID]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.convexID" indexed="false">
-         <Name>convexID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique Convex ID]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.patch" indexed="false">
-         <Name>patch</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique patch number]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.type" indexed="false">
-         <Name>type</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[CAMCOL, RUN, STAVE, TILE, TILEBOX, SKYBOX, WEDGE, SECTOR...]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.radius" indexed="false">
-         <Name>radius</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[radius of bounding circle centered at ra, dec]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.ra" indexed="false">
-         <Name>ra</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[right ascension of observation]]></Description>
-         <Units>deg</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.dec" indexed="false">
-         <Name>dec</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[declination of observation]]></Description>
-         <Units>deg</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.x" indexed="false">
-         <Name>x</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[x of centerpoint Normal unit vector in J2000]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.y" indexed="false">
-         <Name>y</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[y of centerpoint Normal unit vector in J2000]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.z" indexed="false">
-         <Name>z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[z of centerpoint Normal unit vector in J2000]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.c" indexed="false">
-         <Name>c</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[offset of the equation of plane]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.htmid" indexed="false">
-         <Name>htmid</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[20 deep Hierarchical Triangular Mesh ID of centerpoint]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.convexString" indexed="false">
-         <Name>convexString</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[{x,y,z,c}+ representation of convex]]></Description>
          <Units> </Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
@@ -12429,22 +11277,6 @@
    <Table ID="RunQA">
       <Name>RunQA</Name>
       <Description><![CDATA[ The RunQA table provides information relevant to the average data quality  for the objects in each <em>field</em>]]></Description>
-      <Column ID="RunQA.fieldID" indexed="false">
-         <Name>fieldID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[64-bit unique fieldID identifier f(skyversion,firstfield?,run,rerun,camcol,field)]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.skyVersion" indexed="false">
-         <Name>skyVersion</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[0=target, 1=best, currently the runQA table in DR3 CAS only contains quality on the 'best' skyVersion]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="RunQA.first" indexed="false">
          <Name>first</Name>
          <Datatype>short</Datatype>
@@ -12485,14 +11317,6 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="RunQA.fieldQall" indexed="false">
-         <Name>fieldQall</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[Overall Field Quality measure: 0=BAD, 1=ACCEPTABLE, 2=GOOD, 3=EXCELLENT]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="RunQA.opdbq" indexed="false">
          <Name>opdbq</Name>
          <Datatype>short</Datatype>
@@ -12521,14 +11345,6 @@
          <Name>pcrmsq</Name>
          <Datatype>short</Datatype>
          <Description><![CDATA[Principal color analysis RMS spread in colors vs. nomial: 1=GOOD, 0=Spread too big]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.PSFwcondq" indexed="false">
-         <Name>PSFwcondq</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[PSF width quality: 1=GOOD, 0=BAD]]></Description>
          <Units> </Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
@@ -12562,118 +11378,6 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[average principal color y=-0.27r+0.8i-0.534z+0.059 for stars in field (perp. to stellar locus in r-i,i-z)]]></Description>
          <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsPC_s" indexed="false">
-         <Name>rmsPC_s</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms width of the s color]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsPC_w" indexed="false">
-         <Name>rmsPC_w</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms width of the w color]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsPC_x" indexed="false">
-         <Name>rmsPC_x</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms width of the x color]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsPC_y" indexed="false">
-         <Name>rmsPC_y</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms width of the y color]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.medAp7mPSF_u" indexed="false">
-         <Name>medAp7mPSF_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[median difference between the PSF mag and the 7-bin summed aperture mag in u band]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.medAp7mPSF_g" indexed="false">
-         <Name>medAp7mPSF_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[median difference between the PSF mag and the 7-bin summed aperture mag in g band]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.medAp7mPSF_r" indexed="false">
-         <Name>medAp7mPSF_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[median difference between the PSF mag and the 7-bin summed aperture mag in r band]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.medAp7mPSF_i" indexed="false">
-         <Name>medAp7mPSF_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[median difference between the PSF mag and the 7-bin summed aperture mag in i band]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.medAp7mPSF_z" indexed="false">
-         <Name>medAp7mPSF_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[median difference between the PSF mag and the 7-bin summed aperture mag in z band]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsAp7mPSF_u" indexed="false">
-         <Name>rmsAp7mPSF_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms scatter inthe difference between the PSF mag and the 7-bin aperture mag in u]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsAp7mPSF_g" indexed="false">
-         <Name>rmsAp7mPSF_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms scatter inthe difference between the PSF mag and the 7-bin aperture mag in g]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsAp7mPSF_r" indexed="false">
-         <Name>rmsAp7mPSF_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms scatter inthe difference between the PSF mag and the 7-bin aperture mag in r]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsAp7mPSF_i" indexed="false">
-         <Name>rmsAp7mPSF_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms scatter inthe difference between the PSF mag and the 7-bin aperture mag in i]]></Description>
-         <Units>mags</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RunQA.rmsAp7mPSF_z" indexed="false">
-         <Name>rmsAp7mPSF_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[rms scatter inthe difference between the PSF mag and the 7-bin aperture mag in z]]></Description>
-         <Units>mags</Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
@@ -12777,14 +11481,6 @@
    <Table ID="Sector">
       <Name>Sector</Name>
       <Description><![CDATA[ Stores the information about set of unique tile overlaps]]></Description>
-      <Column ID="Sector.type" indexed="false">
-         <Name>type</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[One of SECTOR, SECTORLET and WEDGE]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Sector.regionID" indexed="false">
          <Name>regionID</Name>
          <Datatype>long</Datatype>
@@ -12799,14 +11495,6 @@
          <Description><![CDATA[number of overlapping tiles]]></Description>
          <Units> </Units>
          <UCD version="1+">phys.atmol.number</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Sector.targetVersion" indexed="false">
-         <Name>targetVersion</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[the version of target selection ran over the sector -/K ID_VERSION]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="Sector.area" indexed="false">
@@ -12829,28 +11517,12 @@
          <UCD version="1+">meta.id;meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="Sector2Tile.type" indexed="false">
-         <Name>type</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[type of the sector]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Sector2Tile.tile" indexed="false">
          <Name>tile</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[tile number]]></Description>
          <Units> </Units>
          <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Sector2Tile.isMask" indexed="false">
-         <Name>isMask</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[flag that shows sign of tile (1 is negative)]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -13281,30 +11953,6 @@
    <Table ID="SiteDBs">
       <Name>SiteDBs</Name>
       <Description><![CDATA[ Table containing the list of DBs at this CAS site]]></Description>
-      <Column ID="SiteDBs.dbname" indexed="false">
-         <Name>dbname</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Name of the database]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="SiteDBs.description" indexed="false">
-         <Name>description</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Short one-line description]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="SiteDBs.active" indexed="false">
-         <Name>active</Name>
-         <Datatype>char</Datatype>
-         <Description><![CDATA[Is it active/visible?]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
    </Table>
    <Table ID="SiteDiagnostics">
       <Name>SiteDiagnostics</Name>
@@ -16051,254 +14699,6 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="USNOB">
-      <Name>USNOB</Name>
-      <Description><![CDATA[ SDSS objects that match to USNO-B objects have their match   parameters stored here]]></Description>
-      <Column ID="USNOB.raErr" indexed="false">
-         <Name>raErr</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[SDSS RA error]]></Description>
-         <Units>deg</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.decErr" indexed="false">
-         <Name>decErr</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[SDSS dec error]]></Description>
-         <Units>deg</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.raDecCorr" indexed="false">
-         <Name>raDecCorr</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[SDSS ra and dec correlation]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.delta" indexed="false">
-         <Name>delta</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Distance between this object and the nearest matching USNO-B object.]]></Description>
-         <Units>arcsec</Units>
-         <UCD version="1+">pos.angDistance</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.match" indexed="false">
-         <Name>match</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Number of objects in USNO-B which matched this object within a 1 arcsec radius. If negative, then the nearest matching USNO-B object itself matched more than 1 SDSS object.]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.pmL" indexed="false">
-         <Name>pmL</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Proper motion in galactic longitude.]]></Description>
-         <Units>mas/year</Units>
-         <UCD version="1+">pos.pm;arith.diff</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.pmB" indexed="false">
-         <Name>pmB</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Proper motion in galactic latitude.]]></Description>
-         <Units>mas/year</Units>
-         <UCD version="1+">pos.pm;arith.diff</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.pmRa" indexed="false">
-         <Name>pmRa</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Proper motion in right ascension.]]></Description>
-         <Units>mas/year</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.pmDec" indexed="false">
-         <Name>pmDec</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Proper motion in declination.]]></Description>
-         <Units>mas/year</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.pmRaErr" indexed="false">
-         <Name>pmRaErr</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in proper motion in right ascension.]]></Description>
-         <Units>mas/year</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.pmDecErr" indexed="false">
-         <Name>pmDecErr</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in proper motion in declination.]]></Description>
-         <Units>mas/year</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.sigRa" indexed="false">
-         <Name>sigRa</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[RMS residual for the proper motion fit in r.a.]]></Description>
-         <Units>mas</Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.sigDec" indexed="false">
-         <Name>sigDec</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[RMS residual for the proper motion fit in dec.]]></Description>
-         <Units>mas</Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.nFit" indexed="false">
-         <Name>nFit</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Number of detections used in the fit including the SDSS detection (thus, the number of plates the object was detected on in USNO-B plus one).]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.O" indexed="false">
-         <Name>O</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Recalibrated USNO-B O magnitude, recalibrated to SDSS g]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.E" indexed="false">
-         <Name>E</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Recalibrated USNO-B E magnitude, recalibrated to SDSS r]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.J" indexed="false">
-         <Name>J</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Recalibrated USNO-B J magnitude, recalibrated to SDSS g]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.F" indexed="false">
-         <Name>F</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Recalibrated USNO-B F magnitude, recalibrated to SDSS r]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.N" indexed="false">
-         <Name>N</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Recalibrated USNO-B N magnitude, recalibrated to SDSS i]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.I</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.dist20" indexed="false">
-         <Name>dist20</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Distance to the nearest neighbor with g &lt; 20]]></Description>
-         <Units>arcsec</Units>
-         <UCD version="1+">pos.angDistance</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.dist22" indexed="false">
-         <Name>dist22</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Distance to the nearest neighbor with g &lt; 22]]></Description>
-         <Units>arcsec</Units>
-         <UCD version="1+">pos.angDistance</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="USNOB.objid" indexed="false">
-         <Name>objid</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[unique id, points to photoObj]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="Versions">
-      <Name>Versions</Name>
-      <Description><![CDATA[ Tracks the versioning history of the databas]]></Description>
-      <Column ID="Versions.event" indexed="false">
-         <Name>event</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[The event that happened]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Versions.previous" indexed="false">
-         <Name>previous</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Version before the patch]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Versions.checksum" indexed="false">
-         <Name>checksum</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Checksum before the patch]]></Description>
-         <Units> </Units>
-         <UCD version="1+">phys.atmol.number</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Versions.version" indexed="false">
-         <Name>version</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Version after the patch]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Versions.description" indexed="false">
-         <Name>description</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Summary of changes]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Versions.text" indexed="false">
-         <Name>text</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Details of changes in HTML form]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Versions.who" indexed="false">
-         <Name>who</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Person(s) responsible]]></Description>
-         <Units> </Units>
-         <UCD version="1+">obs.observer</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Versions.when" indexed="false">
-         <Name>when</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[When it happened]]></Description>
-         <Units> </Units>
-         <UCD version="1+">time.epoch</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
    <Table ID="XCRedshift">
       <Name>XCRedshift</Name>
       <Description><![CDATA[ Table of Cross-Correlation Redshift]]></Description>
@@ -16496,66 +14896,6 @@
          <Description><![CDATA[true if obj is local, false if from the destination dataset]]></Description>
          <Units> </Units>
          <UCD version="1+">meta.code</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
-   <Table ID="Columns">
-      <Name>Columns</Name>
-      <Description><![CDATA[ Aliias the DBColumns table also as Columns, for legacy SkyQuer]]></Description>
-      <Column ID="Columns.tablename" indexed="false">
-         <Name>tablename</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[The name of the parent table]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Columns.name" indexed="false">
-         <Name>name</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[The name of column]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Columns.unit" indexed="false">
-         <Name>unit</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Optional description of units]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Columns.ucd" indexed="false">
-         <Name>ucd</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Optional UCD definition]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Columns.enum" indexed="false">
-         <Name>enum</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[Optional link to an enumerated table]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Columns.description" indexed="false">
-         <Name>description</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[One line description of column]]></Description>
-         <Units> </Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Columns.rank" indexed="false">
-         <Name>rank</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Optional position of column in table column display]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -21007,14 +19347,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="PhotoFamily.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoFamily.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -21051,46 +19383,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoFamily.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoFamily.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoFamily.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoFamily.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoFamily.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
@@ -24579,14 +22871,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="PhotoObj.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoObj.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -24623,46 +22907,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObj.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObj.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObj.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObj.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObj.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
@@ -28155,14 +26399,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="PhotoPrimary.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoPrimary.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -28199,46 +26435,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoPrimary.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoPrimary.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoPrimary.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoPrimary.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoPrimary.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
@@ -31727,14 +29923,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="PhotoSecondary.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoSecondary.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -31771,46 +29959,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoSecondary.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoSecondary.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoSecondary.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoSecondary.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoSecondary.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
@@ -36323,14 +34471,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="Galaxy.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Galaxy.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -36373,38 +34513,6 @@
       </Column>
       <Column ID="Galaxy.err_u" indexed="false">
          <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Galaxy.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Galaxy.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Galaxy.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Galaxy.err_z" indexed="false">
-         <Name>err_z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
@@ -39895,14 +38003,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="Sky.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Sky.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -39939,46 +38039,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Sky.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Sky.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Sky.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Sky.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Sky.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
@@ -43467,14 +41527,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="Star.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Star.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -43511,46 +41563,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Star.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Star.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Star.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Star.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Star.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
@@ -47039,14 +45051,6 @@
          <UCD version="1+">meta.id.parent</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="Unknown.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Unknown.u" indexed="false">
          <Name>u</Name>
          <Datatype>double</Datatype>
@@ -47083,46 +45087,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Unknown.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Unknown.err_g" indexed="false">
-         <Name>err_g</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Unknown.err_r" indexed="false">
-         <Name>err_r</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Unknown.err_i" indexed="false">
-         <Name>err_i</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Unknown.err_z" indexed="false">
-         <Name>err_z</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>

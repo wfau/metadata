@@ -24555,14 +24555,6 @@
          <UCD version="1+">obs.field</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StarTag.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="StarTag.size" indexed="false">
          <Name>size</Name>
          <Datatype>float</Datatype>
@@ -27055,14 +27047,6 @@
          <Name>objID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[The unique objId of the center object]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Neighbors.neighborObjID" indexed="false">
-         <Name>neighborObjID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[The objId of the neighbor]]></Description>
          <Units> </Units>
          <UCD version="1+">meta.id;meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
@@ -45127,14 +45111,6 @@
          <UCD version="1+">obs.field</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="GalaxyTag.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="GalaxyTag.size" indexed="false">
          <Name>size</Name>
          <Datatype>float</Datatype>
@@ -45560,14 +45536,6 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[SDSS Object Name, hhmmss.ss+ddmmss.s (J2000; truncated coordinates), see http://www.sdss.org/DR3/coverage/IAU.html]]></Description>
          <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="DR5QuasarCatalog.RA" indexed="false">
-         <Name>RA</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[J2000 R.A.]]></Description>
-         <Units>deg</Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
@@ -48021,14 +47989,6 @@
          <Description><![CDATA[Link to the field this object is in]]></Description>
          <Units> </Units>
          <UCD version="1+">obs.field</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoTag.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.dataset</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="PhotoTag.size" indexed="false">
@@ -55863,14 +55823,6 @@
    <Table ID="OrigPhotoObjAll">
       <Name>OrigPhotoObjAll</Name>
       <Description><![CDATA[ Contains the original photometry and astrometry from the PhotoObjAll table]]></Description>
-      <Column ID="OrigPhotoObjAll.objID" indexed="false">
-         <Name>objID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique SDSS identifier composed from [skyVersion,rerun,run,camcol,field,obj].]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="OrigPhotoObjAll.run" indexed="false">
          <Name>run</Name>
          <Datatype>int</Datatype>
@@ -55983,178 +55935,10 @@
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="OrigPhotoObjAll.psfMag_u" indexed="false">
-         <Name>psfMag_u</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.U</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMag_g" indexed="false">
-         <Name>psfMag_g</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.B</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMag_r" indexed="false">
-         <Name>psfMag_r</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMag_i" indexed="false">
-         <Name>psfMag_i</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.I</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMag_z" indexed="false">
-         <Name>psfMag_z</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.I</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMagErr_u" indexed="false">
-         <Name>psfMagErr_u</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMagErr_g" indexed="false">
-         <Name>psfMagErr_g</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMagErr_r" indexed="false">
-         <Name>psfMagErr_r</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMagErr_i" indexed="false">
-         <Name>psfMagErr_i</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.psfMagErr_z" indexed="false">
-         <Name>psfMagErr_z</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[PSF flux error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMag_u" indexed="false">
-         <Name>modelMag_u</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMag_g" indexed="false">
-         <Name>modelMag_g</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMag_r" indexed="false">
-         <Name>modelMag_r</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMag_i" indexed="false">
-         <Name>modelMag_i</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMag_z" indexed="false">
-         <Name>modelMag_z</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMagErr_u" indexed="false">
-         <Name>modelMagErr_u</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMagErr_g" indexed="false">
-         <Name>modelMagErr_g</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMagErr_r" indexed="false">
-         <Name>modelMagErr_r</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMagErr_i" indexed="false">
-         <Name>modelMagErr_i</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="OrigPhotoObjAll.modelMagErr_z" indexed="false">
-         <Name>modelMagErr_z</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[better of DeV/Exp magnitude fit error]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
    </Table>
    <Table ID="Photoz2">
       <Name>Photoz2</Name>
       <Description><![CDATA[ Alternate computation of photometrically estimated redshifts for objects  in the Galaxy view.<br]]></Description>
-      <Column ID="Photoz2.objID" indexed="false">
-         <Name>objID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[unique ID pointing to PhotoObjAll table]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Photoz2.photozcc2" indexed="false">
          <Name>photozcc2</Name>
          <Datatype>double</Datatype>
@@ -57185,38 +56969,6 @@
       </Column>
       <Column ID="sppLines.Bamask" indexed="false">
          <Name>Bamask</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="sppLines.l2C13C" indexed="false">
-         <Name>l2C13C</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Carbon 4737/36]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="sppLines.l2C13Ccont" indexed="false">
-         <Name>l2C13Ccont</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="sppLines.l2C13Cerr" indexed="false">
-         <Name>l2C13Cerr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[ ]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="sppLines.l2C13Cmask" indexed="false">
-         <Name>l2C13Cmask</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[ ]]></Description>
          <Units> </Units>

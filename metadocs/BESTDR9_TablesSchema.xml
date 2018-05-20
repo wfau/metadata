@@ -21502,22 +21502,6 @@
    <Table ID="PhotoPrimaryDR7">
       <Name>PhotoPrimaryDR7</Name>
       <Description><![CDATA[ Contains the spatial cross-match between DR8 primaries and DR7 primaries]]></Description>
-      <Column ID="PhotoPrimaryDR7.dr7objID" indexed="false">
-         <Name>dr7objID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique DR7 identifier composed from [skyVersion,rerun,run,camcol,field,obj].]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_MAIN</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoPrimaryDR7.dr8objID" indexed="false">
-         <Name>dr8objID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique DR8 identifier composed from [skyVersion,rerun,run,camcol,field,obj].]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_MAIN</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoPrimaryDR7.distance" indexed="false">
          <Name>distance</Name>
          <Datatype>double</Datatype>
@@ -22028,14 +22012,6 @@
          <Description><![CDATA[Link to the field this object is in]]></Description>
          <Units> </Units>
          <UCD version="1">ID_FIELD</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoPrimaryDR7.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_CATALOG</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="PhotoPrimaryDR7.size" indexed="false">
@@ -24726,14 +24702,6 @@
          <Name>objID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[The unique objId of the center object]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_CATALOG</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="neighbors.neighborObjID" indexed="false">
-         <Name>neighborObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[The objId of the neighbor]]></Description>
          <Units> </Units>
          <UCD version="1">ID_CATALOG</UCD>
          <ErrorColumn></ErrorColumn>
@@ -64844,22 +64812,6 @@
    <Table ID="PhotoObjDR7">
       <Name>PhotoObjDR7</Name>
       <Description><![CDATA[ Contains the spatial cross-match between DR8 photoobj and DR7 photoobj]]></Description>
-      <Column ID="PhotoObjDR7.dr7objID" indexed="false">
-         <Name>dr7objID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique DR7 identifier composed from [skyVersion,rerun,run,camcol,field,obj].]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_MAIN</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObjDR7.dr8objID" indexed="false">
-         <Name>dr8objID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Unique DR8 identifier composed from [skyVersion,rerun,run,camcol,field,obj].]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_MAIN</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoObjDR7.distance" indexed="false">
          <Name>distance</Name>
          <Datatype>double</Datatype>
@@ -65386,14 +65338,6 @@
          <Description><![CDATA[Link to the field this object is in]]></Description>
          <Units> </Units>
          <UCD version="1">ID_FIELD</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="PhotoObjDR7.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_CATALOG</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="PhotoObjDR7.size" indexed="false">

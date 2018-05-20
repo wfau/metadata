@@ -6015,14 +6015,6 @@
    <Table ID="Sector">
       <Name>Sector</Name>
       <Description><![CDATA[ Stores the information about set of unique tile overlaps]]></Description>
-      <Column ID="Sector.type" indexed="false">
-         <Name>type</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[One of SECTOR, SECTORLET and WEDGE]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Sector.regionID" indexed="false">
          <Name>regionID</Name>
          <Datatype>int</Datatype>
@@ -10235,14 +10227,6 @@
    <Table ID="PhotoAux">
       <Name>PhotoAux</Name>
       <Description><![CDATA[ The PhotoAuxAll parameters for the PhotoObj view]]></Description>
-      <Column ID="PhotoAux.objid" indexed="false">
-         <Name>objid</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique SDSS identifier composed from [skyVersion,rerun,run,camcol,field,obj].]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoAux.mode" indexed="false">
          <Name>mode</Name>
          <Datatype>int</Datatype>
@@ -15511,22 +15495,6 @@
          <Name>regionString</Name>
          <Datatype>string</Datatype>
          <Description><![CDATA[the string representation of the region]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Region.sql" indexed="false">
-         <Name>sql</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[the precompiled string predicate of region]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Region.xml" indexed="false">
-         <Name>xml</Name>
-         <Datatype>string</Datatype>
-         <Description><![CDATA[the precompiled XML description of region]]></Description>
          <Units> </Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
@@ -27651,14 +27619,6 @@
    <Table ID="PhotoAuxAll">
       <Name>PhotoAuxAll</Name>
       <Description><![CDATA[ The extra columns that didn't make it into the PhotoObjAll table]]></Description>
-      <Column ID="PhotoAuxAll.objid" indexed="false">
-         <Name>objid</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique SDSS identifier composed from [skyVersion,rerun,run,camcol,field,obj].]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoAuxAll.mode" indexed="false">
          <Name>mode</Name>
          <Datatype>int</Datatype>
@@ -33327,22 +33287,6 @@
    <Table ID="RegionConvex">
       <Name>RegionConvex</Name>
       <Description><![CDATA[ Defines the attributes of a given convex of a given regio]]></Description>
-      <Column ID="RegionConvex.regionID" indexed="false">
-         <Name>regionID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique Region ID]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="RegionConvex.convexID" indexed="false">
-         <Name>convexID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique Convex ID]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="RegionConvex.patch" indexed="false">
          <Name>patch</Name>
          <Datatype>int</Datatype>

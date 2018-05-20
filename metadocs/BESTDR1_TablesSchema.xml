@@ -2223,22 +2223,6 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="QsoCatalogAll.bestObjID" indexed="false">
-         <Name>bestObjID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique SDSS identifier in Best DB composed from [rerun,run,camcol,field,obj], or 0 if there is none.]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QsoCatalogAll.targetObjID" indexed="false">
-         <Name>targetObjID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Unique SDSS identifier in Target DB composed from [rerun,run,camcol,field,obj], or 0 if there is none.]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="QsoCatalogAll.zone" indexed="false">
          <Name>zone</Name>
          <Datatype>int</Datatype>
@@ -2260,38 +2244,6 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[J2000 right declination (r')]]></Description>
          <Units>degrees in J2000</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QsoCatalogAll.Confidence" indexed="false">
-         <Name>Confidence</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[a number between 0..1. If this has a SpecObj, then it is the QSO Zconf (see table definition). If no specobj, it is .3*(BestObjFlagedQso+TargetObjFlagedQso)]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QsoCatalogAll.SpecObjQso" indexed="false">
-         <Name>SpecObjQso</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Flag (0 / 1): 1 means this SpecObj is SpecClass QSO or HiX_QSO]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QsoCatalogAll.BestObjQso" indexed="false">
-         <Name>BestObjQso</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Flag (0 / 1): 1 PhotoObjID was flagged as a QSO in the target flags.]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="QsoCatalogAll.TargetObjQso" indexed="false">
-         <Name>TargetObjQso</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[Flag (0 / 1): 1 PhotoObjID was flagged as a QSO in the target flags.]]></Description>
-         <Units> </Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
