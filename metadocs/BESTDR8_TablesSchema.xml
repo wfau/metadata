@@ -59528,14 +59528,6 @@
          <UCD version="1">ID_FIELD</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="PhotoObjDR7.specObjID" indexed="false">
-         <Name>specObjID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[Pointer to the spectrum of object, if exists, else 0]]></Description>
-         <Units> </Units>
-         <UCD version="1">ID_CATALOG</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="PhotoObjDR7.size" indexed="false">
          <Name>size</Name>
          <Datatype>float</Datatype>

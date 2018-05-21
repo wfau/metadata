@@ -44275,14 +44275,6 @@
          <UCD version="1">NUMBER</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="RequiredFilters.isSynoptic" indexed="false">
-         <Name>isSynoptic</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[is the band observed multiple times for variability measurements (0 FALSE, 1 TRUE)]]></Description>
-         <Units> </Units>
-         <UCD version="1"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
    </Table>
    <Table ID="gpsSourceXtwomass_psc">
       <Name>gpsSourceXtwomass_psc</Name>
