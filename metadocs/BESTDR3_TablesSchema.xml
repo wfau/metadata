@@ -4568,14 +4568,6 @@
    <Table ID="Match">
       <Name>Match</Name>
       <Description><![CDATA[ records what objects in one run are re-observed in other runs]]></Description>
-      <Column ID="Match.mode2" indexed="false">
-         <Name>mode2</Name>
-         <Datatype>short</Datatype>
-         <Description><![CDATA[Object1 mode (primary,..) .]]></Description>
-         <Units> </Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="Match.distance" indexed="false">
          <Name>distance</Name>
          <Datatype>double</Datatype>
@@ -34507,14 +34499,6 @@
          <Name>z</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Shorthand alias for modelMag]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">??</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Galaxy.err_u" indexed="false">
-         <Name>err_u</Name>
-         <Datatype>double</Datatype>
-         <Description><![CDATA[Error in modelMag alias]]></Description>
          <Units>mag</Units>
          <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
