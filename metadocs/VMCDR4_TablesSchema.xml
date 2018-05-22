@@ -12660,22 +12660,6 @@
          <UCD version="1+">meta.code.class</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="vmcCepheidVariables.iMeanMag" indexed="false">
-         <Name>iMeanMag</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Mean I band magnitude {catalogue TType keyword: Imag}]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;stat.mean;em.opt.I</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vmcCepheidVariables.vMeanMag" indexed="false">
-         <Name>vMeanMag</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Mean V band magnitude {catalogue TType keyword: Vmag}]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phot.mag;stat.mean;em.opt.V</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
       <Column ID="vmcCepheidVariables.period" indexed="false">
          <Name>period</Name>
          <Datatype>float</Datatype>
@@ -12802,14 +12786,6 @@
          <Description><![CDATA[Error in Peak-to-Peak amplitude in Ks band {catalogue TType keyword: e_A(Ks)}]]></Description>
          <Units>mag</Units>
          <UCD version="1+">stat.error;src.var.amplitude;em.IR.K</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="vmcCepheidVariables.evi" indexed="false">
-         <Name>evi</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[The dust extinction value E(V-I) {catalogue TType keyword: E(V-I)}]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phys.absorption.gal</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vmcCepheidVariables.notes" indexed="false">

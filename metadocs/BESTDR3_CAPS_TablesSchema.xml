@@ -2,7 +2,7 @@
 <DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <Catalog ID="bestdr3">
-   <Name>BestDR3</Name>
+   <Name>BESTDR3</Name>
    <Description><![CDATA[This is an AstroGrid Dataset Access installation of the Sloan Digital Sky Survey Data Release 3 (SDSS DR3) hosted by the Wide Field Astronomy Unit (WFAU), University of Edinburgh. WFAU would like to thank John Hopkins University and the University of Chicago for permission to host the data.]]></Description>
    <Table ID="Algorithm">
       <Name>Algorithm</Name>
