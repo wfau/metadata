@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>WISExSCOSPZ</Name>
+   <Description></Description>
+
+   <Table ID="wiseScosPhotoz">
+      <Name>wiseScosPhotoz</Name>
+      <Description><![CDATA[ WISE x SuperCOSMOS Photometric Redshift catalogue]]></Description>
+      <Column ID="wiseScosPhotoz.wiseX" indexed="false">
+         <Name>wiseX</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.wiseID" indexed="true">
+         <Name>wiseID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[WISE ID for the AllWISE source catalogue (allwise_sc.cntr)]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.scosID" indexed="false">
+         <Name>scosID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.x;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.z;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.htmID" indexed="true">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.ra" indexed="true">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.dec" indexed="true">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.l" indexed="true">
+         <Name>l</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.galactic.lon</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.b" indexed="true">
+         <Name>b</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.galactic.lat</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.ebv" indexed="false">
+         <Name>ebv</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>mag</Units>
+         <UCD version="1">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.w1mCorr" indexed="true">
+         <Name>w1mCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.w2mCorr" indexed="true">
+         <Name>w2mCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>mag</Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.bCalCorr" indexed="true">
+         <Name>bCalCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.rCalCorr" indexed="true">
+         <Name>rCalCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.zPhoto_ANN" indexed="true">
+         <Name>zPhoto_ANN</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.zPhoto_Corr" indexed="true">
+         <Name>zPhoto_Corr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotoz.fromAllSky" indexed="false">
+         <Name>fromAllSky</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="wiseScosPhotozRejects">
+      <Name>wiseScosPhotozRejects</Name>
+      <Description><![CDATA[ WISE x SuperCOSMOS Photometric Redshift catalogue]]></Description>
+      <Column ID="wiseScosPhotozRejects.wiseX" indexed="false">
+         <Name>wiseX</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.wiseID" indexed="true">
+         <Name>wiseID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[WISE ID for the AllWISE source catalogue (allwise_sc.cntr)]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.scosID" indexed="false">
+         <Name>scosID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.x;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.z;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.l" indexed="false">
+         <Name>l</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.galactic.lon</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.b" indexed="false">
+         <Name>b</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.galactic.lat</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.ebv" indexed="false">
+         <Name>ebv</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>mag</Units>
+         <UCD version="1">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.w1mCorr" indexed="false">
+         <Name>w1mCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.w2mCorr" indexed="false">
+         <Name>w2mCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>mag</Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.bCalCorr" indexed="false">
+         <Name>bCalCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.rCalCorr" indexed="false">
+         <Name>rCalCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.zPhoto_ANN" indexed="false">
+         <Name>zPhoto_ANN</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.zPhoto_Corr" indexed="false">
+         <Name>zPhoto_Corr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosPhotozRejects.fromAllSky" indexed="false">
+         <Name>fromAllSky</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="wiseScosSvm">
+      <Name>wiseScosSvm</Name>
+      <Description><![CDATA[ WISE x SuperCOSMOS Photometric Redshift catalogue and classifications]]></Description>
+      <Column ID="wiseScosSvm.wiseX" indexed="false">
+         <Name>wiseX</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.wiseID" indexed="true">
+         <Name>wiseID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[WISE ID for the AllWISE source catalogue (allwise_sc.cntr)]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.scosID" indexed="false">
+         <Name>scosID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.x;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos.cartesian.z;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.ebv" indexed="false">
+         <Name>ebv</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>mag</Units>
+         <UCD version="1">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.w1mCorr" indexed="false">
+         <Name>w1mCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.w1mCorrErr" indexed="false">
+         <Name>w1mCorrErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.w2mCorr" indexed="false">
+         <Name>w2mCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units>mag</Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.w2mCorrErr" indexed="false">
+         <Name>w2mCorrErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.bCalCorr" indexed="false">
+         <Name>bCalCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.bCalCorrErr" indexed="false">
+         <Name>bCalCorrErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.rCalCorr" indexed="false">
+         <Name>rCalCorr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.rCalCorrErr" indexed="false">
+         <Name>rCalCorrErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.zPhoto_ANN" indexed="false">
+         <Name>zPhoto_ANN</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.zPhoto_Corr" indexed="false">
+         <Name>zPhoto_Corr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.fromAllSky" indexed="false">
+         <Name>fromAllSky</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.SVMClass" indexed="false">
+         <Name>SVMClass</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.probGal" indexed="false">
+         <Name>probGal</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.probStar" indexed="false">
+         <Name>probStar</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.probQso" indexed="false">
+         <Name>probQso</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[ ]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wiseScosSvm.inPhotozCat" indexed="false">
+         <Name>inPhotozCat</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Is the object in the photo-z only catalogue 0 NO/1 YES]]></Description>
+         <Units> </Units>
+         <UCD version="1"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
+
