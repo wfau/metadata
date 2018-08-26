@@ -36,6 +36,38 @@
             {
                 "jdbcid" : "avASDeA0",
                 "jdbcschema" : "dbo",
+                "jdbccatalog": "ATLASv20131127",
+                "adqlschema": "ATLASv20131127",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/ATLASv20131127_TablesSchema.xml",
+                    "catalog": "ATLASv20131127"
+                }
+            },   
+
+            {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
+                "jdbccatalog": "ATLASv20160425",
+                "adqlschema": "ATLASv20160425",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/ATLASv20160425_TablesSchema.xml",
+                    "catalog": "ATLASv20160425"
+                }
+            },   
+
+            {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
+                "jdbccatalog": "ATLASv20180209",
+                "adqlschema": "ATLASv20180209",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/ATLASv20180209_TablesSchema.xml",
+                    "catalog": "ATLASv20180209"
+                }
+            },   
+            {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
                 "jdbccatalog": "TWOMASS",
                 "adqlschema": "2MASS",
                 "metadata": {
