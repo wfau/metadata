@@ -2,7 +2,7 @@
 <DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <Catalog>
-   <Name>VPHASv20170222</Name>
+   <Name>VPHASDR3</Name>
    <Description></Description>
 
    <Table ID="ArchiveCurationHistory">
@@ -4739,7 +4739,7 @@
       <Column ID="Programme.doNotUseOBinfo" indexed="false">
          <Name>doNotUseOBinfo</Name>
          <Datatype>int</Datatype>
-         <Description><![CDATA[Don't use OB info in wide field multi-epoch frame assignment.]]></Description>
+         <Description><![CDATA[Don't use OB info in wide field multi-epoch frame assignment. 0 Use OB info obsID, 1 Do not use OB info, 2 Use OB info from obsContainerID]]></Description>
          <Units> </Units>
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
@@ -5574,6 +5574,642 @@
          <Description><![CDATA[K band magnitude error]]></Description>
          <Units>mag</Units>
          <UCD version="1+">stat.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="vphasAstrometricInfo">
+      <Name>vphasAstrometricInfo</Name>
+      <Description><![CDATA[ This table is mainly for use by software to link up epochs efficientl]]></Description>
+      <Column ID="vphasAstrometricInfo.multiframeID" indexed="true">
+         <Name>multiframeID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[the UID of the relevant multiframe]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;obs.field</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.extNum" indexed="true">
+         <Name>extNum</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[the extension number of this frame]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.number</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.cuEventID" indexed="false">
+         <Name>cuEventID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of curation event giving rise to this record]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.bib</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos1NormX" indexed="false">
+         <Name>detedgeinnerpos1NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEINNERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos1NormY" indexed="false">
+         <Name>detedgeinnerpos1NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEINNERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos1NormZ" indexed="false">
+         <Name>detedgeinnerpos1NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEINNERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos1Const" indexed="false">
+         <Name>detedgeinnerpos1Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEINNERPOS1 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos2NormX" indexed="false">
+         <Name>detedgeinnerpos2NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEINNERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos2NormY" indexed="false">
+         <Name>detedgeinnerpos2NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEINNERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos2NormZ" indexed="false">
+         <Name>detedgeinnerpos2NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEINNERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos2Const" indexed="false">
+         <Name>detedgeinnerpos2Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEINNERPOS2 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos3NormX" indexed="false">
+         <Name>detedgeinnerpos3NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEINNERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos3NormY" indexed="false">
+         <Name>detedgeinnerpos3NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEINNERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos3NormZ" indexed="false">
+         <Name>detedgeinnerpos3NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEINNERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos3Const" indexed="false">
+         <Name>detedgeinnerpos3Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEINNERPOS3 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos4NormX" indexed="false">
+         <Name>detedgeinnerpos4NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEINNERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos4NormY" indexed="false">
+         <Name>detedgeinnerpos4NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEINNERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos4NormZ" indexed="false">
+         <Name>detedgeinnerpos4NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEINNERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeinnerpos4Const" indexed="false">
+         <Name>detedgeinnerpos4Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEINNERPOS4 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos1NormX" indexed="false">
+         <Name>detedgeouterpos1NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEOUTERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos1NormY" indexed="false">
+         <Name>detedgeouterpos1NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEOUTERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos1NormZ" indexed="false">
+         <Name>detedgeouterpos1NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEOUTERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos1Const" indexed="false">
+         <Name>detedgeouterpos1Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEOUTERPOS1 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos2NormX" indexed="false">
+         <Name>detedgeouterpos2NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEOUTERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos2NormY" indexed="false">
+         <Name>detedgeouterpos2NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEOUTERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos2NormZ" indexed="false">
+         <Name>detedgeouterpos2NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEOUTERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos2Const" indexed="false">
+         <Name>detedgeouterpos2Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEOUTERPOS2 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos3NormX" indexed="false">
+         <Name>detedgeouterpos3NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEOUTERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos3NormY" indexed="false">
+         <Name>detedgeouterpos3NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEOUTERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos3NormZ" indexed="false">
+         <Name>detedgeouterpos3NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEOUTERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos3Const" indexed="false">
+         <Name>detedgeouterpos3Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEOUTERPOS3 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos4NormX" indexed="false">
+         <Name>detedgeouterpos4NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DETEDGEOUTERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos4NormY" indexed="false">
+         <Name>detedgeouterpos4NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DETEDGEOUTERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos4NormZ" indexed="false">
+         <Name>detedgeouterpos4NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DETEDGEOUTERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.detedgeouterpos4Const" indexed="false">
+         <Name>detedgeouterpos4Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DETEDGEOUTERPOS4 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos1NormX" indexed="false">
+         <Name>dithedgeinnerpos1NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEINNERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos1NormY" indexed="false">
+         <Name>dithedgeinnerpos1NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEINNERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos1NormZ" indexed="false">
+         <Name>dithedgeinnerpos1NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEINNERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos1Const" indexed="false">
+         <Name>dithedgeinnerpos1Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEINNERPOS1 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos2NormX" indexed="false">
+         <Name>dithedgeinnerpos2NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEINNERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos2NormY" indexed="false">
+         <Name>dithedgeinnerpos2NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEINNERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos2NormZ" indexed="false">
+         <Name>dithedgeinnerpos2NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEINNERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos2Const" indexed="false">
+         <Name>dithedgeinnerpos2Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEINNERPOS2 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos3NormX" indexed="false">
+         <Name>dithedgeinnerpos3NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEINNERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos3NormY" indexed="false">
+         <Name>dithedgeinnerpos3NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEINNERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos3NormZ" indexed="false">
+         <Name>dithedgeinnerpos3NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEINNERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos3Const" indexed="false">
+         <Name>dithedgeinnerpos3Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEINNERPOS3 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos4NormX" indexed="false">
+         <Name>dithedgeinnerpos4NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEINNERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos4NormY" indexed="false">
+         <Name>dithedgeinnerpos4NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEINNERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos4NormZ" indexed="false">
+         <Name>dithedgeinnerpos4NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEINNERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeinnerpos4Const" indexed="false">
+         <Name>dithedgeinnerpos4Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEINNERPOS4 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos1NormX" indexed="false">
+         <Name>dithedgeouterpos1NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEOUTERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos1NormY" indexed="false">
+         <Name>dithedgeouterpos1NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEOUTERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos1NormZ" indexed="false">
+         <Name>dithedgeouterpos1NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEOUTERPOS1 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos1Const" indexed="false">
+         <Name>dithedgeouterpos1Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEOUTERPOS1 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos2NormX" indexed="false">
+         <Name>dithedgeouterpos2NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEOUTERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos2NormY" indexed="false">
+         <Name>dithedgeouterpos2NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEOUTERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos2NormZ" indexed="false">
+         <Name>dithedgeouterpos2NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEOUTERPOS2 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos2Const" indexed="false">
+         <Name>dithedgeouterpos2Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEOUTERPOS2 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos3NormX" indexed="false">
+         <Name>dithedgeouterpos3NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEOUTERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos3NormY" indexed="false">
+         <Name>dithedgeouterpos3NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEOUTERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos3NormZ" indexed="false">
+         <Name>dithedgeouterpos3NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEOUTERPOS3 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos3Const" indexed="false">
+         <Name>dithedgeouterpos3Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEOUTERPOS3 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos4NormX" indexed="false">
+         <Name>dithedgeouterpos4NormX</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector X-coordinate of the halfspace describing the DITHEDGEOUTERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos4NormY" indexed="false">
+         <Name>dithedgeouterpos4NormY</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Y-coordinate of the halfspace describing the DITHEDGEOUTERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos4NormZ" indexed="false">
+         <Name>dithedgeouterpos4NormZ</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian unit normal vector Z-coordinate of the halfspace describing the DITHEDGEOUTERPOS4 detector boundary (see Budavari et al. 2010,)]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.dithedgeouterpos4Const" indexed="false">
+         <Name>dithedgeouterpos4Const</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Offset of halfspace along the unit normal vector describing the DITHEDGEOUTERPOS4 detector boundary. If the detector boundary is straight, with no distortion this is zero.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.param</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.xifitrms" indexed="false">
+         <Name>xifitrms</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[RMS errors in fit for xi]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.xnfitrms" indexed="false">
+         <Name>xnfitrms</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[RMS errors in fit for xn]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.xizp" indexed="false">
+         <Name>xizp</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Zeropoint offset in xi]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">arith.zp</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.siga" indexed="false">
+         <Name>siga</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Error on coefficient a]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.fit;stat.stdev</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.xnzp" indexed="false">
+         <Name>xnzp</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Zeropoint offset in xn]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">arith.zp</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.sigd" indexed="false">
+         <Name>sigd</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Error on coefficient d]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.fit;stat.stdev</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.xisc" indexed="false">
+         <Name>xisc</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Scale factor in xi]]></Description>
+         <Units> </Units>
+         <UCD version="1+">instr.scale</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.xnsc" indexed="false">
+         <Name>xnsc</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Scale factor in xn]]></Description>
+         <Units> </Units>
+         <UCD version="1+">instr.scale</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.orient" indexed="false">
+         <Name>orient</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Orientation of axes]]></Description>
+         <Units>radians</Units>
+         <UCD version="1+">pos.posAng</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.nonperp" indexed="false">
+         <Name>nonperp</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Non-perpendicularity of axes]]></Description>
+         <Units>radians</Units>
+         <UCD version="1+">pos.posAng</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.chi2s" indexed="false">
+         <Name>chi2s</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Reduced chi-squared of fit]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.fit.chi2</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="vphasAstrometricInfo.isComplete" indexed="false">
+         <Name>isComplete</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Level of completeness: 0 redo both parts 1; halfspace calculation complete; 2 Astrometric correction complete; 3 All complete]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.code.qual</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -8169,7 +8805,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[the UID of the relevant R_1 multiframe]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;obs.field</UCD>
+         <UCD version="1+">meta.id;obs.field;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.r_1eNum" indexed="false">
@@ -8177,7 +8813,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[the extension number of this R_1 frame]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.number</UCD>
+         <UCD version="1+">meta.number;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.newR_1frame" indexed="false">
@@ -8185,7 +8821,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[new/old flag (1/0) of this detector image]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.listProcR_1" indexed="false">
@@ -8193,7 +8829,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[Frame has been list processed (0=no; 1=yes)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.r_2mfID" indexed="false">
@@ -8201,7 +8837,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[the UID of the relevant R_2 multiframe]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;obs.field</UCD>
+         <UCD version="1+">meta.id;obs.field;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.r_2eNum" indexed="false">
@@ -8209,7 +8845,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[the extension number of this R_2 frame]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.number</UCD>
+         <UCD version="1+">meta.number;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.newR_2frame" indexed="false">
@@ -8217,7 +8853,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[new/old flag (1/0) of this detector image]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.listProcR_2" indexed="false">
@@ -8225,7 +8861,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[Frame has been list processed (0=no; 1=yes)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.imfID" indexed="false">
@@ -8265,7 +8901,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[the UID of the relevant Havphas multiframe]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.id;obs.field;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">meta.id;obs.field;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.havphaseNum" indexed="false">
@@ -8273,7 +8909,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[the extension number of this Havphas frame]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.number;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">meta.number;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.newHavphasframe" indexed="false">
@@ -8281,7 +8917,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[new/old flag (1/0) of this detector image]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">meta.code;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.listProcHavphas" indexed="false">
@@ -8289,7 +8925,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[Frame has been list processed (0=no; 1=yes)]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">meta.code;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasMergeLog.mergeSwVersion" indexed="false">
@@ -8525,7 +9161,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source colour G-R_1 (using aperMag3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.B</UCD>
+         <UCD version="1+">phot.color;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.gmr_1PntErr" indexed="false">
@@ -8533,7 +9169,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on point source colour G-R_1]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.B</UCD>
+         <UCD version="1+">stat.error;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.gmr_2Pnt" indexed="true">
@@ -8541,7 +9177,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source colour G-R_2 (using aperMag3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.B</UCD>
+         <UCD version="1+">phot.color;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.gmr_2PntErr" indexed="false">
@@ -8549,7 +9185,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on point source colour G-R_2]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.B</UCD>
+         <UCD version="1+">stat.error;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1miPnt" indexed="true">
@@ -8557,7 +9193,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source colour R_1-I (using aperMag3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.I</UCD>
+         <UCD version="1+">phot.color;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1miPntErr" indexed="false">
@@ -8565,7 +9201,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on point source colour R_1-I]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.I</UCD>
+         <UCD version="1+">stat.error;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2miPnt" indexed="true">
@@ -8573,7 +9209,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source colour R_2-I (using aperMag3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.I</UCD>
+         <UCD version="1+">phot.color;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2miPntErr" indexed="false">
@@ -8581,7 +9217,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on point source colour R_2-I]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.I</UCD>
+         <UCD version="1+">stat.error;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.umgExt" indexed="false">
@@ -8605,7 +9241,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source colour G-R_1 (using aperMagNoAperCorr3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.B</UCD>
+         <UCD version="1+">phot.color;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.gmr_1ExtErr" indexed="false">
@@ -8613,7 +9249,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on extended source colour G-R_1]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.B</UCD>
+         <UCD version="1+">stat.error;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.gmr_2Ext" indexed="false">
@@ -8621,7 +9257,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source colour G-R_2 (using aperMagNoAperCorr3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.B</UCD>
+         <UCD version="1+">phot.color;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.gmr_2ExtErr" indexed="false">
@@ -8629,7 +9265,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on extended source colour G-R_2]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.B</UCD>
+         <UCD version="1+">stat.error;em.opt.B;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1miExt" indexed="false">
@@ -8637,7 +9273,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source colour R_1-I (using aperMagNoAperCorr3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.I</UCD>
+         <UCD version="1+">phot.color;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1miExtErr" indexed="false">
@@ -8645,7 +9281,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on extended source colour R_1-I]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.I</UCD>
+         <UCD version="1+">stat.error;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2miExt" indexed="false">
@@ -8653,7 +9289,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source colour R_2-I (using aperMagNoAperCorr3)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.color;em.opt.I</UCD>
+         <UCD version="1+">phot.color;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2miExtErr" indexed="false">
@@ -8661,7 +9297,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on extended source colour R_2-I]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;em.opt.I</UCD>
+         <UCD version="1+">stat.error;em.opt.R;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.mergedClassStat" indexed="false">
@@ -8717,7 +9353,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[The mean Modified Julian Day of each detection]]></Description>
          <Units>day</Units>
-         <UCD version="1+">time.epoch</UCD>
+         <UCD version="1+">time.epoch;em.opt.U</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.uPetroMag" indexed="true">
@@ -8933,7 +9569,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[The mean Modified Julian Day of each detection]]></Description>
          <Units>day</Units>
-         <UCD version="1+">time.epoch</UCD>
+         <UCD version="1+">time.epoch;em.opt.B</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.gPetroMag" indexed="true">
@@ -9149,7 +9785,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[The mean Modified Julian Day of each detection]]></Description>
          <Units>day</Units>
-         <UCD version="1+">time.epoch</UCD>
+         <UCD version="1+">time.epoch;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1PetroMag" indexed="true">
@@ -9157,7 +9793,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_1 mag (Petrosian)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1PetroMagErr" indexed="false">
@@ -9165,7 +9801,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in extended source R_1 mag (Petrosian)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1PsfMag" indexed="false">
@@ -9173,7 +9809,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source profile-fitted R_1 mag]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1PsfMagErr" indexed="false">
@@ -9181,7 +9817,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point source profile-fitted R_1 mag]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1SerMag2D" indexed="false">
@@ -9189,7 +9825,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_1 mag (profile-fitted)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1SerMag2DErr" indexed="false">
@@ -9197,7 +9833,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in extended source R_1 mag (profile-fitted)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMag3" indexed="true">
@@ -9205,7 +9841,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Default point source R_1 aperture corrected mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMag3Err" indexed="false">
@@ -9213,7 +9849,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in default point/extended source R_1 mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMag4" indexed="false">
@@ -9221,7 +9857,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source R_1 aperture corrected mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMag4Err" indexed="false">
@@ -9229,7 +9865,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point/extended source R_1 mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMag6" indexed="false">
@@ -9237,7 +9873,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source R_1 aperture corrected mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMag6Err" indexed="false">
@@ -9245,7 +9881,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point/extended source R_1 mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMagNoAperCorr3" indexed="true">
@@ -9253,7 +9889,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Default extended source R_1 aperture mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMagNoAperCorr4" indexed="false">
@@ -9261,7 +9897,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_1 aperture mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AperMagNoAperCorr6" indexed="false">
@@ -9269,7 +9905,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_1 aperture mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1Gausig" indexed="false">
@@ -9277,7 +9913,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[RMS of axes of ellipse fit in R_1]]></Description>
          <Units>pixels</Units>
-         <UCD version="1+">src.morph.param</UCD>
+         <UCD version="1+">src.morph.param;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1Ell" indexed="false">
@@ -9285,7 +9921,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[1-b/a, where a/b=semi-major/minor axes in R_1]]></Description>
          <Units> </Units>
-         <UCD version="1+">src.ellipticity</UCD>
+         <UCD version="1+">src.ellipticity;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1PA" indexed="false">
@@ -9293,7 +9929,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[ellipse fit celestial orientation in R_1]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1+">pos.posAng</UCD>
+         <UCD version="1+">pos.posAng;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1ErrBits" indexed="false">
@@ -9301,7 +9937,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[processing warning/error bitwise flags in R_1]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1AverageConf" indexed="false">
@@ -9309,7 +9945,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[average confidence in 2 arcsec diameter default aperture (aper3) R_1]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat.likelihood</UCD>
+         <UCD version="1+">stat.likelihood;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1Class" indexed="false">
@@ -9317,7 +9953,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[discrete image classification flag in R_1]]></Description>
          <Units> </Units>
-         <UCD version="1+">src.class</UCD>
+         <UCD version="1+">src.class;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1ClassStat" indexed="false">
@@ -9325,7 +9961,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[N(0,1) stellarness-of-profile statistic in R_1]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat</UCD>
+         <UCD version="1+">stat;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1ppErrBits" indexed="false">
@@ -9333,7 +9969,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[additional WFAU post-processing error bits in R_1]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1SeqNum" indexed="false">
@@ -9341,7 +9977,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[the running number of the R_1 detection]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.number</UCD>
+         <UCD version="1+">meta.number;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1Xi" indexed="false">
@@ -9349,7 +9985,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Offset of R_1 detection from master position (+east/-west)]]></Description>
          <Units>arcsec</Units>
-         <UCD version="1+">pos.eq.ra;arith.diff</UCD>
+         <UCD version="1+">pos.eq.ra;arith.diff;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_1Eta" indexed="false">
@@ -9357,7 +9993,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Offset of R_1 detection from master position (+north/-south)]]></Description>
          <Units>arcsec</Units>
-         <UCD version="1+">pos.eq.dec;arith.diff</UCD>
+         <UCD version="1+">pos.eq.dec;arith.diff;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2Mjd" indexed="false">
@@ -9365,7 +10001,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[The mean Modified Julian Day of each detection]]></Description>
          <Units>day</Units>
-         <UCD version="1+">time.epoch</UCD>
+         <UCD version="1+">time.epoch;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2PetroMag" indexed="true">
@@ -9373,7 +10009,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_2 mag (Petrosian)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2PetroMagErr" indexed="false">
@@ -9381,7 +10017,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in extended source R_2 mag (Petrosian)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2PsfMag" indexed="false">
@@ -9389,7 +10025,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source profile-fitted R_2 mag]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2PsfMagErr" indexed="false">
@@ -9397,7 +10033,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point source profile-fitted R_2 mag]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2SerMag2D" indexed="false">
@@ -9405,7 +10041,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_2 mag (profile-fitted)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2SerMag2DErr" indexed="false">
@@ -9413,7 +10049,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in extended source R_2 mag (profile-fitted)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMag3" indexed="true">
@@ -9421,7 +10057,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Default point source R_2 aperture corrected mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMag3Err" indexed="false">
@@ -9429,7 +10065,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in default point/extended source R_2 mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMag4" indexed="false">
@@ -9437,7 +10073,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source R_2 aperture corrected mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMag4Err" indexed="false">
@@ -9445,7 +10081,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point/extended source R_2 mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMag6" indexed="false">
@@ -9453,7 +10089,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source R_2 aperture corrected mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMag6Err" indexed="false">
@@ -9461,7 +10097,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point/extended source R_2 mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMagNoAperCorr3" indexed="true">
@@ -9469,7 +10105,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Default extended source R_2 aperture mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMagNoAperCorr4" indexed="false">
@@ -9477,7 +10113,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_2 aperture mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AperMagNoAperCorr6" indexed="false">
@@ -9485,7 +10121,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source R_2 aperture mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag</UCD>
+         <UCD version="1+">phot.mag;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2Gausig" indexed="false">
@@ -9493,7 +10129,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[RMS of axes of ellipse fit in R_2]]></Description>
          <Units>pixels</Units>
-         <UCD version="1+">src.morph.param</UCD>
+         <UCD version="1+">src.morph.param;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2Ell" indexed="false">
@@ -9501,7 +10137,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[1-b/a, where a/b=semi-major/minor axes in R_2]]></Description>
          <Units> </Units>
-         <UCD version="1+">src.ellipticity</UCD>
+         <UCD version="1+">src.ellipticity;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2PA" indexed="false">
@@ -9509,7 +10145,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[ellipse fit celestial orientation in R_2]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1+">pos.posAng</UCD>
+         <UCD version="1+">pos.posAng;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2ErrBits" indexed="false">
@@ -9517,7 +10153,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[processing warning/error bitwise flags in R_2]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2AverageConf" indexed="false">
@@ -9525,7 +10161,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[average confidence in 2 arcsec diameter default aperture (aper3) R_2]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat.likelihood</UCD>
+         <UCD version="1+">stat.likelihood;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2Class" indexed="false">
@@ -9533,7 +10169,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[discrete image classification flag in R_2]]></Description>
          <Units> </Units>
-         <UCD version="1+">src.class</UCD>
+         <UCD version="1+">src.class;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2ClassStat" indexed="false">
@@ -9541,7 +10177,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[N(0,1) stellarness-of-profile statistic in R_2]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat</UCD>
+         <UCD version="1+">stat;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2ppErrBits" indexed="false">
@@ -9549,7 +10185,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[additional WFAU post-processing error bits in R_2]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code</UCD>
+         <UCD version="1+">meta.code;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2SeqNum" indexed="false">
@@ -9557,7 +10193,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[the running number of the R_2 detection]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.number</UCD>
+         <UCD version="1+">meta.number;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2Xi" indexed="false">
@@ -9565,7 +10201,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Offset of R_2 detection from master position (+east/-west)]]></Description>
          <Units>arcsec</Units>
-         <UCD version="1+">pos.eq.ra;arith.diff</UCD>
+         <UCD version="1+">pos.eq.ra;arith.diff;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.r_2Eta" indexed="false">
@@ -9573,7 +10209,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Offset of R_2 detection from master position (+north/-south)]]></Description>
          <Units>arcsec</Units>
-         <UCD version="1+">pos.eq.dec;arith.diff</UCD>
+         <UCD version="1+">pos.eq.dec;arith.diff;em.opt.R</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.iMjd" indexed="false">
@@ -9581,7 +10217,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[The mean Modified Julian Day of each detection]]></Description>
          <Units>day</Units>
-         <UCD version="1+">time.epoch</UCD>
+         <UCD version="1+">time.epoch;em.opt.I</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.iPetroMag" indexed="true">
@@ -9797,7 +10433,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[The mean Modified Julian Day of each detection]]></Description>
          <Units>day</Units>
-         <UCD version="1+">time.epoch</UCD>
+         <UCD version="1+">time.epoch;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasPetroMag" indexed="true">
@@ -9805,7 +10441,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source Havphas mag (Petrosian)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasPetroMagErr" indexed="false">
@@ -9813,7 +10449,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in extended source Havphas mag (Petrosian)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasPsfMag" indexed="false">
@@ -9821,7 +10457,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source profile-fitted Havphas mag]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasPsfMagErr" indexed="false">
@@ -9829,7 +10465,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point source profile-fitted Havphas mag]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasSerMag2D" indexed="false">
@@ -9837,7 +10473,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source Havphas mag (profile-fitted)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasSerMag2DErr" indexed="false">
@@ -9845,7 +10481,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in extended source Havphas mag (profile-fitted)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMag3" indexed="true">
@@ -9853,7 +10489,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Default point source Havphas aperture corrected mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMag3Err" indexed="false">
@@ -9861,7 +10497,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in default point/extended source Havphas mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMag4" indexed="false">
@@ -9869,7 +10505,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source Havphas aperture corrected mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMag4Err" indexed="false">
@@ -9877,7 +10513,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point/extended source Havphas mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMag6" indexed="false">
@@ -9885,7 +10521,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Point source Havphas aperture corrected mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMag6Err" indexed="false">
@@ -9893,7 +10529,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in point/extended source Havphas mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">stat.error;phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat.error;phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMagNoAperCorr3" indexed="true">
@@ -9901,7 +10537,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Default extended source Havphas aperture mag (2.0 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMagNoAperCorr4" indexed="false">
@@ -9909,7 +10545,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source Havphas aperture mag (2.8 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAperMagNoAperCorr6" indexed="false">
@@ -9917,7 +10553,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Extended source Havphas aperture mag (5.7 arcsec aperture diameter)]]></Description>
          <Units>mag</Units>
-         <UCD version="1+">phot.mag;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">phot.mag;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasGausig" indexed="false">
@@ -9925,7 +10561,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[RMS of axes of ellipse fit in Havphas]]></Description>
          <Units>pixels</Units>
-         <UCD version="1+">src.morph.param;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">src.morph.param;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasEll" indexed="false">
@@ -9933,7 +10569,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[1-b/a, where a/b=semi-major/minor axes in Havphas]]></Description>
          <Units> </Units>
-         <UCD version="1+">src.ellipticity;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">src.ellipticity;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasPA" indexed="false">
@@ -9941,7 +10577,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[ellipse fit celestial orientation in Havphas]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1+">pos.posAng;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">pos.posAng;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasErrBits" indexed="false">
@@ -9949,7 +10585,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[processing warning/error bitwise flags in Havphas]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">meta.code;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasAverageConf" indexed="false">
@@ -9957,7 +10593,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[average confidence in 2 arcsec diameter default aperture (aper3) Havphas]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat.likelihood;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat.likelihood;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasClass" indexed="false">
@@ -9965,7 +10601,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[discrete image classification flag in Havphas]]></Description>
          <Units> </Units>
-         <UCD version="1+">src.class;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">src.class;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasClassStat" indexed="false">
@@ -9973,7 +10609,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[N(0,1) stellarness-of-profile statistic in Havphas]]></Description>
          <Units> </Units>
-         <UCD version="1+">stat;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">stat;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasppErrBits" indexed="false">
@@ -9981,7 +10617,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[additional WFAU post-processing error bits in Havphas]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.code;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">meta.code;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasSeqNum" indexed="false">
@@ -9989,7 +10625,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[the running number of the Havphas detection]]></Description>
          <Units> </Units>
-         <UCD version="1+">meta.number;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">meta.number;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasXi" indexed="false">
@@ -9997,7 +10633,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Offset of Havphas detection from master position (+east/-west)]]></Description>
          <Units>arcsec</Units>
-         <UCD version="1+">pos.eq.ra;arith.diff;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">pos.eq.ra;arith.diff;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vphasSource.havphasEta" indexed="false">
@@ -10005,7 +10641,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Offset of Havphas detection from master position (+north/-south)]]></Description>
          <Units>arcsec</Units>
-         <UCD version="1+">pos.eq.dec;arith.diff;em.opt.R;em.line.Halpha</UCD>
+         <UCD version="1+">pos.eq.dec;arith.diff;em.line.Halpha</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
