@@ -122,7 +122,48 @@
                     "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/DENIS_TablesSchema.xml",
                     "catalog": "DENIS"
                 }
-            } 
+            },
+            {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
+                "jdbccatalog": "VPHASDR3",
+                "adqlschema": "VPHASDR3",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/VPHASDR3_TablesSchema.xml",
+                    "catalog": "VPHASDR3"
+                }
+            },
+            {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
+                "jdbccatalog": "VVVDR4",
+                "adqlschema": "VVVDR4",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/VVVDR4_TablesSchema.xml",
+                    "catalog": "VVVDR4"
+                }
+            },
+            {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
+                "jdbccatalog": "BestDR7",
+                "adqlschema": "SDSSDR7",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/BESTDR7_TablesSchema.xml",
+                    "catalog": "BestDR7"
+                }
+            },
+            {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
+                "jdbccatalog": "BestDR9",
+                "adqlschema": "SDSSDR9",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/BESTDR9_TablesSchema.xml",
+                    "catalog": "BestDR9"
+                }
+            }
+ 
              
         ]
 	   
