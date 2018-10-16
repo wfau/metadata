@@ -262,7 +262,18 @@
 	                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/WISE_TablesSchema.xml",
 	                    "catalog": "WISE"
 	                }
+                },
+                {
+                        "jdbcid" : "avASDeA0",
+                        "jdbcschema" : "dbo",
+                        "jdbccatalog": "WFCAMCAL08B",
+                        "adqlschema": "WFCAMCAL08B",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/stvoutsin/metadata/master/metadocs/WFCAMCAL08B_TablesSchema.xml",
+                            "catalog": "WFCAMCAL08B"
+                        }
                 }
+
       
              
         ]
