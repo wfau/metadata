@@ -11945,6 +11945,14 @@
    <Table ID="SiteDBs">
       <Name>SiteDBs</Name>
       <Description><![CDATA[ Table containing the list of DBs at this CAS site]]></Description>
+      <Column ID="SiteDBs.dbName" indexed="false">
+         <Name>dbName</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[dbName]]></Description>
+         <Units> </Units>
+         <UCD version="1+">??</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
    </Table>
    <Table ID="SiteDiagnostics">
       <Name>SiteDiagnostics</Name>
