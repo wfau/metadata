@@ -119,7 +119,7 @@
 	                "jdbccatalog": "BESTDR3",
 	                "adqlschema": "SDSSDR3",
 	                "metadata": {
-	                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/BESTDR3_TablesSchema.xml",
+	                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/BESTDR3_CAPS_TablesSchema.xml",
 	                    "catalog": "BESTDR3"
 	                }
                 }, 
