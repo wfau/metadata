@@ -33,6 +33,16 @@
                     "catalog": "ATLASDR3"
                 }
             },   
+	    {
+                "jdbcid" : "avASDeA0",
+                "jdbcschema" : "dbo",
+                "jdbccatalog": "ATLASDR4",
+                "adqlschema": "ATLASDR4",
+                "metadata": {
+                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/ATLASDR4_TablesSchema.xml",
+                    "catalog": "ATLASDR4"
+                }
+            },   
             {
                 "jdbcid" : "avASDeA0",
                 "jdbcschema" : "dbo",
