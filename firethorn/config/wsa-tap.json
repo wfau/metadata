@@ -104,6 +104,16 @@
 	                }
                 }, 
                 {
+                        "jdbcid" : "avASDeA0",
+                        "jdbcschema" : "dbo",
+                        "jdbccatalog": "UKIDSSDR11PLUS",
+                        "adqlschema": "UKIDSSDR11PLUS",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/UKIDSSDR11PLUS_TablesSchema.xml",
+                            "catalog": "UKIDSSDR11PLUS"
+                        }
+                }, 
+                {
 	                "jdbcid" : "avASDeA0",
 	                "jdbcschema" : "dbo",
 	                "jdbccatalog": "BestDR1",
