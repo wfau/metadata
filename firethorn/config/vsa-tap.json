@@ -315,6 +315,16 @@
 	                }
                 }, 
                 {
+                        "jdbcid" : "avASDeA0",
+                        "jdbcschema" : "dbo",
+                        "jdbccatalog": "EXTINCT",
+                        "adqlschema": "EXTINCT",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/EXTINCT_TablesSchema.xml",
+                            "catalog": "EXTINCT"
+                        }
+                }, 
+                {
 	                "jdbcid" : "avASDeA0",
 	                "jdbcschema" : "dbo",
 	                "jdbccatalog": "TWOMASS",
