@@ -2,7 +2,7 @@
 <DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <Catalog>
-   <Name>EXTINCT</Name>
+   <Name>extinct</Name>
    <Description></Description>
 
    <Table ID="FilterExtinctionCoefficients">
@@ -13,7 +13,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[UID of filter]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id;meta.main</UCD>
+         <UCD version="1+">meta.id;meta.main</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="FilterExtinctionCoefficients.telescope" indexed="false">
@@ -21,7 +21,7 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[Name of the telescope / instrument]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id</UCD>
+         <UCD version="1+">meta.id</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="FilterExtinctionCoefficients.shortName" indexed="false">
@@ -29,7 +29,7 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[Short name of the filter]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id</UCD>
+         <UCD version="1+">meta.id</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="FilterExtinctionCoefficients.description" indexed="false">
@@ -37,7 +37,7 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[a concise description of the filter]]></Description>
          <Units> </Units>
-         <UCD version="1">NOTE</UCD>
+         <UCD version="1+">meta.note</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="FilterExtinctionCoefficients.cutOn" indexed="false">
@@ -45,7 +45,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[The 50% cut-on wavelength of the filter]]></Description>
          <Units>microns</Units>
-         <UCD version="1">??</UCD>
+         <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="FilterExtinctionCoefficients.cutOff" indexed="false">
@@ -53,47 +53,15 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[The 50% cut-off wavelength of the filter]]></Description>
          <Units>microns</Units>
-         <UCD version="1">??</UCD>
+         <UCD version="1+">??</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="FilterExtinctionCoefficients.aEJKsNish" indexed="false">
-         <Name>aEJKsNish</Name>
+      <Column ID="FilterExtinctionCoefficients.aEBVSclaf" indexed="false">
+         <Name>aEBVSclaf</Name>
          <Datatype>float</Datatype>
-         <Description><![CDATA[The constant to multiply the E(J-Ks) value by to get the extinction in the Nishiyama et al. (2009) system.]]></Description>
+         <Description><![CDATA[The constant to multiply the E(B-V) value by to get the extinction in the Schlafly et al. (2016) system.]]></Description>
          <Units> </Units>
-         <UCD version="1"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="FilterExtinctionCoefficients.aEHKsNish" indexed="false">
-         <Name>aEHKsNish</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[The constant to multiply the E(H-Ks) value by to get the extinction in the Nishiyama et al. (2009) system.]]></Description>
-         <Units> </Units>
-         <UCD version="1"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="FilterExtinctionCoefficients.aEJKsCard" indexed="false">
-         <Name>aEJKsCard</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[The constant to multiply the E(J-Ks) value by to get the extinction in the Cardelli et al. (1989) system.]]></Description>
-         <Units> </Units>
-         <UCD version="1"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="FilterExtinctionCoefficients.aEHKsCard" indexed="false">
-         <Name>aEHKsCard</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[The constant to multiply the E(H-Ks) value by to get the extinction in the Cardelli et al. (1989) system.]]></Description>
-         <Units> </Units>
-         <UCD version="1"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="FilterExtinctionCoefficients.aEBVCard" indexed="false">
-         <Name>aEBVCard</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[The constant to multiply the E(B-V) value by to get the extinction in the Cardelli et al. (1989) system.]]></Description>
-         <Units> </Units>
-         <UCD version="1"></UCD>
+         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -105,7 +73,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[UID of the map]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id;meta.main</UCD>
+         <UCD version="1+">meta.id;meta.main</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.mapName" indexed="false">
@@ -113,7 +81,7 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[Name of map]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id</UCD>
+         <UCD version="1+">meta.id</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.description" indexed="false">
@@ -121,7 +89,7 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[Description of map.]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.bib</UCD>
+         <UCD version="1+">meta.bib</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.minGalLong" indexed="false">
@@ -129,7 +97,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Minimum Galactic Longitude]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">stat.min;pos.galactic.lon</UCD>
+         <UCD version="1+">stat.min;pos.galactic.lon</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.maxGalLong" indexed="false">
@@ -137,7 +105,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Maximum Galactic Longitude]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">stat.max;pos.galactic.lon</UCD>
+         <UCD version="1+">stat.max;pos.galactic.lon</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.minGalLat" indexed="false">
@@ -145,7 +113,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Minimum Galactic Latitude]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">stat.min;pos.galactic.lat</UCD>
+         <UCD version="1+">stat.min;pos.galactic.lat</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.maxGalLat" indexed="false">
@@ -153,7 +121,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Maximum Galactic Latitude]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">stat.max;pos.galactic.lat</UCD>
+         <UCD version="1+">stat.max;pos.galactic.lat</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.tableNames" indexed="false">
@@ -161,7 +129,7 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[Names of tables containing extinction map data: pixel map, 3d extinction val table]]></Description>
          <Units> </Units>
-         <UCD version="1"></UCD>
+         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.reference" indexed="false">
@@ -169,23 +137,23 @@
          <Datatype>string</Datatype>
          <Description><![CDATA[Reference of paper which describes the map.]]></Description>
          <Units> </Units>
-         <UCD version="1"></UCD>
+         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.pixSizeAng" indexed="false">
          <Name>pixSizeAng</Name>
          <Datatype>float</Datatype>
-         <Description><![CDATA[Angular resolution of extinction map]]></Description>
+         <Description><![CDATA[Max Angular resolution of extinction map]]></Description>
          <Units>Arcminutes</Units>
-         <UCD version="1"></UCD>
+         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="ThreeDimExtinctionMaps.pixSizeRad" indexed="false">
          <Name>pixSizeRad</Name>
          <Datatype>float</Datatype>
-         <Description><![CDATA[Radial resolution of extinction map]]></Description>
+         <Description><![CDATA[Max Radial resolution of extinction map]]></Description>
          <Units>kpc</Units>
-         <UCD version="1"></UCD>
+         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -197,7 +165,7 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[UID of the 3D spatial position]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id;meta.main</UCD>
+         <UCD version="1+">meta.id;meta.main</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulge3DExtinctVals.pixelID" indexed="false">
@@ -205,7 +173,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[UID of the pixel]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id</UCD>
+         <UCD version="1+">meta.id</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulge3DExtinctVals.r" indexed="false">
@@ -213,7 +181,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Distance to map pixel]]></Description>
          <Units>kpc</Units>
-         <UCD version="1"></UCD>
+         <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulge3DExtinctVals.eJKs" indexed="false">
@@ -221,7 +189,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[E(J-Ks) calculated from the stellar population model at distance r]]></Description>
          <Units>mag</Units>
-         <UCD version="1">phys.absorption.gal</UCD>
+         <UCD version="1+">phys.absorption.gal</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulge3DExtinctVals.eJKsErr" indexed="false">
@@ -229,7 +197,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on E(J-Ks) calculated from the stellar population model at distance r]]></Description>
          <Units>mag</Units>
-         <UCD version="1">star.error</UCD>
+         <UCD version="1+">star.error</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulge3DExtinctVals.eHKs" indexed="false">
@@ -237,7 +205,7 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[E(H-Ks) calculated from the stellar population model at distance r]]></Description>
          <Units>mag</Units>
-         <UCD version="1">phys.absorption.gal</UCD>
+         <UCD version="1+">phys.absorption.gal</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulge3DExtinctVals.eHKsErr" indexed="false">
@@ -245,7 +213,315 @@
          <Datatype>float</Datatype>
          <Description><![CDATA[Error on E(H-Ks) calculated from the stellar population model at distance r]]></Description>
          <Units>mag</Units>
-         <UCD version="1">star.error</UCD>
+         <UCD version="1+">star.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="Gaia3DExtinctVals">
+      <Name>Gaia3DExtinctVals</Name>
+      <Description><![CDATA[ Contains the extinction values of the Gaia, 2Mass and APOGEE-DR14 3]]></Description>
+      <Column ID="Gaia3DExtinctVals.extID" indexed="true">
+         <Name>extID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[UID of the 3D spatial position]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Gaia3DExtinctVals.pixelID" indexed="false">
+         <Name>pixelID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Gaia3DExtinctVals.r" indexed="false">
+         <Name>r</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distance to map pixel]]></Description>
+         <Units>kpc</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Gaia3DExtinctVals.rErr" indexed="false">
+         <Name>rErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Uncertainty in distance]]></Description>
+         <Units>kpc</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Gaia3DExtinctVals.eBVReddening" indexed="false">
+         <Name>eBVReddening</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[E(B-V) calculated from distance using isochrones and extinction from photometry and atmospheric parameters at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Gaia3DExtinctVals.eBVErrUp" indexed="false">
+         <Name>eBVErrUp</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Positive error on E(B-V) at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">star.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Gaia3DExtinctVals.eBVErrDown" indexed="false">
+         <Name>eBVErrDown</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Negative error on E(B-V) at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">star.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="panSTARRS1ExtMapCoords">
+      <Name>panSTARRS1ExtMapCoords</Name>
+      <Description><![CDATA[ Contains details of the 2D pixel positions and scales of the panSTARRS 1 3D Galactic extinction Ma]]></Description>
+      <Column ID="panSTARRS1ExtMapCoords.pixelID" indexed="true">
+         <Name>pixelID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the 2D pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.mapID" indexed="false">
+         <Name>mapID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the map]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.l" indexed="false">
+         <Name>l</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic longitude of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.galactic.lon</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.b" indexed="false">
+         <Name>b</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic latitude of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.galactic.lat</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Right Ascension of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Declination of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.resolution" indexed="false">
+         <Name>resolution</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Resolution of pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.angResolution</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.maxDist" indexed="false">
+         <Name>maxDist</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum reliable distance moduli for pixel]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.minDist" indexed="false">
+         <Name>minDist</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Minimum reliable distance moduli for pixel]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.didConverge" indexed="false">
+         <Name>didConverge</Name>
+         <Datatype>boolean</Datatype>
+         <Description><![CDATA[Did the line of sight reddening curve converge (MCMC non convergence): 1-Yes,0-No.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS1ExtMapCoords.healpixID" indexed="false">
+         <Name>healpixID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Equal Area iso-Latitude Pixelization (HEALpix) index, for celestial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="GaiaExtMapCoords">
+      <Name>GaiaExtMapCoords</Name>
+      <Description><![CDATA[ Contains details of the 2D pixel positions and scales of the Gaia, 2Mass and APOGEE-DR14 3]]></Description>
+      <Column ID="GaiaExtMapCoords.pixelID" indexed="true">
+         <Name>pixelID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the 2D pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.mapID" indexed="false">
+         <Name>mapID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[UID of the map]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.l" indexed="false">
+         <Name>l</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic longitude of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.galactic.lon</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.b" indexed="false">
+         <Name>b</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic latitude of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.galactic.lat</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Right Ascension of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Declination of pixel]]></Description>
+         <Units>Degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Unit vector of spherical co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.z;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.resolution" indexed="false">
+         <Name>resolution</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Resolution of pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.angResolution</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.maxDist" indexed="false">
+         <Name>maxDist</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum reliable distance for pixel]]></Description>
+         <Units>kpc</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.minDist" indexed="false">
+         <Name>minDist</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Minimum reliable distance for pixel]]></Description>
+         <Units>kpc</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.didConverge" indexed="false">
+         <Name>didConverge</Name>
+         <Datatype>boolean</Datatype>
+         <Description><![CDATA[Did the line of sight reddening curve converge (MCMC non convergence): 1-Yes,0-No.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="GaiaExtMapCoords.healpixID" indexed="false">
+         <Name>healpixID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical Equal Area iso-Latitude Pixelization (HEALpix) index, for celestial co-ordinates]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
@@ -257,7 +533,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[UID of the 2D pixel]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id;meta.main</UCD>
+         <UCD version="1+">meta.id;meta.main</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.mapID" indexed="false">
@@ -265,7 +541,7 @@
          <Datatype>int</Datatype>
          <Description><![CDATA[UID of the map]]></Description>
          <Units> </Units>
-         <UCD version="1">meta.id</UCD>
+         <UCD version="1+">meta.id</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.l" indexed="false">
@@ -273,7 +549,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Galactic longitude of pixel]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">pos.galactic.lon</UCD>
+         <UCD version="1+">pos.galactic.lon</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.b" indexed="false">
@@ -281,7 +557,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Galactic latitude of pixel]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">pos.galactic.lat</UCD>
+         <UCD version="1+">pos.galactic.lat</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.ra" indexed="false">
@@ -289,7 +565,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Celestial Right Ascension of pixel]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">pos.eq.ra;meta.main</UCD>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.dec" indexed="false">
@@ -297,7 +573,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[Celestial Declination of pixel]]></Description>
          <Units>Degrees</Units>
-         <UCD version="1">pos.eq.dec;meta.main</UCD>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.cx" indexed="false">
@@ -305,7 +581,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
          <Units> </Units>
-         <UCD version="1">pos.cartesian.x;pos.eq</UCD>
+         <UCD version="1+">pos.cartesian.x;pos.eq</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.cy" indexed="false">
@@ -313,7 +589,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
          <Units> </Units>
-         <UCD version="1">pos.cartesian.y;pos.eq</UCD>
+         <UCD version="1+">pos.cartesian.y;pos.eq</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.cz" indexed="false">
@@ -321,7 +597,7 @@
          <Datatype>double</Datatype>
          <Description><![CDATA[unit vector of spherical co-ordinates]]></Description>
          <Units> </Units>
-         <UCD version="1">pos.cartesian.z;pos.eq</UCD>
+         <UCD version="1+">pos.cartesian.z;pos.eq</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
       <Column ID="vvvBulgeExtMapCoords.htmID" indexed="false">
@@ -329,7 +605,67 @@
          <Datatype>long</Datatype>
          <Description><![CDATA[Hierarchical Triangular Mesh (HTM) index, 20 deep, for equatorial co-ordinates]]></Description>
          <Units> </Units>
-         <UCD version="1">pos</UCD>
+         <UCD version="1+">pos</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="panSTARRS13DExtinctVals">
+      <Name>panSTARRS13DExtinctVals</Name>
+      <Description><![CDATA[ Contains the extinction values of the panSTARRS 1 3D Galactic extinction Ma]]></Description>
+      <Column ID="panSTARRS13DExtinctVals.extID" indexed="true">
+         <Name>extID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[UID of the 3D spatial position]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS13DExtinctVals.pixelID" indexed="false">
+         <Name>pixelID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[UID of the pixel]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS13DExtinctVals.r" indexed="false">
+         <Name>r</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Distance moduli to map pixel]]></Description>
+         <Units>kpc</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS13DExtinctVals.eBVBestFit" indexed="false">
+         <Name>eBVBestFit</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[E(B-V) calculated from best fit distance vs reddening profile at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS13DExtinctVals.eBVMedian" indexed="false">
+         <Name>eBVMedian</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[E(B-V) calculated from median of distance vs reddening profiles at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS13DExtinctVals.eBVMean" indexed="false">
+         <Name>eBVMean</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[E(B-V) calculated from mean of distance vs reddening profiles at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phys.absorption.gal</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="panSTARRS13DExtinctVals.eBVErr" indexed="false">
+         <Name>eBVErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error on mean E(B-V) calculated from the stellar population model at distance r]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">star.error</UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
