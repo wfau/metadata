@@ -317,13 +317,14 @@
                 {
                         "jdbcid" : "avASDeA0",
                         "jdbcschema" : "dbo",
-                        "jdbccatalog": "EXTINCT",
-                        "adqlschema": "EXTINCT",
+                        "jdbccatalog": "Extinct",
+                        "adqlschema": "Extinct",
                         "metadata": {
                             "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/EXTINCT_TablesSchema.xml",
-                            "catalog": "EXTINCT"
+                            "catalog": "Extinct"
                         }
-                }, 
+                },
+
                 {
 	                "jdbcid" : "avASDeA0",
 	                "jdbcschema" : "dbo",
