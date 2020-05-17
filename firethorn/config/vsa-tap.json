@@ -33,17 +33,6 @@
 	                    "catalog": "VVVDR4"
 	                }
 	            },
-                    {
-                        "jdbcid" : "avASDeA0",
-                        "jdbcschema" : "dbo",
-                        "jdbccatalog": "VVVDR5",
-                        "adqlschema": "VVVDR5",
-                        "metadata": {
-                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/VVVDR5_TablesSchema.xml",
-                            "catalog": "VVVDR5"
-                        }
-                    },
-
 	            {
 	                "jdbcid" : "avASDeA0",   
 	                "jdbcschema" : "dbo",         
@@ -325,6 +314,17 @@
 	                    "catalog": "BestDR9"
 	                }
                 }, 
+                {
+                        "jdbcid" : "avASDeA0",
+                        "jdbcschema" : "dbo",
+                        "jdbccatalog": "Extinct",
+                        "adqlschema": "Extinct",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/EXTINCT_TablesSchema.xml",
+                            "catalog": "Extinct"
+                        }
+                },
+
                 {
 	                "jdbcid" : "avASDeA0",
 	                "jdbcschema" : "dbo",
