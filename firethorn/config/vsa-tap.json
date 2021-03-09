@@ -3,7 +3,7 @@
        "id": "vie0DohJ",
        "name": "VSA",
        "Schemas": [
-       		     {
+       		    {
 	                "jdbcid" : "avASDeA0",
 	                "jdbcschema" : "dbo",
 	                "jdbccatalog": "VVVDR1",
@@ -424,7 +424,17 @@
 	                    "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/WISE_TablesSchema.xml",
 	                    "catalog": "WISE"
 	                }
-                } 
+                },
+	        {
+                        "jdbcid" : "avASDeA0",
+                        "jdbcschema" : "dbo",
+                        "jdbccatalog": "PS1DR2",
+                        "adqlschema": "PS1DR2",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/PS1DR2_TablesSchema.xml",
+                            "catalog": "PS1DR2"
+                        }
+                 }  
              
         ]
 	   
