@@ -1,0 +1,3781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>ps1dr2</Name>
+   <Description></Description>
+
+   <Table ID="Detection">
+      <Name>Detection</Name>
+      <Description><![CDATA[ Contains single epoch photometry of individual detections from a single exposure]]></Description>
+      <Column ID="Detection.objID" indexed="false">
+         <Name>objID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.uniquePspsP2id" indexed="false">
+         <Name>uniquePspsP2id</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique internal PSPS detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.detectID" indexed="false">
+         <Name>detectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.ippObjID" indexed="false">
+         <Name>ippObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.ippDetectID" indexed="false">
+         <Name>ippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.filterID" indexed="false">
+         <Name>filterID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Filter identifier. Details in the Filter table.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.surveyID" indexed="false">
+         <Name>surveyID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Survey identifier. Details in the Survey table.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.imageID" indexed="false">
+         <Name>imageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique image identifier. Constructed as (100 * frameID + ccdID).]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.randomDetID" indexed="false">
+         <Name>randomDetID</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Random value drawn from the interval between zero and one.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.dvoRegionID" indexed="false">
+         <Name>dvoRegionID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Internal DVO region identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.obsTime" indexed="false">
+         <Name>obsTime</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Modified Julian Date at the midpoint of the observation.]]></Description>
+         <Units>days</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.xPos" indexed="false">
+         <Name>xPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF x center location.]]></Description>
+         <Units>raw pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.yPos" indexed="false">
+         <Name>yPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF y center location.]]></Description>
+         <Units>raw pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.xPosErr" indexed="false">
+         <Name>xPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF x center location.]]></Description>
+         <Units>raw pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.yPosErr" indexed="false">
+         <Name>yPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF y center location.]]></Description>
+         <Units>raw pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.pltScale" indexed="false">
+         <Name>pltScale</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Local plate scale at this location.]]></Description>
+         <Units>arcsec/pixel</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.posAngle" indexed="false">
+         <Name>posAngle</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Position angle (sky-to-chip) at this location.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.ra" indexed="false">
+         <Name>ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.dec" indexed="false">
+         <Name>dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.raErr" indexed="false">
+         <Name>raErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension error.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.decErr" indexed="false">
+         <Name>decErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination error.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.extNSigma" indexed="false">
+         <Name>extNSigma</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[An extendedness measure based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.zp" indexed="false">
+         <Name>zp</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Photometric zeropoint. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.telluricExt" indexed="false">
+         <Name>telluricExt</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Estimated Telluric extinction due to non-photometric observing conditions. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.expTime" indexed="false">
+         <Name>expTime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Exposure time of the frame/exposure. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>seconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.airMass" indexed="false">
+         <Name>airMass</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Airmass at midpoint of the exposure. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfFlux" indexed="false">
+         <Name>psfFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Flux from PSF fit.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfFluxErr" indexed="false">
+         <Name>psfFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error on flux from PSF fit.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfMajorFWHM" indexed="false">
+         <Name>psfMajorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis FWHM.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfMinorFWHM" indexed="false">
+         <Name>psfMinorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF minor axis FWHM.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfTheta" indexed="false">
+         <Name>psfTheta</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis orientation.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfCore" indexed="false">
+         <Name>psfCore</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF core parameter k, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfQf" indexed="false">
+         <Name>psfQf</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF coverage factor.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfQfPerfect" indexed="false">
+         <Name>psfQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF weighted fraction of pixels totally unmasked.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfChiSq" indexed="false">
+         <Name>psfChiSq</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Reduced chi squared value of the PSF model fit.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.psfLikelihood" indexed="false">
+         <Name>psfLikelihood</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Likelihood that this detection is best fit by a PSF.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentXX" indexed="false">
+         <Name>momentXX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xx.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentXY" indexed="false">
+         <Name>momentXY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xy.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentYY" indexed="false">
+         <Name>momentYY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_yy.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentR1" indexed="false">
+         <Name>momentR1</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[First radial moment.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentRH" indexed="false">
+         <Name>momentRH</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Half radial moment (r^0.5 weighting).]]></Description>
+         <Units>arcsec^0.5</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentM3C" indexed="false">
+         <Name>momentM3C</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Cosine of trefoil second moment term: r^2 cos(3 theta) = M_xxx - 3 * M_xyy.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentM3S" indexed="false">
+         <Name>momentM3S</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Sine of trefoil second moment: r^2 sin (3 theta) = 3 * M_xxy - M_yyy.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentM4C" indexed="false">
+         <Name>momentM4C</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Cosine of quadrupole second moment: r^2 cos (4 theta) = M_xxxx - 6 * M_xxyy + M_yyyy.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.momentM4S" indexed="false">
+         <Name>momentM4S</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Sine of quadrupole second moment: r^2 sin (4 theta) = 4 * M_xxxy - 4 * M_xyyy.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.apFlux" indexed="false">
+         <Name>apFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Flux in seeing-dependent aperture.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.apFluxErr" indexed="false">
+         <Name>apFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error on flux in seeing-dependent aperture.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.apFillF" indexed="false">
+         <Name>apFillF</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture fill factor.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.apRadius" indexed="false">
+         <Name>apRadius</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture radius.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.kronFlux" indexed="false">
+         <Name>kronFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) flux.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.kronFluxErr" indexed="false">
+         <Name>kronFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error on Kron (1980) flux.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.kronRad" indexed="false">
+         <Name>kronRad</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) radius.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.sky" indexed="false">
+         <Name>sky</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Background sky level.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.skyErr" indexed="false">
+         <Name>skyErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in background sky level.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.infoFlag" indexed="false">
+         <Name>infoFlag</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the photometry. Values listed in DetectionFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.infoFlag2" indexed="false">
+         <Name>infoFlag2</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the photometry. Values listed in DetectionFlags2.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.infoFlag3" indexed="false">
+         <Name>infoFlag3</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the photometry. Values listed in DetectionFlags3.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="Detection.processingVersion" indexed="false">
+         <Name>processingVersion</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Data release version.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="MeanObject">
+      <Name>MeanObject</Name>
+      <Description><![CDATA[ Contains the mean photometric information for objects based on the single epoch data]]></Description>
+      <Column ID="MeanObject.objID" indexed="false">
+         <Name>objID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.uniquePspsOBid" indexed="false">
+         <Name>uniquePspsOBid</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique internal PSPS object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gQfPerfect" indexed="false">
+         <Name>gQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF weighted fraction of pixels totally unmasked from g filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanPSFMag" indexed="false">
+         <Name>gMeanPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean PSF magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanPSFMagErr" indexed="false">
+         <Name>gMeanPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean PSF magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanPSFMagStd" indexed="false">
+         <Name>gMeanPSFMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of PSF magnitudes from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanPSFMagNpt" indexed="false">
+         <Name>gMeanPSFMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean PSF magnitude from g filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanPSFMagMin" indexed="false">
+         <Name>gMeanPSFMagMin</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Minimum PSF magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanPSFMagMax" indexed="false">
+         <Name>gMeanPSFMagMax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanKronMag" indexed="false">
+         <Name>gMeanKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean Kron (1980) magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanKronMagErr" indexed="false">
+         <Name>gMeanKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean Kron (1980) magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanKronMagStd" indexed="false">
+         <Name>gMeanKronMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of Kron (1980) magnitudes from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanKronMagNpt" indexed="false">
+         <Name>gMeanKronMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean Kron (1980) magnitude from g filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanApMag" indexed="false">
+         <Name>gMeanApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean aperture magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanApMagErr" indexed="false">
+         <Name>gMeanApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean aperture magnitude from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanApMagStd" indexed="false">
+         <Name>gMeanApMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of aperture magnitudes from g filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gMeanApMagNpt" indexed="false">
+         <Name>gMeanApMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean aperture magnitude from g filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.gFlags" indexed="false">
+         <Name>gFlags</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask for mean object from g filter detections. Values listed in ObjectFilterFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rQfPerfect" indexed="false">
+         <Name>rQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF weighted fraction of pixels totally unmasked from r filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanPSFMag" indexed="false">
+         <Name>rMeanPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean PSF magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanPSFMagErr" indexed="false">
+         <Name>rMeanPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean PSF magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanPSFMagStd" indexed="false">
+         <Name>rMeanPSFMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of PSF magnitudes from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanPSFMagNpt" indexed="false">
+         <Name>rMeanPSFMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean PSF magnitude from r filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanPSFMagMin" indexed="false">
+         <Name>rMeanPSFMagMin</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Minimum PSF magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanPSFMagMax" indexed="false">
+         <Name>rMeanPSFMagMax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanKronMag" indexed="false">
+         <Name>rMeanKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean Kron (1980) magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanKronMagErr" indexed="false">
+         <Name>rMeanKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean Kron (1980) magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanKronMagStd" indexed="false">
+         <Name>rMeanKronMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of Kron (1980) magnitudes from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanKronMagNpt" indexed="false">
+         <Name>rMeanKronMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean Kron (1980) magnitude from r filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanApMag" indexed="false">
+         <Name>rMeanApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean aperture magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanApMagErr" indexed="false">
+         <Name>rMeanApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean aperture magnitude from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanApMagStd" indexed="false">
+         <Name>rMeanApMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of aperture magnitudes from r filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rMeanApMagNpt" indexed="false">
+         <Name>rMeanApMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean aperture magnitude from r filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.rFlags" indexed="false">
+         <Name>rFlags</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask for mean object from r filter detections. Values listed in ObjectFilterFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iQfPerfect" indexed="false">
+         <Name>iQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF weighted fraction of pixels totally unmasked from i filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanPSFMag" indexed="false">
+         <Name>iMeanPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean PSF magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanPSFMagErr" indexed="false">
+         <Name>iMeanPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean PSF magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanPSFMagStd" indexed="false">
+         <Name>iMeanPSFMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of PSF magnitudes from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanPSFMagNpt" indexed="false">
+         <Name>iMeanPSFMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean PSF magnitude from i filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanPSFMagMin" indexed="false">
+         <Name>iMeanPSFMagMin</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Minimum PSF magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanPSFMagMax" indexed="false">
+         <Name>iMeanPSFMagMax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanKronMag" indexed="false">
+         <Name>iMeanKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean Kron (1980) magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanKronMagErr" indexed="false">
+         <Name>iMeanKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean Kron (1980) magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanKronMagStd" indexed="false">
+         <Name>iMeanKronMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of Kron (1980) magnitudes from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanKronMagNpt" indexed="false">
+         <Name>iMeanKronMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean Kron (1980) magnitude from i filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanApMag" indexed="false">
+         <Name>iMeanApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean aperture magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanApMagErr" indexed="false">
+         <Name>iMeanApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean aperture magnitude from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanApMagStd" indexed="false">
+         <Name>iMeanApMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of aperture magnitudes from i filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iMeanApMagNpt" indexed="false">
+         <Name>iMeanApMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean aperture magnitude from i filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.iFlags" indexed="false">
+         <Name>iFlags</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask for mean object from i filter detections. Values listed in ObjectFilterFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zQfPerfect" indexed="false">
+         <Name>zQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF weighted fraction of pixels totally unmasked from z filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanPSFMag" indexed="false">
+         <Name>zMeanPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean PSF magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanPSFMagErr" indexed="false">
+         <Name>zMeanPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean PSF magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanPSFMagStd" indexed="false">
+         <Name>zMeanPSFMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of PSF magnitudes from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanPSFMagNpt" indexed="false">
+         <Name>zMeanPSFMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean PSF magnitude from z filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanPSFMagMin" indexed="false">
+         <Name>zMeanPSFMagMin</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Minimum PSF magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanPSFMagMax" indexed="false">
+         <Name>zMeanPSFMagMax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanKronMag" indexed="false">
+         <Name>zMeanKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean Kron (1980) magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanKronMagErr" indexed="false">
+         <Name>zMeanKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean Kron (1980) magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanKronMagStd" indexed="false">
+         <Name>zMeanKronMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of Kron (1980) magnitudes from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanKronMagNpt" indexed="false">
+         <Name>zMeanKronMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean Kron (1980) magnitude from z filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanApMag" indexed="false">
+         <Name>zMeanApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean aperture magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanApMagErr" indexed="false">
+         <Name>zMeanApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean aperture magnitude from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanApMagStd" indexed="false">
+         <Name>zMeanApMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of aperture magnitudes from z filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zMeanApMagNpt" indexed="false">
+         <Name>zMeanApMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean aperture magnitude from z filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.zFlags" indexed="false">
+         <Name>zFlags</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask for mean object from z filter detections. Values listed in ObjectFilterFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yQfPerfect" indexed="false">
+         <Name>yQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF weighted fraction of pixels totally unmasked from y filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanPSFMag" indexed="false">
+         <Name>yMeanPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean PSF magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanPSFMagErr" indexed="false">
+         <Name>yMeanPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean PSF magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanPSFMagStd" indexed="false">
+         <Name>yMeanPSFMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of PSF magnitudes from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanPSFMagNpt" indexed="false">
+         <Name>yMeanPSFMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean PSF magnitude from y filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanPSFMagMin" indexed="false">
+         <Name>yMeanPSFMagMin</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Minimum PSF magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanPSFMagMax" indexed="false">
+         <Name>yMeanPSFMagMax</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Maximum PSF magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanKronMag" indexed="false">
+         <Name>yMeanKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean Kron (1980) magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanKronMagErr" indexed="false">
+         <Name>yMeanKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean Kron (1980) magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanKronMagStd" indexed="false">
+         <Name>yMeanKronMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of Kron (1980) magnitudes from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanKronMagNpt" indexed="false">
+         <Name>yMeanKronMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean Kron (1980) magnitude from y filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanApMag" indexed="false">
+         <Name>yMeanApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Mean aperture magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanApMagErr" indexed="false">
+         <Name>yMeanApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in mean aperture magnitude from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanApMagStd" indexed="false">
+         <Name>yMeanApMagStd</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Standard deviation of aperture magnitudes from y filter detections.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yMeanApMagNpt" indexed="false">
+         <Name>yMeanApMagNpt</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of measurements included in mean aperture magnitude from y filter detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="MeanObject.yFlags" indexed="false">
+         <Name>yFlags</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask for mean object from y filter detections. Values listed in ObjectFilterFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="ObjectThin">
+      <Name>ObjectThin</Name>
+      <Description><![CDATA[ Contains the positional information for objects in a number of coordinate systems]]></Description>
+      <Column ID="ObjectThin.objName" indexed="false">
+         <Name>objName</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[IAU name for this object.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.objNameHMS" indexed="false">
+         <Name>objNameHMS</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Alternate Pan-STARRS name for this object.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.objAltName1" indexed="false">
+         <Name>objAltName1</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Alternate name for this object.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.objAltName2" indexed="false">
+         <Name>objAltName2</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Altername name for this object.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.objAltName3" indexed="false">
+         <Name>objAltName3</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Altername name for this object.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.objPopularName" indexed="false">
+         <Name>objPopularName</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Well known name for this object.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.objID" indexed="false">
+         <Name>objID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.uniquePspsOBid" indexed="false">
+         <Name>uniquePspsOBid</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique internal PSPS object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.ippObjID" indexed="false">
+         <Name>ippObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.surveyID" indexed="false">
+         <Name>surveyID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Survey identifier. Details in the Survey table.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.htmID" indexed="false">
+         <Name>htmID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Hierarchical triangular mesh (Szalay 2007) index.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.HTM</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.zoneID" indexed="false">
+         <Name>zoneID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Local zone index, found by dividing the sky into bands of declination 1/2 arcminute in height: zoneID = floor((90 + declination)/0.0083333).]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.tessID" indexed="false">
+         <Name>tessID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Tessellation identifier. Details in the TessellationType table.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.projectionID" indexed="false">
+         <Name>projectionID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Projection cell identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.skyCellID" indexed="false">
+         <Name>skyCellID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Skycell region identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.randomID" indexed="false">
+         <Name>randomID</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Random value drawn from the interval between zero and one.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.batchID" indexed="false">
+         <Name>batchID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Internal database batch identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.dvoRegionID" indexed="false">
+         <Name>dvoRegionID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Internal DVO region identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.processingVersion" indexed="false">
+         <Name>processingVersion</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Data release version.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.software</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.objInfoFlag" indexed="false">
+         <Name>objInfoFlag</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the photometry. Values listed in ObjectInfoFlags]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.code</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.qualityFlag" indexed="false">
+         <Name>qualityFlag</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Subset of objInfoFlag denoting whether this object is real or a likely false positive. Values listed in ObjectQualityFlags]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.code.qual</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.raStack" indexed="false">
+         <Name>raStack</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.decStack" indexed="false">
+         <Name>decStack</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination from stack detections, weighted mean value across filters, in equinox J2000. See StackObjectThin for stack epoch information.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.raStackErr" indexed="false">
+         <Name>raStackErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension standard deviation from stack detections.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.decStackErr" indexed="false">
+         <Name>decStackErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination standard deviation from stack detections.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.raMean" indexed="false">
+         <Name>raMean</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.decMean" indexed="false">
+         <Name>decMean</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination from single epoch detections (weighted mean) in equinox J2000 at the mean epoch given by epochMean.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.raMeanErr" indexed="false">
+         <Name>raMeanErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension standard deviation from single epoch detections.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.decMeanErr" indexed="false">
+         <Name>decMeanErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination standard deviation from single epoch detections.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+">stat.error</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.epochMean" indexed="false">
+         <Name>epochMean</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Modified Julian Date of the mean epoch corresponding to raMean, decMean (equinox J2000). Note that Gaia DR1 data is sometimes included in the mean position; in those cases, the epochMean value is near the Gaia DR1 epoch 2015.5 = MJD 15023. As a result, epochMean is not necessarily near the mean value of the PS1 measurement dates.]]></Description>
+         <Units>days</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.posMeanChisq" indexed="false">
+         <Name>posMeanChisq</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Reduced chi squared value of mean position.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">stat.stdev</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.cx" indexed="false">
+         <Name>cx</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian x on a unit sphere.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.x;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.cy" indexed="false">
+         <Name>cy</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian y on a unit sphere.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.cz" indexed="false">
+         <Name>cz</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Cartesian z on a unit sphere.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">pos.cartesian.y;pos.eq</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.lambda" indexed="false">
+         <Name>lambda</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Ecliptic longitude.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.beta" indexed="false">
+         <Name>beta</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Ecliptic latitude.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.l" indexed="false">
+         <Name>l</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic longitude.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.b" indexed="false">
+         <Name>b</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Galactic latitude.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.nStackObjectRows" indexed="false">
+         <Name>nStackObjectRows</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of independent StackObjectThin rows associated with this object.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.nStackDetections" indexed="false">
+         <Name>nStackDetections</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of stack detections.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.nDetections" indexed="false">
+         <Name>nDetections</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of single epoch detections in all filters.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.ng" indexed="false">
+         <Name>ng</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of single epoch detections in g filter.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.nr" indexed="false">
+         <Name>nr</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of single epoch detections in r filter.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.ni" indexed="false">
+         <Name>ni</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of single epoch detections in i filter.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.nz" indexed="false">
+         <Name>nz</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of single epoch detections in z filter.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="ObjectThin.ny" indexed="false">
+         <Name>ny</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of single epoch detections in y filter.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="StackObjectAttributes">
+      <Name>StackObjectAttributes</Name>
+      <Description><![CDATA[ Contains the PSF, Kron (1980), and aperture fluxes for all filters in a single row, along with point-source object shape parameters]]></Description>
+      <Column ID="StackObjectAttributes.objID" indexed="false">
+         <Name>objID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.uniquePspsSTid" indexed="false">
+         <Name>uniquePspsSTid</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique internal PSPS stack identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ippObjID" indexed="false">
+         <Name>ippObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.randomStackObjID" indexed="false">
+         <Name>randomStackObjID</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Random value drawn from the interval between zero and one.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.primaryDetection" indexed="false">
+         <Name>primaryDetection</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Identifies if this row is the primary stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.bestDetection" indexed="false">
+         <Name>bestDetection</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Identifies if this row is the best detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gippDetectID" indexed="false">
+         <Name>gippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gstackDetectID" indexed="false">
+         <Name>gstackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gstackImageID" indexed="false">
+         <Name>gstackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for g filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gxPos" indexed="false">
+         <Name>gxPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF x center location from g filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gyPos" indexed="false">
+         <Name>gyPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF y center location from g filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gxPosErr" indexed="false">
+         <Name>gxPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF x center location from g filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gyPosErr" indexed="false">
+         <Name>gyPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF y center location from g filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfMajorFWHM" indexed="false">
+         <Name>gpsfMajorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis FWHM from g filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfMinorFWHM" indexed="false">
+         <Name>gpsfMinorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF minor axis FWHM from g filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfTheta" indexed="false">
+         <Name>gpsfTheta</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis orientation from g filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfCore" indexed="false">
+         <Name>gpsfCore</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF core parameter k from g filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfLikelihood" indexed="false">
+         <Name>gpsfLikelihood</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Likelihood that this g filter stack detection is best fit by a PSF.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfQf" indexed="false">
+         <Name>gpsfQf</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF coverage factor for g filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfQfPerfect" indexed="false">
+         <Name>gpsfQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for g filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gpsfChiSq" indexed="false">
+         <Name>gpsfChiSq</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Reduced chi squared value of the PSF model fit for g filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gmomentXX" indexed="false">
+         <Name>gmomentXX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xx for g filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gmomentXY" indexed="false">
+         <Name>gmomentXY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xy for g filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gmomentYY" indexed="false">
+         <Name>gmomentYY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_yy for g filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gmomentR1" indexed="false">
+         <Name>gmomentR1</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[First radial moment for g filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gmomentRH" indexed="false">
+         <Name>gmomentRH</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Half radial moment (r^0.5 weighting) for g filter stack detection.]]></Description>
+         <Units>arcsec^0.5</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gPSFFlux" indexed="false">
+         <Name>gPSFFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF flux from g filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gPSFFluxErr" indexed="false">
+         <Name>gPSFFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF flux from g filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gApFlux" indexed="false">
+         <Name>gApFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture flux from g filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gApFluxErr" indexed="false">
+         <Name>gApFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture flux from g filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gApFillFac" indexed="false">
+         <Name>gApFillFac</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture fill factor from g filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gApRadius" indexed="false">
+         <Name>gApRadius</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture radius for g filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gKronFlux" indexed="false">
+         <Name>gKronFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) flux from g filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gKronFluxErr" indexed="false">
+         <Name>gKronFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) flux from g filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gKronRad" indexed="false">
+         <Name>gKronRad</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) radius from g filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gexpTime" indexed="false">
+         <Name>gexpTime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Exposure time of the g filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>seconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gExtNSigma" indexed="false">
+         <Name>gExtNSigma</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[An extendedness measure for the g filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gsky" indexed="false">
+         <Name>gsky</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Residual background sky level at the g filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gskyErr" indexed="false">
+         <Name>gskyErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in residual background sky level at the g filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gzp" indexed="false">
+         <Name>gzp</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Photometric zeropoint for the g filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.gPlateScale" indexed="false">
+         <Name>gPlateScale</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Local plate scale for the g filter stack.]]></Description>
+         <Units>arcsec/pixel</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rippDetectID" indexed="false">
+         <Name>rippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rstackDetectID" indexed="false">
+         <Name>rstackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rstackImageID" indexed="false">
+         <Name>rstackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for r filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rxPos" indexed="false">
+         <Name>rxPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF x center location from r filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ryPos" indexed="false">
+         <Name>ryPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF y center location from r filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rxPosErr" indexed="false">
+         <Name>rxPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF x center location from r filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ryPosErr" indexed="false">
+         <Name>ryPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF y center location from r filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfMajorFWHM" indexed="false">
+         <Name>rpsfMajorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis FWHM from r filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfMinorFWHM" indexed="false">
+         <Name>rpsfMinorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF minor axis FWHM from r filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfTheta" indexed="false">
+         <Name>rpsfTheta</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis orientation from r filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfCore" indexed="false">
+         <Name>rpsfCore</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF core parameter k from r filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfLikelihood" indexed="false">
+         <Name>rpsfLikelihood</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Likelihood that this r filter stack detection is best fit by a PSF.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfQf" indexed="false">
+         <Name>rpsfQf</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF coverage factor for r filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfQfPerfect" indexed="false">
+         <Name>rpsfQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for r filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rpsfChiSq" indexed="false">
+         <Name>rpsfChiSq</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Reduced chi squared value of the PSF model fit for r filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rmomentXX" indexed="false">
+         <Name>rmomentXX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xx for r filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rmomentXY" indexed="false">
+         <Name>rmomentXY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xy for r filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rmomentYY" indexed="false">
+         <Name>rmomentYY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_yy for r filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rmomentR1" indexed="false">
+         <Name>rmomentR1</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[First radial moment for r filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rmomentRH" indexed="false">
+         <Name>rmomentRH</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Half radial moment (r^0.5 weighting) for r filter stack detection.]]></Description>
+         <Units>arcsec^0.5</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rPSFFlux" indexed="false">
+         <Name>rPSFFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF flux from r filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rPSFFluxErr" indexed="false">
+         <Name>rPSFFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF flux from r filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rApFlux" indexed="false">
+         <Name>rApFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture flux from r filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rApFluxErr" indexed="false">
+         <Name>rApFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture flux from r filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rApFillFac" indexed="false">
+         <Name>rApFillFac</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture fill factor from r filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rApRadius" indexed="false">
+         <Name>rApRadius</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture radius for r filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rKronFlux" indexed="false">
+         <Name>rKronFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) flux from r filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rKronFluxErr" indexed="false">
+         <Name>rKronFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) flux from r filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rKronRad" indexed="false">
+         <Name>rKronRad</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) radius from r filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rexpTime" indexed="false">
+         <Name>rexpTime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Exposure time of the r filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>seconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rExtNSigma" indexed="false">
+         <Name>rExtNSigma</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[An extendedness measure for the r filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rsky" indexed="false">
+         <Name>rsky</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Residual background sky level at the r filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rskyErr" indexed="false">
+         <Name>rskyErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in residual background sky level at the r filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rzp" indexed="false">
+         <Name>rzp</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Photometric zeropoint for the r filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.rPlateScale" indexed="false">
+         <Name>rPlateScale</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Local plate scale for the r filter stack.]]></Description>
+         <Units>arcsec/pixel</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iippDetectID" indexed="false">
+         <Name>iippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.istackDetectID" indexed="false">
+         <Name>istackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.istackImageID" indexed="false">
+         <Name>istackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for i filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ixPos" indexed="false">
+         <Name>ixPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF x center location from i filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iyPos" indexed="false">
+         <Name>iyPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF y center location from i filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ixPosErr" indexed="false">
+         <Name>ixPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF x center location from i filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iyPosErr" indexed="false">
+         <Name>iyPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF y center location from i filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfMajorFWHM" indexed="false">
+         <Name>ipsfMajorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis FWHM from i filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfMinorFWHM" indexed="false">
+         <Name>ipsfMinorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF minor axis FWHM from i filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfTheta" indexed="false">
+         <Name>ipsfTheta</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis orientation from i filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfCore" indexed="false">
+         <Name>ipsfCore</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF core parameter k from i filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfLikelihood" indexed="false">
+         <Name>ipsfLikelihood</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Likelihood that this i filter stack detection is best fit by a PSF.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfQf" indexed="false">
+         <Name>ipsfQf</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF coverage factor for i filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfQfPerfect" indexed="false">
+         <Name>ipsfQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for i filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ipsfChiSq" indexed="false">
+         <Name>ipsfChiSq</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Reduced chi squared value of the PSF model fit for i filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.imomentXX" indexed="false">
+         <Name>imomentXX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xx for i filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.imomentXY" indexed="false">
+         <Name>imomentXY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xy for i filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.imomentYY" indexed="false">
+         <Name>imomentYY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_yy for i filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.imomentR1" indexed="false">
+         <Name>imomentR1</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[First radial moment for i filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.imomentRH" indexed="false">
+         <Name>imomentRH</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Half radial moment (r^0.5 weighting) for i filter stack detection.]]></Description>
+         <Units>arcsec^0.5</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iPSFFlux" indexed="false">
+         <Name>iPSFFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF flux from i filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iPSFFluxErr" indexed="false">
+         <Name>iPSFFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF flux from i filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iApFlux" indexed="false">
+         <Name>iApFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture flux from i filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iApFluxErr" indexed="false">
+         <Name>iApFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture flux from i filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iApFillFac" indexed="false">
+         <Name>iApFillFac</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture fill factor from i filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iApRadius" indexed="false">
+         <Name>iApRadius</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture radius for i filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iKronFlux" indexed="false">
+         <Name>iKronFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) flux from i filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iKronFluxErr" indexed="false">
+         <Name>iKronFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) flux from i filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iKronRad" indexed="false">
+         <Name>iKronRad</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) radius from i filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iexpTime" indexed="false">
+         <Name>iexpTime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Exposure time of the i filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>seconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iExtNSigma" indexed="false">
+         <Name>iExtNSigma</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[An extendedness measure for the i filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.isky" indexed="false">
+         <Name>isky</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Residual background sky level at the i filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iskyErr" indexed="false">
+         <Name>iskyErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in residual background sky level at the i filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.izp" indexed="false">
+         <Name>izp</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Photometric zeropoint for the i filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.iPlateScale" indexed="false">
+         <Name>iPlateScale</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Local plate scale for the i filter stack.]]></Description>
+         <Units>arcsec/pixel</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zippDetectID" indexed="false">
+         <Name>zippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zstackDetectID" indexed="false">
+         <Name>zstackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zstackImageID" indexed="false">
+         <Name>zstackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for z filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zxPos" indexed="false">
+         <Name>zxPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF x center location from z filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zyPos" indexed="false">
+         <Name>zyPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF y center location from z filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zxPosErr" indexed="false">
+         <Name>zxPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF x center location from z filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zyPosErr" indexed="false">
+         <Name>zyPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF y center location from z filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfMajorFWHM" indexed="false">
+         <Name>zpsfMajorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis FWHM from z filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfMinorFWHM" indexed="false">
+         <Name>zpsfMinorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF minor axis FWHM from z filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfTheta" indexed="false">
+         <Name>zpsfTheta</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis orientation from z filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfCore" indexed="false">
+         <Name>zpsfCore</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF core parameter k from z filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfLikelihood" indexed="false">
+         <Name>zpsfLikelihood</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Likelihood that this z filter stack detection is best fit by a PSF.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfQf" indexed="false">
+         <Name>zpsfQf</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF coverage factor for z filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfQfPerfect" indexed="false">
+         <Name>zpsfQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for z filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zpsfChiSq" indexed="false">
+         <Name>zpsfChiSq</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Reduced chi squared value of the PSF model fit for z filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zmomentXX" indexed="false">
+         <Name>zmomentXX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xx for z filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zmomentXY" indexed="false">
+         <Name>zmomentXY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xy for z filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zmomentYY" indexed="false">
+         <Name>zmomentYY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_yy for z filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zmomentR1" indexed="false">
+         <Name>zmomentR1</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[First radial moment for z filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zmomentRH" indexed="false">
+         <Name>zmomentRH</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Half radial moment (r^0.5 weighting) for z filter stack detection.]]></Description>
+         <Units>arcsec^0.5</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zPSFFlux" indexed="false">
+         <Name>zPSFFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF flux from z filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zPSFFluxErr" indexed="false">
+         <Name>zPSFFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF flux from z filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zApFlux" indexed="false">
+         <Name>zApFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture flux from z filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zApFluxErr" indexed="false">
+         <Name>zApFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture flux from z filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zApFillFac" indexed="false">
+         <Name>zApFillFac</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture fill factor from z filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zApRadius" indexed="false">
+         <Name>zApRadius</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture radius for z filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zKronFlux" indexed="false">
+         <Name>zKronFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) flux from z filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zKronFluxErr" indexed="false">
+         <Name>zKronFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) flux from z filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zKronRad" indexed="false">
+         <Name>zKronRad</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) radius from z filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zexpTime" indexed="false">
+         <Name>zexpTime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Exposure time of the z filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>seconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zExtNSigma" indexed="false">
+         <Name>zExtNSigma</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[An extendedness measure for the z filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zsky" indexed="false">
+         <Name>zsky</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Residual background sky level at the z filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zskyErr" indexed="false">
+         <Name>zskyErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in residual background sky level at the z filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zzp" indexed="false">
+         <Name>zzp</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Photometric zeropoint for the z filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.zPlateScale" indexed="false">
+         <Name>zPlateScale</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Local plate scale for the z filter stack.]]></Description>
+         <Units>arcsec/pixel</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yippDetectID" indexed="false">
+         <Name>yippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ystackDetectID" indexed="false">
+         <Name>ystackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ystackImageID" indexed="false">
+         <Name>ystackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for y filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yxPos" indexed="false">
+         <Name>yxPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF x center location from y filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yyPos" indexed="false">
+         <Name>yyPos</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF y center location from y filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yxPosErr" indexed="false">
+         <Name>yxPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF x center location from y filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yyPosErr" indexed="false">
+         <Name>yyPosErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF y center location from y filter stack detection.]]></Description>
+         <Units>sky pixels</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfMajorFWHM" indexed="false">
+         <Name>ypsfMajorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis FWHM from y filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfMinorFWHM" indexed="false">
+         <Name>ypsfMinorFWHM</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF minor axis FWHM from y filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfTheta" indexed="false">
+         <Name>ypsfTheta</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF major axis orientation from y filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfCore" indexed="false">
+         <Name>ypsfCore</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF core parameter k from y filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfLikelihood" indexed="false">
+         <Name>ypsfLikelihood</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Likelihood that this y filter stack detection is best fit by a PSF.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfQf" indexed="false">
+         <Name>ypsfQf</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF coverage factor for y filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfQfPerfect" indexed="false">
+         <Name>ypsfQfPerfect</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for y filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ypsfChiSq" indexed="false">
+         <Name>ypsfChiSq</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Reduced chi squared value of the PSF model fit for y filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ymomentXX" indexed="false">
+         <Name>ymomentXX</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xx for y filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ymomentXY" indexed="false">
+         <Name>ymomentXY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_xy for y filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ymomentYY" indexed="false">
+         <Name>ymomentYY</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Second moment M_yy for y filter stack detection.]]></Description>
+         <Units>arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ymomentR1" indexed="false">
+         <Name>ymomentR1</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[First radial moment for y filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ymomentRH" indexed="false">
+         <Name>ymomentRH</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Half radial moment (r^0.5 weighting) for y filter stack detection.]]></Description>
+         <Units>arcsec^0.5</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yPSFFlux" indexed="false">
+         <Name>yPSFFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF flux from y filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yPSFFluxErr" indexed="false">
+         <Name>yPSFFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF flux from y filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yApFlux" indexed="false">
+         <Name>yApFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture flux from y filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yApFluxErr" indexed="false">
+         <Name>yApFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture flux from y filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yApFillFac" indexed="false">
+         <Name>yApFillFac</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture fill factor from y filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yApRadius" indexed="false">
+         <Name>yApRadius</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture radius for y filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yKronFlux" indexed="false">
+         <Name>yKronFlux</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) flux from y filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yKronFluxErr" indexed="false">
+         <Name>yKronFluxErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) flux from y filter stack detection.]]></Description>
+         <Units>Janskys</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yKronRad" indexed="false">
+         <Name>yKronRad</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) radius from y filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yexpTime" indexed="false">
+         <Name>yexpTime</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Exposure time of the y filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>seconds</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yExtNSigma" indexed="false">
+         <Name>yExtNSigma</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[An extendedness measure for the y filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.ysky" indexed="false">
+         <Name>ysky</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Residual background sky level at the y filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yskyErr" indexed="false">
+         <Name>yskyErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in residual background sky level at the y filter stack detection.]]></Description>
+         <Units>Janskys/arcsec^2</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yzp" indexed="false">
+         <Name>yzp</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Photometric zeropoint for the y filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
+         <Units>magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectAttributes.yPlateScale" indexed="false">
+         <Name>yPlateScale</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Local plate scale for the y filter stack.]]></Description>
+         <Units>arcsec/pixel</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="StackObjectThin">
+      <Name>StackObjectThin</Name>
+      <Description><![CDATA[ Contains the positional and photometric information for point-source photometry of stack detections]]></Description>
+      <Column ID="StackObjectThin.objID" indexed="false">
+         <Name>objID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.uniquePspsSTid" indexed="false">
+         <Name>uniquePspsSTid</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique internal PSPS stack identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ippObjID" indexed="false">
+         <Name>ippObjID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal object identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.surveyID" indexed="false">
+         <Name>surveyID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Survey identifier. Details in the Survey table.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.tessID" indexed="false">
+         <Name>tessID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Tessellation identifier. Details in the TessellationType table.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.projectionID" indexed="false">
+         <Name>projectionID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Projection cell identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.skyCellID" indexed="false">
+         <Name>skyCellID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Skycell region identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.randomStackObjID" indexed="false">
+         <Name>randomStackObjID</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Random value drawn from the interval between zero and one.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.primaryDetection" indexed="false">
+         <Name>primaryDetection</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Identifies if this row is the primary stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.bestDetection" indexed="false">
+         <Name>bestDetection</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Identifies if this row is the best detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.dvoRegionID" indexed="false">
+         <Name>dvoRegionID</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Internal DVO region identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.processingVersion" indexed="false">
+         <Name>processingVersion</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Data release version.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gippDetectID" indexed="false">
+         <Name>gippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gstackDetectID" indexed="false">
+         <Name>gstackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gstackImageID" indexed="false">
+         <Name>gstackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for g filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gra" indexed="false">
+         <Name>gra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension from g filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gdec" indexed="false">
+         <Name>gdec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination from g filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.graErr" indexed="false">
+         <Name>graErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension error from g filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gdecErr" indexed="false">
+         <Name>gdecErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination error from g filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gEpoch" indexed="false">
+         <Name>gEpoch</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the g-band stack (equinox J2000).]]></Description>
+         <Units>days</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gPSFMag" indexed="false">
+         <Name>gPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF magnitude from g filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gPSFMagErr" indexed="false">
+         <Name>gPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF magnitude from g filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gApMag" indexed="false">
+         <Name>gApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture magnitude from g filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gApMagErr" indexed="false">
+         <Name>gApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture magnitude from g filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gKronMag" indexed="false">
+         <Name>gKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) magnitude from g filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gKronMagErr" indexed="false">
+         <Name>gKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) magnitude from g filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ginfoFlag" indexed="false">
+         <Name>ginfoFlag</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the g filter stack photometry. Values listed in DetectionFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ginfoFlag2" indexed="false">
+         <Name>ginfoFlag2</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the g filter stack photometry. Values listed in DetectionFlags2.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ginfoFlag3" indexed="false">
+         <Name>ginfoFlag3</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the g filter stack photometry. Values listed in DetectionFlags3.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.gnFrames" indexed="false">
+         <Name>gnFrames</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of input frames/exposures contributing to the g filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rippDetectID" indexed="false">
+         <Name>rippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rstackDetectID" indexed="false">
+         <Name>rstackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rstackImageID" indexed="false">
+         <Name>rstackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for r filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rra" indexed="false">
+         <Name>rra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension from r filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rdec" indexed="false">
+         <Name>rdec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination from r filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rraErr" indexed="false">
+         <Name>rraErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension error from r filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rdecErr" indexed="false">
+         <Name>rdecErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination error from r filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rEpoch" indexed="false">
+         <Name>rEpoch</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the r-band stack (equinox J2000).]]></Description>
+         <Units>days</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rPSFMag" indexed="false">
+         <Name>rPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF magnitude from r filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rPSFMagErr" indexed="false">
+         <Name>rPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF magnitude from r filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rApMag" indexed="false">
+         <Name>rApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture magnitude from r filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rApMagErr" indexed="false">
+         <Name>rApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture magnitude from r filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rKronMag" indexed="false">
+         <Name>rKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) magnitude from r filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rKronMagErr" indexed="false">
+         <Name>rKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) magnitude from r filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rinfoFlag" indexed="false">
+         <Name>rinfoFlag</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the r filter stack photometry. Values listed in DetectionFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rinfoFlag2" indexed="false">
+         <Name>rinfoFlag2</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the r filter stack photometry. Values listed in DetectionFlags2.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rinfoFlag3" indexed="false">
+         <Name>rinfoFlag3</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the r filter stack photometry. Values listed in DetectionFlags3.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.rnFrames" indexed="false">
+         <Name>rnFrames</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of input frames/exposures contributing to the r filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iippDetectID" indexed="false">
+         <Name>iippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.istackDetectID" indexed="false">
+         <Name>istackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.istackImageID" indexed="false">
+         <Name>istackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for i filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ira" indexed="false">
+         <Name>ira</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension from i filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.idec" indexed="false">
+         <Name>idec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination from i filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iraErr" indexed="false">
+         <Name>iraErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension error from i filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.idecErr" indexed="false">
+         <Name>idecErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination error from i filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iEpoch" indexed="false">
+         <Name>iEpoch</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the i-band stack (equinox J2000).]]></Description>
+         <Units>days</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iPSFMag" indexed="false">
+         <Name>iPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF magnitude from i filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iPSFMagErr" indexed="false">
+         <Name>iPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF magnitude from i filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iApMag" indexed="false">
+         <Name>iApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture magnitude from i filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iApMagErr" indexed="false">
+         <Name>iApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture magnitude from i filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iKronMag" indexed="false">
+         <Name>iKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) magnitude from i filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iKronMagErr" indexed="false">
+         <Name>iKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) magnitude from i filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iinfoFlag" indexed="false">
+         <Name>iinfoFlag</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the i filter stack photometry. Values listed in DetectionFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iinfoFlag2" indexed="false">
+         <Name>iinfoFlag2</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the i filter stack photometry. Values listed in DetectionFlags2.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.iinfoFlag3" indexed="false">
+         <Name>iinfoFlag3</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the i filter stack photometry. Values listed in DetectionFlags3.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.inFrames" indexed="false">
+         <Name>inFrames</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of input frames/exposures contributing to the i filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zippDetectID" indexed="false">
+         <Name>zippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zstackDetectID" indexed="false">
+         <Name>zstackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zstackImageID" indexed="false">
+         <Name>zstackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for z filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zra" indexed="false">
+         <Name>zra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension from z filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zdec" indexed="false">
+         <Name>zdec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination from z filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zraErr" indexed="false">
+         <Name>zraErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension error from z filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zdecErr" indexed="false">
+         <Name>zdecErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination error from z filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zEpoch" indexed="false">
+         <Name>zEpoch</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the z-band stack (equinox J2000).]]></Description>
+         <Units>days</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zPSFMag" indexed="false">
+         <Name>zPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF magnitude from z filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zPSFMagErr" indexed="false">
+         <Name>zPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF magnitude from z filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zApMag" indexed="false">
+         <Name>zApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture magnitude from z filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zApMagErr" indexed="false">
+         <Name>zApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture magnitude from z filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zKronMag" indexed="false">
+         <Name>zKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) magnitude from z filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zKronMagErr" indexed="false">
+         <Name>zKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) magnitude from z filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zinfoFlag" indexed="false">
+         <Name>zinfoFlag</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the z filter stack photometry. Values listed in DetectionFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zinfoFlag2" indexed="false">
+         <Name>zinfoFlag2</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the z filter stack photometry. Values listed in DetectionFlags2.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.zinfoFlag3" indexed="false">
+         <Name>zinfoFlag3</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the z filter stack photometry. Values listed in DetectionFlags3.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.znFrames" indexed="false">
+         <Name>znFrames</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of input frames/exposures contributing to the z filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yippDetectID" indexed="false">
+         <Name>yippDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[IPP internal detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ystackDetectID" indexed="false">
+         <Name>ystackDetectID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack detection identifier.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ystackImageID" indexed="false">
+         <Name>ystackImageID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Unique stack identifier for y filter detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yra" indexed="false">
+         <Name>yra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Right ascension from y filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ydec" indexed="false">
+         <Name>ydec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Declination from y filter stack detection.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yraErr" indexed="false">
+         <Name>yraErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Right ascension error from y filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ydecErr" indexed="false">
+         <Name>ydecErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Declination error from y filter stack detection.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yEpoch" indexed="false">
+         <Name>yEpoch</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the y-band stack (equinox J2000).]]></Description>
+         <Units>days</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yPSFMag" indexed="false">
+         <Name>yPSFMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[PSF magnitude from y filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yPSFMagErr" indexed="false">
+         <Name>yPSFMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in PSF magnitude from y filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yApMag" indexed="false">
+         <Name>yApMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Aperture magnitude from y filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yApMagErr" indexed="false">
+         <Name>yApMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in aperture magnitude from y filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yKronMag" indexed="false">
+         <Name>yKronMag</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Kron (1980) magnitude from y filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yKronMagErr" indexed="false">
+         <Name>yKronMagErr</Name>
+         <Datatype>float</Datatype>
+         <Description><![CDATA[Error in Kron (1980) magnitude from y filter stack detection.]]></Description>
+         <Units>AB magnitudes</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yinfoFlag" indexed="false">
+         <Name>yinfoFlag</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the y filter stack photometry. Values listed in DetectionFlags.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yinfoFlag2" indexed="false">
+         <Name>yinfoFlag2</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the y filter stack photometry. Values listed in DetectionFlags2.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.yinfoFlag3" indexed="false">
+         <Name>yinfoFlag3</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Information flag bitmask indicating details of the y filter stack photometry. Values listed in DetectionFlags3.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="StackObjectThin.ynFrames" indexed="false">
+         <Name>ynFrames</Name>
+         <Datatype>int</Datatype>
+         <Description><![CDATA[Number of input frames/exposures contributing to the y filter stack detection.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
