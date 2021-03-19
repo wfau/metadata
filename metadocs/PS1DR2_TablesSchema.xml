@@ -1505,7 +1505,7 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="StackObjectAttributes">
+   <Table ID="stackObjectAttributes">
       <Name>StackObjectAttributes</Name>
       <Description><![CDATA[ Contains the PSF, Kron (1980), and aperture fluxes for all filters in a single row, along with point-source object shape parameters]]></Description>
       <Column ID="StackObjectAttributes.objID" indexed="false">
@@ -2957,7 +2957,7 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="StackObjectThin">
+   <Table ID="stackObjectThin">
       <Name>StackObjectThin</Name>
       <Description><![CDATA[ Contains the positional and photometric information for point-source photometry of stack detections]]></Description>
       <Column ID="StackObjectThin.objID" indexed="false">
