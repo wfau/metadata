@@ -1506,9 +1506,9 @@
       </Column>
    </Table>
    <Table ID="stackObjectAttributes">
-      <Name>StackObjectAttributes</Name>
+      <Name>stackObjectAttributes</Name>
       <Description><![CDATA[ Contains the PSF, Kron (1980), and aperture fluxes for all filters in a single row, along with point-source object shape parameters]]></Description>
-      <Column ID="StackObjectAttributes.objID" indexed="false">
+      <Column ID="stackObjectAttributes.objID" indexed="false">
          <Name>objID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique object identifier.]]></Description>
@@ -1516,7 +1516,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.uniquePspsSTid" indexed="false">
+      <Column ID="stackObjectAttributes.uniquePspsSTid" indexed="false">
          <Name>uniquePspsSTid</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique internal PSPS stack identifier.]]></Description>
@@ -1524,7 +1524,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ippObjID" indexed="false">
+      <Column ID="stackObjectAttributes.ippObjID" indexed="false">
          <Name>ippObjID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal object identifier.]]></Description>
@@ -1532,7 +1532,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.randomStackObjID" indexed="false">
+      <Column ID="stackObjectAttributes.randomStackObjID" indexed="false">
          <Name>randomStackObjID</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Random value drawn from the interval between zero and one.]]></Description>
@@ -1540,7 +1540,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.primaryDetection" indexed="false">
+      <Column ID="stackObjectAttributes.primaryDetection" indexed="false">
          <Name>primaryDetection</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Identifies if this row is the primary stack detection.]]></Description>
@@ -1548,7 +1548,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.bestDetection" indexed="false">
+      <Column ID="stackObjectAttributes.bestDetection" indexed="false">
          <Name>bestDetection</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Identifies if this row is the best detection.]]></Description>
@@ -1556,7 +1556,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gippDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.gippDetectID" indexed="false">
          <Name>gippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -1564,7 +1564,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gstackDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.gstackDetectID" indexed="false">
          <Name>gstackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -1572,7 +1572,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gstackImageID" indexed="false">
+      <Column ID="stackObjectAttributes.gstackImageID" indexed="false">
          <Name>gstackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for g filter detection.]]></Description>
@@ -1580,7 +1580,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gxPos" indexed="false">
+      <Column ID="stackObjectAttributes.gxPos" indexed="false">
          <Name>gxPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF x center location from g filter stack detection.]]></Description>
@@ -1588,7 +1588,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gyPos" indexed="false">
+      <Column ID="stackObjectAttributes.gyPos" indexed="false">
          <Name>gyPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF y center location from g filter stack detection.]]></Description>
@@ -1596,7 +1596,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gxPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.gxPosErr" indexed="false">
          <Name>gxPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF x center location from g filter stack detection.]]></Description>
@@ -1604,7 +1604,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gyPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.gyPosErr" indexed="false">
          <Name>gyPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF y center location from g filter stack detection.]]></Description>
@@ -1612,7 +1612,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfMajorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfMajorFWHM" indexed="false">
          <Name>gpsfMajorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis FWHM from g filter stack detection.]]></Description>
@@ -1620,7 +1620,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfMinorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfMinorFWHM" indexed="false">
          <Name>gpsfMinorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF minor axis FWHM from g filter stack detection.]]></Description>
@@ -1628,7 +1628,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfTheta" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfTheta" indexed="false">
          <Name>gpsfTheta</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis orientation from g filter stack detection.]]></Description>
@@ -1636,7 +1636,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfCore" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfCore" indexed="false">
          <Name>gpsfCore</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF core parameter k from g filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
@@ -1644,7 +1644,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfLikelihood" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfLikelihood" indexed="false">
          <Name>gpsfLikelihood</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Likelihood that this g filter stack detection is best fit by a PSF.]]></Description>
@@ -1652,7 +1652,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfQf" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfQf" indexed="false">
          <Name>gpsfQf</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF coverage factor for g filter stack detection.]]></Description>
@@ -1660,7 +1660,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfQfPerfect" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfQfPerfect" indexed="false">
          <Name>gpsfQfPerfect</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for g filter stack detection.]]></Description>
@@ -1668,7 +1668,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gpsfChiSq" indexed="false">
+      <Column ID="stackObjectAttributes.gpsfChiSq" indexed="false">
          <Name>gpsfChiSq</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Reduced chi squared value of the PSF model fit for g filter stack detection.]]></Description>
@@ -1676,7 +1676,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gmomentXX" indexed="false">
+      <Column ID="stackObjectAttributes.gmomentXX" indexed="false">
          <Name>gmomentXX</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xx for g filter stack detection.]]></Description>
@@ -1684,7 +1684,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gmomentXY" indexed="false">
+      <Column ID="stackObjectAttributes.gmomentXY" indexed="false">
          <Name>gmomentXY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xy for g filter stack detection.]]></Description>
@@ -1692,7 +1692,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gmomentYY" indexed="false">
+      <Column ID="stackObjectAttributes.gmomentYY" indexed="false">
          <Name>gmomentYY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_yy for g filter stack detection.]]></Description>
@@ -1700,7 +1700,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gmomentR1" indexed="false">
+      <Column ID="stackObjectAttributes.gmomentR1" indexed="false">
          <Name>gmomentR1</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[First radial moment for g filter stack detection.]]></Description>
@@ -1708,7 +1708,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gmomentRH" indexed="false">
+      <Column ID="stackObjectAttributes.gmomentRH" indexed="false">
          <Name>gmomentRH</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Half radial moment (r^0.5 weighting) for g filter stack detection.]]></Description>
@@ -1716,7 +1716,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gPSFFlux" indexed="false">
+      <Column ID="stackObjectAttributes.gPSFFlux" indexed="false">
          <Name>gPSFFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF flux from g filter stack detection.]]></Description>
@@ -1724,7 +1724,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gPSFFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.gPSFFluxErr" indexed="false">
          <Name>gPSFFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF flux from g filter stack detection.]]></Description>
@@ -1732,7 +1732,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gApFlux" indexed="false">
+      <Column ID="stackObjectAttributes.gApFlux" indexed="false">
          <Name>gApFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture flux from g filter stack detection.]]></Description>
@@ -1740,7 +1740,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gApFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.gApFluxErr" indexed="false">
          <Name>gApFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture flux from g filter stack detection.]]></Description>
@@ -1748,7 +1748,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gApFillFac" indexed="false">
+      <Column ID="stackObjectAttributes.gApFillFac" indexed="false">
          <Name>gApFillFac</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture fill factor from g filter stack detection.]]></Description>
@@ -1756,7 +1756,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gApRadius" indexed="false">
+      <Column ID="stackObjectAttributes.gApRadius" indexed="false">
          <Name>gApRadius</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture radius for g filter stack detection.]]></Description>
@@ -1764,7 +1764,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gKronFlux" indexed="false">
+      <Column ID="stackObjectAttributes.gKronFlux" indexed="false">
          <Name>gKronFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) flux from g filter stack detection.]]></Description>
@@ -1772,7 +1772,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gKronFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.gKronFluxErr" indexed="false">
          <Name>gKronFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) flux from g filter stack detection.]]></Description>
@@ -1780,7 +1780,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gKronRad" indexed="false">
+      <Column ID="stackObjectAttributes.gKronRad" indexed="false">
          <Name>gKronRad</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) radius from g filter stack detection.]]></Description>
@@ -1788,7 +1788,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gexpTime" indexed="false">
+      <Column ID="stackObjectAttributes.gexpTime" indexed="false">
          <Name>gexpTime</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Exposure time of the g filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -1796,7 +1796,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gExtNSigma" indexed="false">
+      <Column ID="stackObjectAttributes.gExtNSigma" indexed="false">
          <Name>gExtNSigma</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[An extendedness measure for the g filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
@@ -1804,7 +1804,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gsky" indexed="false">
+      <Column ID="stackObjectAttributes.gsky" indexed="false">
          <Name>gsky</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Residual background sky level at the g filter stack detection.]]></Description>
@@ -1812,7 +1812,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gskyErr" indexed="false">
+      <Column ID="stackObjectAttributes.gskyErr" indexed="false">
          <Name>gskyErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in residual background sky level at the g filter stack detection.]]></Description>
@@ -1820,7 +1820,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gzp" indexed="false">
+      <Column ID="stackObjectAttributes.gzp" indexed="false">
          <Name>gzp</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Photometric zeropoint for the g filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -1828,7 +1828,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.gPlateScale" indexed="false">
+      <Column ID="stackObjectAttributes.gPlateScale" indexed="false">
          <Name>gPlateScale</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Local plate scale for the g filter stack.]]></Description>
@@ -1836,7 +1836,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rippDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.rippDetectID" indexed="false">
          <Name>rippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -1844,7 +1844,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rstackDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.rstackDetectID" indexed="false">
          <Name>rstackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -1852,7 +1852,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rstackImageID" indexed="false">
+      <Column ID="stackObjectAttributes.rstackImageID" indexed="false">
          <Name>rstackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for r filter detection.]]></Description>
@@ -1860,7 +1860,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rxPos" indexed="false">
+      <Column ID="stackObjectAttributes.rxPos" indexed="false">
          <Name>rxPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF x center location from r filter stack detection.]]></Description>
@@ -1868,7 +1868,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ryPos" indexed="false">
+      <Column ID="stackObjectAttributes.ryPos" indexed="false">
          <Name>ryPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF y center location from r filter stack detection.]]></Description>
@@ -1876,7 +1876,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rxPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.rxPosErr" indexed="false">
          <Name>rxPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF x center location from r filter stack detection.]]></Description>
@@ -1884,7 +1884,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ryPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.ryPosErr" indexed="false">
          <Name>ryPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF y center location from r filter stack detection.]]></Description>
@@ -1892,7 +1892,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfMajorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfMajorFWHM" indexed="false">
          <Name>rpsfMajorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis FWHM from r filter stack detection.]]></Description>
@@ -1900,7 +1900,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfMinorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfMinorFWHM" indexed="false">
          <Name>rpsfMinorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF minor axis FWHM from r filter stack detection.]]></Description>
@@ -1908,7 +1908,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfTheta" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfTheta" indexed="false">
          <Name>rpsfTheta</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis orientation from r filter stack detection.]]></Description>
@@ -1916,7 +1916,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfCore" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfCore" indexed="false">
          <Name>rpsfCore</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF core parameter k from r filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
@@ -1924,7 +1924,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfLikelihood" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfLikelihood" indexed="false">
          <Name>rpsfLikelihood</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Likelihood that this r filter stack detection is best fit by a PSF.]]></Description>
@@ -1932,7 +1932,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfQf" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfQf" indexed="false">
          <Name>rpsfQf</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF coverage factor for r filter stack detection.]]></Description>
@@ -1940,7 +1940,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfQfPerfect" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfQfPerfect" indexed="false">
          <Name>rpsfQfPerfect</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for r filter stack detection.]]></Description>
@@ -1948,7 +1948,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rpsfChiSq" indexed="false">
+      <Column ID="stackObjectAttributes.rpsfChiSq" indexed="false">
          <Name>rpsfChiSq</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Reduced chi squared value of the PSF model fit for r filter stack detection.]]></Description>
@@ -1956,7 +1956,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rmomentXX" indexed="false">
+      <Column ID="stackObjectAttributes.rmomentXX" indexed="false">
          <Name>rmomentXX</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xx for r filter stack detection.]]></Description>
@@ -1964,7 +1964,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rmomentXY" indexed="false">
+      <Column ID="stackObjectAttributes.rmomentXY" indexed="false">
          <Name>rmomentXY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xy for r filter stack detection.]]></Description>
@@ -1972,7 +1972,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rmomentYY" indexed="false">
+      <Column ID="stackObjectAttributes.rmomentYY" indexed="false">
          <Name>rmomentYY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_yy for r filter stack detection.]]></Description>
@@ -1980,7 +1980,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rmomentR1" indexed="false">
+      <Column ID="stackObjectAttributes.rmomentR1" indexed="false">
          <Name>rmomentR1</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[First radial moment for r filter stack detection.]]></Description>
@@ -1988,7 +1988,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rmomentRH" indexed="false">
+      <Column ID="stackObjectAttributes.rmomentRH" indexed="false">
          <Name>rmomentRH</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Half radial moment (r^0.5 weighting) for r filter stack detection.]]></Description>
@@ -1996,7 +1996,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rPSFFlux" indexed="false">
+      <Column ID="stackObjectAttributes.rPSFFlux" indexed="false">
          <Name>rPSFFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF flux from r filter stack detection.]]></Description>
@@ -2004,7 +2004,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rPSFFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.rPSFFluxErr" indexed="false">
          <Name>rPSFFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF flux from r filter stack detection.]]></Description>
@@ -2012,7 +2012,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rApFlux" indexed="false">
+      <Column ID="stackObjectAttributes.rApFlux" indexed="false">
          <Name>rApFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture flux from r filter stack detection.]]></Description>
@@ -2020,7 +2020,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rApFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.rApFluxErr" indexed="false">
          <Name>rApFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture flux from r filter stack detection.]]></Description>
@@ -2028,7 +2028,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rApFillFac" indexed="false">
+      <Column ID="stackObjectAttributes.rApFillFac" indexed="false">
          <Name>rApFillFac</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture fill factor from r filter stack detection.]]></Description>
@@ -2036,7 +2036,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rApRadius" indexed="false">
+      <Column ID="stackObjectAttributes.rApRadius" indexed="false">
          <Name>rApRadius</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture radius for r filter stack detection.]]></Description>
@@ -2044,7 +2044,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rKronFlux" indexed="false">
+      <Column ID="stackObjectAttributes.rKronFlux" indexed="false">
          <Name>rKronFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) flux from r filter stack detection.]]></Description>
@@ -2052,7 +2052,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rKronFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.rKronFluxErr" indexed="false">
          <Name>rKronFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) flux from r filter stack detection.]]></Description>
@@ -2060,7 +2060,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rKronRad" indexed="false">
+      <Column ID="stackObjectAttributes.rKronRad" indexed="false">
          <Name>rKronRad</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) radius from r filter stack detection.]]></Description>
@@ -2068,7 +2068,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rexpTime" indexed="false">
+      <Column ID="stackObjectAttributes.rexpTime" indexed="false">
          <Name>rexpTime</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Exposure time of the r filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2076,7 +2076,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rExtNSigma" indexed="false">
+      <Column ID="stackObjectAttributes.rExtNSigma" indexed="false">
          <Name>rExtNSigma</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[An extendedness measure for the r filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
@@ -2084,7 +2084,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rsky" indexed="false">
+      <Column ID="stackObjectAttributes.rsky" indexed="false">
          <Name>rsky</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Residual background sky level at the r filter stack detection.]]></Description>
@@ -2092,7 +2092,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rskyErr" indexed="false">
+      <Column ID="stackObjectAttributes.rskyErr" indexed="false">
          <Name>rskyErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in residual background sky level at the r filter stack detection.]]></Description>
@@ -2100,7 +2100,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rzp" indexed="false">
+      <Column ID="stackObjectAttributes.rzp" indexed="false">
          <Name>rzp</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Photometric zeropoint for the r filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2108,7 +2108,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.rPlateScale" indexed="false">
+      <Column ID="stackObjectAttributes.rPlateScale" indexed="false">
          <Name>rPlateScale</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Local plate scale for the r filter stack.]]></Description>
@@ -2116,7 +2116,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iippDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.iippDetectID" indexed="false">
          <Name>iippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -2124,7 +2124,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.istackDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.istackDetectID" indexed="false">
          <Name>istackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -2132,7 +2132,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.istackImageID" indexed="false">
+      <Column ID="stackObjectAttributes.istackImageID" indexed="false">
          <Name>istackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for i filter detection.]]></Description>
@@ -2140,7 +2140,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ixPos" indexed="false">
+      <Column ID="stackObjectAttributes.ixPos" indexed="false">
          <Name>ixPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF x center location from i filter stack detection.]]></Description>
@@ -2148,7 +2148,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iyPos" indexed="false">
+      <Column ID="stackObjectAttributes.iyPos" indexed="false">
          <Name>iyPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF y center location from i filter stack detection.]]></Description>
@@ -2156,7 +2156,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ixPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.ixPosErr" indexed="false">
          <Name>ixPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF x center location from i filter stack detection.]]></Description>
@@ -2164,7 +2164,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iyPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.iyPosErr" indexed="false">
          <Name>iyPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF y center location from i filter stack detection.]]></Description>
@@ -2172,7 +2172,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfMajorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfMajorFWHM" indexed="false">
          <Name>ipsfMajorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis FWHM from i filter stack detection.]]></Description>
@@ -2180,7 +2180,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfMinorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfMinorFWHM" indexed="false">
          <Name>ipsfMinorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF minor axis FWHM from i filter stack detection.]]></Description>
@@ -2188,7 +2188,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfTheta" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfTheta" indexed="false">
          <Name>ipsfTheta</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis orientation from i filter stack detection.]]></Description>
@@ -2196,7 +2196,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfCore" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfCore" indexed="false">
          <Name>ipsfCore</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF core parameter k from i filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
@@ -2204,7 +2204,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfLikelihood" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfLikelihood" indexed="false">
          <Name>ipsfLikelihood</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Likelihood that this i filter stack detection is best fit by a PSF.]]></Description>
@@ -2212,7 +2212,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfQf" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfQf" indexed="false">
          <Name>ipsfQf</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF coverage factor for i filter stack detection.]]></Description>
@@ -2220,7 +2220,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfQfPerfect" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfQfPerfect" indexed="false">
          <Name>ipsfQfPerfect</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for i filter stack detection.]]></Description>
@@ -2228,7 +2228,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ipsfChiSq" indexed="false">
+      <Column ID="stackObjectAttributes.ipsfChiSq" indexed="false">
          <Name>ipsfChiSq</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Reduced chi squared value of the PSF model fit for i filter stack detection.]]></Description>
@@ -2236,7 +2236,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.imomentXX" indexed="false">
+      <Column ID="stackObjectAttributes.imomentXX" indexed="false">
          <Name>imomentXX</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xx for i filter stack detection.]]></Description>
@@ -2244,7 +2244,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.imomentXY" indexed="false">
+      <Column ID="stackObjectAttributes.imomentXY" indexed="false">
          <Name>imomentXY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xy for i filter stack detection.]]></Description>
@@ -2252,7 +2252,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.imomentYY" indexed="false">
+      <Column ID="stackObjectAttributes.imomentYY" indexed="false">
          <Name>imomentYY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_yy for i filter stack detection.]]></Description>
@@ -2260,7 +2260,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.imomentR1" indexed="false">
+      <Column ID="stackObjectAttributes.imomentR1" indexed="false">
          <Name>imomentR1</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[First radial moment for i filter stack detection.]]></Description>
@@ -2268,7 +2268,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.imomentRH" indexed="false">
+      <Column ID="stackObjectAttributes.imomentRH" indexed="false">
          <Name>imomentRH</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Half radial moment (r^0.5 weighting) for i filter stack detection.]]></Description>
@@ -2276,7 +2276,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iPSFFlux" indexed="false">
+      <Column ID="stackObjectAttributes.iPSFFlux" indexed="false">
          <Name>iPSFFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF flux from i filter stack detection.]]></Description>
@@ -2284,7 +2284,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iPSFFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.iPSFFluxErr" indexed="false">
          <Name>iPSFFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF flux from i filter stack detection.]]></Description>
@@ -2292,7 +2292,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iApFlux" indexed="false">
+      <Column ID="stackObjectAttributes.iApFlux" indexed="false">
          <Name>iApFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture flux from i filter stack detection.]]></Description>
@@ -2300,7 +2300,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iApFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.iApFluxErr" indexed="false">
          <Name>iApFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture flux from i filter stack detection.]]></Description>
@@ -2308,7 +2308,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iApFillFac" indexed="false">
+      <Column ID="stackObjectAttributes.iApFillFac" indexed="false">
          <Name>iApFillFac</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture fill factor from i filter stack detection.]]></Description>
@@ -2316,7 +2316,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iApRadius" indexed="false">
+      <Column ID="stackObjectAttributes.iApRadius" indexed="false">
          <Name>iApRadius</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture radius for i filter stack detection.]]></Description>
@@ -2324,7 +2324,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iKronFlux" indexed="false">
+      <Column ID="stackObjectAttributes.iKronFlux" indexed="false">
          <Name>iKronFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) flux from i filter stack detection.]]></Description>
@@ -2332,7 +2332,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iKronFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.iKronFluxErr" indexed="false">
          <Name>iKronFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) flux from i filter stack detection.]]></Description>
@@ -2340,7 +2340,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iKronRad" indexed="false">
+      <Column ID="stackObjectAttributes.iKronRad" indexed="false">
          <Name>iKronRad</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) radius from i filter stack detection.]]></Description>
@@ -2348,7 +2348,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iexpTime" indexed="false">
+      <Column ID="stackObjectAttributes.iexpTime" indexed="false">
          <Name>iexpTime</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Exposure time of the i filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2356,7 +2356,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iExtNSigma" indexed="false">
+      <Column ID="stackObjectAttributes.iExtNSigma" indexed="false">
          <Name>iExtNSigma</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[An extendedness measure for the i filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
@@ -2364,7 +2364,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.isky" indexed="false">
+      <Column ID="stackObjectAttributes.isky" indexed="false">
          <Name>isky</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Residual background sky level at the i filter stack detection.]]></Description>
@@ -2372,7 +2372,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iskyErr" indexed="false">
+      <Column ID="stackObjectAttributes.iskyErr" indexed="false">
          <Name>iskyErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in residual background sky level at the i filter stack detection.]]></Description>
@@ -2380,7 +2380,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.izp" indexed="false">
+      <Column ID="stackObjectAttributes.izp" indexed="false">
          <Name>izp</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Photometric zeropoint for the i filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2388,7 +2388,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.iPlateScale" indexed="false">
+      <Column ID="stackObjectAttributes.iPlateScale" indexed="false">
          <Name>iPlateScale</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Local plate scale for the i filter stack.]]></Description>
@@ -2396,7 +2396,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zippDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.zippDetectID" indexed="false">
          <Name>zippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -2404,7 +2404,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zstackDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.zstackDetectID" indexed="false">
          <Name>zstackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -2412,7 +2412,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zstackImageID" indexed="false">
+      <Column ID="stackObjectAttributes.zstackImageID" indexed="false">
          <Name>zstackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for z filter detection.]]></Description>
@@ -2420,7 +2420,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zxPos" indexed="false">
+      <Column ID="stackObjectAttributes.zxPos" indexed="false">
          <Name>zxPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF x center location from z filter stack detection.]]></Description>
@@ -2428,7 +2428,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zyPos" indexed="false">
+      <Column ID="stackObjectAttributes.zyPos" indexed="false">
          <Name>zyPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF y center location from z filter stack detection.]]></Description>
@@ -2436,7 +2436,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zxPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.zxPosErr" indexed="false">
          <Name>zxPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF x center location from z filter stack detection.]]></Description>
@@ -2444,7 +2444,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zyPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.zyPosErr" indexed="false">
          <Name>zyPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF y center location from z filter stack detection.]]></Description>
@@ -2452,7 +2452,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfMajorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfMajorFWHM" indexed="false">
          <Name>zpsfMajorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis FWHM from z filter stack detection.]]></Description>
@@ -2460,7 +2460,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfMinorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfMinorFWHM" indexed="false">
          <Name>zpsfMinorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF minor axis FWHM from z filter stack detection.]]></Description>
@@ -2468,7 +2468,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfTheta" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfTheta" indexed="false">
          <Name>zpsfTheta</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis orientation from z filter stack detection.]]></Description>
@@ -2476,7 +2476,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfCore" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfCore" indexed="false">
          <Name>zpsfCore</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF core parameter k from z filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
@@ -2484,7 +2484,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfLikelihood" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfLikelihood" indexed="false">
          <Name>zpsfLikelihood</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Likelihood that this z filter stack detection is best fit by a PSF.]]></Description>
@@ -2492,7 +2492,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfQf" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfQf" indexed="false">
          <Name>zpsfQf</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF coverage factor for z filter stack detection.]]></Description>
@@ -2500,7 +2500,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfQfPerfect" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfQfPerfect" indexed="false">
          <Name>zpsfQfPerfect</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for z filter stack detection.]]></Description>
@@ -2508,7 +2508,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zpsfChiSq" indexed="false">
+      <Column ID="stackObjectAttributes.zpsfChiSq" indexed="false">
          <Name>zpsfChiSq</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Reduced chi squared value of the PSF model fit for z filter stack detection.]]></Description>
@@ -2516,7 +2516,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zmomentXX" indexed="false">
+      <Column ID="stackObjectAttributes.zmomentXX" indexed="false">
          <Name>zmomentXX</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xx for z filter stack detection.]]></Description>
@@ -2524,7 +2524,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zmomentXY" indexed="false">
+      <Column ID="stackObjectAttributes.zmomentXY" indexed="false">
          <Name>zmomentXY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xy for z filter stack detection.]]></Description>
@@ -2532,7 +2532,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zmomentYY" indexed="false">
+      <Column ID="stackObjectAttributes.zmomentYY" indexed="false">
          <Name>zmomentYY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_yy for z filter stack detection.]]></Description>
@@ -2540,7 +2540,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zmomentR1" indexed="false">
+      <Column ID="stackObjectAttributes.zmomentR1" indexed="false">
          <Name>zmomentR1</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[First radial moment for z filter stack detection.]]></Description>
@@ -2548,7 +2548,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zmomentRH" indexed="false">
+      <Column ID="stackObjectAttributes.zmomentRH" indexed="false">
          <Name>zmomentRH</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Half radial moment (r^0.5 weighting) for z filter stack detection.]]></Description>
@@ -2556,7 +2556,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zPSFFlux" indexed="false">
+      <Column ID="stackObjectAttributes.zPSFFlux" indexed="false">
          <Name>zPSFFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF flux from z filter stack detection.]]></Description>
@@ -2564,7 +2564,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zPSFFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.zPSFFluxErr" indexed="false">
          <Name>zPSFFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF flux from z filter stack detection.]]></Description>
@@ -2572,7 +2572,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zApFlux" indexed="false">
+      <Column ID="stackObjectAttributes.zApFlux" indexed="false">
          <Name>zApFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture flux from z filter stack detection.]]></Description>
@@ -2580,7 +2580,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zApFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.zApFluxErr" indexed="false">
          <Name>zApFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture flux from z filter stack detection.]]></Description>
@@ -2588,7 +2588,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zApFillFac" indexed="false">
+      <Column ID="stackObjectAttributes.zApFillFac" indexed="false">
          <Name>zApFillFac</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture fill factor from z filter stack detection.]]></Description>
@@ -2596,7 +2596,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zApRadius" indexed="false">
+      <Column ID="stackObjectAttributes.zApRadius" indexed="false">
          <Name>zApRadius</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture radius for z filter stack detection.]]></Description>
@@ -2604,7 +2604,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zKronFlux" indexed="false">
+      <Column ID="stackObjectAttributes.zKronFlux" indexed="false">
          <Name>zKronFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) flux from z filter stack detection.]]></Description>
@@ -2612,7 +2612,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zKronFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.zKronFluxErr" indexed="false">
          <Name>zKronFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) flux from z filter stack detection.]]></Description>
@@ -2620,7 +2620,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zKronRad" indexed="false">
+      <Column ID="stackObjectAttributes.zKronRad" indexed="false">
          <Name>zKronRad</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) radius from z filter stack detection.]]></Description>
@@ -2628,7 +2628,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zexpTime" indexed="false">
+      <Column ID="stackObjectAttributes.zexpTime" indexed="false">
          <Name>zexpTime</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Exposure time of the z filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2636,7 +2636,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zExtNSigma" indexed="false">
+      <Column ID="stackObjectAttributes.zExtNSigma" indexed="false">
          <Name>zExtNSigma</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[An extendedness measure for the z filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
@@ -2644,7 +2644,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zsky" indexed="false">
+      <Column ID="stackObjectAttributes.zsky" indexed="false">
          <Name>zsky</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Residual background sky level at the z filter stack detection.]]></Description>
@@ -2652,7 +2652,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zskyErr" indexed="false">
+      <Column ID="stackObjectAttributes.zskyErr" indexed="false">
          <Name>zskyErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in residual background sky level at the z filter stack detection.]]></Description>
@@ -2660,7 +2660,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zzp" indexed="false">
+      <Column ID="stackObjectAttributes.zzp" indexed="false">
          <Name>zzp</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Photometric zeropoint for the z filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2668,7 +2668,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.zPlateScale" indexed="false">
+      <Column ID="stackObjectAttributes.zPlateScale" indexed="false">
          <Name>zPlateScale</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Local plate scale for the z filter stack.]]></Description>
@@ -2676,7 +2676,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yippDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.yippDetectID" indexed="false">
          <Name>yippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -2684,7 +2684,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ystackDetectID" indexed="false">
+      <Column ID="stackObjectAttributes.ystackDetectID" indexed="false">
          <Name>ystackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -2692,7 +2692,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ystackImageID" indexed="false">
+      <Column ID="stackObjectAttributes.ystackImageID" indexed="false">
          <Name>ystackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for y filter detection.]]></Description>
@@ -2700,7 +2700,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yxPos" indexed="false">
+      <Column ID="stackObjectAttributes.yxPos" indexed="false">
          <Name>yxPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF x center location from y filter stack detection.]]></Description>
@@ -2708,7 +2708,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yyPos" indexed="false">
+      <Column ID="stackObjectAttributes.yyPos" indexed="false">
          <Name>yyPos</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF y center location from y filter stack detection.]]></Description>
@@ -2716,7 +2716,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yxPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.yxPosErr" indexed="false">
          <Name>yxPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF x center location from y filter stack detection.]]></Description>
@@ -2724,7 +2724,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yyPosErr" indexed="false">
+      <Column ID="stackObjectAttributes.yyPosErr" indexed="false">
          <Name>yyPosErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF y center location from y filter stack detection.]]></Description>
@@ -2732,7 +2732,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfMajorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfMajorFWHM" indexed="false">
          <Name>ypsfMajorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis FWHM from y filter stack detection.]]></Description>
@@ -2740,7 +2740,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfMinorFWHM" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfMinorFWHM" indexed="false">
          <Name>ypsfMinorFWHM</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF minor axis FWHM from y filter stack detection.]]></Description>
@@ -2748,7 +2748,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfTheta" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfTheta" indexed="false">
          <Name>ypsfTheta</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF major axis orientation from y filter stack detection.]]></Description>
@@ -2756,7 +2756,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfCore" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfCore" indexed="false">
          <Name>ypsfCore</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF core parameter k from y filter stack detection, where F = F0 / (1 + k r^2 + r^3.33).]]></Description>
@@ -2764,7 +2764,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfLikelihood" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfLikelihood" indexed="false">
          <Name>ypsfLikelihood</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Likelihood that this y filter stack detection is best fit by a PSF.]]></Description>
@@ -2772,7 +2772,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfQf" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfQf" indexed="false">
          <Name>ypsfQf</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF coverage factor for y filter stack detection.]]></Description>
@@ -2780,7 +2780,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfQfPerfect" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfQfPerfect" indexed="false">
          <Name>ypsfQfPerfect</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF-weighted fraction of pixels totally unmasked for y filter stack detection.]]></Description>
@@ -2788,7 +2788,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ypsfChiSq" indexed="false">
+      <Column ID="stackObjectAttributes.ypsfChiSq" indexed="false">
          <Name>ypsfChiSq</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Reduced chi squared value of the PSF model fit for y filter stack detection.]]></Description>
@@ -2796,7 +2796,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ymomentXX" indexed="false">
+      <Column ID="stackObjectAttributes.ymomentXX" indexed="false">
          <Name>ymomentXX</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xx for y filter stack detection.]]></Description>
@@ -2804,7 +2804,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ymomentXY" indexed="false">
+      <Column ID="stackObjectAttributes.ymomentXY" indexed="false">
          <Name>ymomentXY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_xy for y filter stack detection.]]></Description>
@@ -2812,7 +2812,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ymomentYY" indexed="false">
+      <Column ID="stackObjectAttributes.ymomentYY" indexed="false">
          <Name>ymomentYY</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Second moment M_yy for y filter stack detection.]]></Description>
@@ -2820,7 +2820,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ymomentR1" indexed="false">
+      <Column ID="stackObjectAttributes.ymomentR1" indexed="false">
          <Name>ymomentR1</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[First radial moment for y filter stack detection.]]></Description>
@@ -2828,7 +2828,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ymomentRH" indexed="false">
+      <Column ID="stackObjectAttributes.ymomentRH" indexed="false">
          <Name>ymomentRH</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Half radial moment (r^0.5 weighting) for y filter stack detection.]]></Description>
@@ -2836,7 +2836,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yPSFFlux" indexed="false">
+      <Column ID="stackObjectAttributes.yPSFFlux" indexed="false">
          <Name>yPSFFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF flux from y filter stack detection.]]></Description>
@@ -2844,7 +2844,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yPSFFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.yPSFFluxErr" indexed="false">
          <Name>yPSFFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF flux from y filter stack detection.]]></Description>
@@ -2852,7 +2852,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yApFlux" indexed="false">
+      <Column ID="stackObjectAttributes.yApFlux" indexed="false">
          <Name>yApFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture flux from y filter stack detection.]]></Description>
@@ -2860,7 +2860,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yApFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.yApFluxErr" indexed="false">
          <Name>yApFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture flux from y filter stack detection.]]></Description>
@@ -2868,7 +2868,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yApFillFac" indexed="false">
+      <Column ID="stackObjectAttributes.yApFillFac" indexed="false">
          <Name>yApFillFac</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture fill factor from y filter stack detection.]]></Description>
@@ -2876,7 +2876,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yApRadius" indexed="false">
+      <Column ID="stackObjectAttributes.yApRadius" indexed="false">
          <Name>yApRadius</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture radius for y filter stack detection.]]></Description>
@@ -2884,7 +2884,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yKronFlux" indexed="false">
+      <Column ID="stackObjectAttributes.yKronFlux" indexed="false">
          <Name>yKronFlux</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) flux from y filter stack detection.]]></Description>
@@ -2892,7 +2892,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yKronFluxErr" indexed="false">
+      <Column ID="stackObjectAttributes.yKronFluxErr" indexed="false">
          <Name>yKronFluxErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) flux from y filter stack detection.]]></Description>
@@ -2900,7 +2900,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yKronRad" indexed="false">
+      <Column ID="stackObjectAttributes.yKronRad" indexed="false">
          <Name>yKronRad</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) radius from y filter stack detection.]]></Description>
@@ -2908,7 +2908,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yexpTime" indexed="false">
+      <Column ID="stackObjectAttributes.yexpTime" indexed="false">
          <Name>yexpTime</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Exposure time of the y filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2916,7 +2916,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yExtNSigma" indexed="false">
+      <Column ID="stackObjectAttributes.yExtNSigma" indexed="false">
          <Name>yExtNSigma</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[An extendedness measure for the y filter stack detection based on the deviation between PSF and Kron (1980) magnitudes, normalized by the PSF magnitude uncertainty.]]></Description>
@@ -2924,7 +2924,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.ysky" indexed="false">
+      <Column ID="stackObjectAttributes.ysky" indexed="false">
          <Name>ysky</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Residual background sky level at the y filter stack detection.]]></Description>
@@ -2932,7 +2932,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yskyErr" indexed="false">
+      <Column ID="stackObjectAttributes.yskyErr" indexed="false">
          <Name>yskyErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in residual background sky level at the y filter stack detection.]]></Description>
@@ -2940,7 +2940,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yzp" indexed="false">
+      <Column ID="stackObjectAttributes.yzp" indexed="false">
          <Name>yzp</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Photometric zeropoint for the y filter stack. Necessary for converting listed fluxes and magnitudes back to measured ADU counts.]]></Description>
@@ -2948,7 +2948,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectAttributes.yPlateScale" indexed="false">
+      <Column ID="stackObjectAttributes.yPlateScale" indexed="false">
          <Name>yPlateScale</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Local plate scale for the y filter stack.]]></Description>
@@ -2958,9 +2958,9 @@
       </Column>
    </Table>
    <Table ID="stackObjectThin">
-      <Name>StackObjectThin</Name>
+      <Name>stackObjectThin</Name>
       <Description><![CDATA[ Contains the positional and photometric information for point-source photometry of stack detections]]></Description>
-      <Column ID="StackObjectThin.objID" indexed="false">
+      <Column ID="stackObjectThin.objID" indexed="false">
          <Name>objID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique object identifier.]]></Description>
@@ -2968,7 +2968,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.uniquePspsSTid" indexed="false">
+      <Column ID="stackObjectThin.uniquePspsSTid" indexed="false">
          <Name>uniquePspsSTid</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique internal PSPS stack identifier.]]></Description>
@@ -2976,7 +2976,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ippObjID" indexed="false">
+      <Column ID="stackObjectThin.ippObjID" indexed="false">
          <Name>ippObjID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal object identifier.]]></Description>
@@ -2984,7 +2984,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.surveyID" indexed="false">
+      <Column ID="stackObjectThin.surveyID" indexed="false">
          <Name>surveyID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Survey identifier. Details in the Survey table.]]></Description>
@@ -2992,7 +2992,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.tessID" indexed="false">
+      <Column ID="stackObjectThin.tessID" indexed="false">
          <Name>tessID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Tessellation identifier. Details in the TessellationType table.]]></Description>
@@ -3000,7 +3000,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.projectionID" indexed="false">
+      <Column ID="stackObjectThin.projectionID" indexed="false">
          <Name>projectionID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Projection cell identifier.]]></Description>
@@ -3008,7 +3008,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.skyCellID" indexed="false">
+      <Column ID="stackObjectThin.skyCellID" indexed="false">
          <Name>skyCellID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Skycell region identifier.]]></Description>
@@ -3016,7 +3016,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.randomStackObjID" indexed="false">
+      <Column ID="stackObjectThin.randomStackObjID" indexed="false">
          <Name>randomStackObjID</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Random value drawn from the interval between zero and one.]]></Description>
@@ -3024,7 +3024,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.primaryDetection" indexed="false">
+      <Column ID="stackObjectThin.primaryDetection" indexed="false">
          <Name>primaryDetection</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Identifies if this row is the primary stack detection.]]></Description>
@@ -3032,7 +3032,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.bestDetection" indexed="false">
+      <Column ID="stackObjectThin.bestDetection" indexed="false">
          <Name>bestDetection</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Identifies if this row is the best detection.]]></Description>
@@ -3040,7 +3040,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.dvoRegionID" indexed="false">
+      <Column ID="stackObjectThin.dvoRegionID" indexed="false">
          <Name>dvoRegionID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Internal DVO region identifier.]]></Description>
@@ -3048,7 +3048,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.processingVersion" indexed="false">
+      <Column ID="stackObjectThin.processingVersion" indexed="false">
          <Name>processingVersion</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Data release version.]]></Description>
@@ -3056,7 +3056,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gippDetectID" indexed="false">
+      <Column ID="stackObjectThin.gippDetectID" indexed="false">
          <Name>gippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -3064,7 +3064,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gstackDetectID" indexed="false">
+      <Column ID="stackObjectThin.gstackDetectID" indexed="false">
          <Name>gstackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -3072,7 +3072,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gstackImageID" indexed="false">
+      <Column ID="stackObjectThin.gstackImageID" indexed="false">
          <Name>gstackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for g filter detection.]]></Description>
@@ -3080,7 +3080,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gra" indexed="false">
+      <Column ID="stackObjectThin.gra" indexed="false">
          <Name>gra</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Right ascension from g filter stack detection.]]></Description>
@@ -3088,7 +3088,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gdec" indexed="false">
+      <Column ID="stackObjectThin.gdec" indexed="false">
          <Name>gdec</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Declination from g filter stack detection.]]></Description>
@@ -3096,7 +3096,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.graErr" indexed="false">
+      <Column ID="stackObjectThin.graErr" indexed="false">
          <Name>graErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Right ascension error from g filter stack detection.]]></Description>
@@ -3104,7 +3104,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gdecErr" indexed="false">
+      <Column ID="stackObjectThin.gdecErr" indexed="false">
          <Name>gdecErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Declination error from g filter stack detection.]]></Description>
@@ -3112,7 +3112,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gEpoch" indexed="false">
+      <Column ID="stackObjectThin.gEpoch" indexed="false">
          <Name>gEpoch</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the g-band stack (equinox J2000).]]></Description>
@@ -3120,7 +3120,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gPSFMag" indexed="false">
+      <Column ID="stackObjectThin.gPSFMag" indexed="false">
          <Name>gPSFMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF magnitude from g filter stack detection.]]></Description>
@@ -3128,7 +3128,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gPSFMagErr" indexed="false">
+      <Column ID="stackObjectThin.gPSFMagErr" indexed="false">
          <Name>gPSFMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF magnitude from g filter stack detection.]]></Description>
@@ -3136,7 +3136,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gApMag" indexed="false">
+      <Column ID="stackObjectThin.gApMag" indexed="false">
          <Name>gApMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture magnitude from g filter stack detection.]]></Description>
@@ -3144,7 +3144,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gApMagErr" indexed="false">
+      <Column ID="stackObjectThin.gApMagErr" indexed="false">
          <Name>gApMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture magnitude from g filter stack detection.]]></Description>
@@ -3152,7 +3152,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gKronMag" indexed="false">
+      <Column ID="stackObjectThin.gKronMag" indexed="false">
          <Name>gKronMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) magnitude from g filter stack detection.]]></Description>
@@ -3160,7 +3160,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gKronMagErr" indexed="false">
+      <Column ID="stackObjectThin.gKronMagErr" indexed="false">
          <Name>gKronMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) magnitude from g filter stack detection.]]></Description>
@@ -3168,7 +3168,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ginfoFlag" indexed="false">
+      <Column ID="stackObjectThin.ginfoFlag" indexed="false">
          <Name>ginfoFlag</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the g filter stack photometry. Values listed in DetectionFlags.]]></Description>
@@ -3176,7 +3176,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ginfoFlag2" indexed="false">
+      <Column ID="stackObjectThin.ginfoFlag2" indexed="false">
          <Name>ginfoFlag2</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the g filter stack photometry. Values listed in DetectionFlags2.]]></Description>
@@ -3184,7 +3184,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ginfoFlag3" indexed="false">
+      <Column ID="stackObjectThin.ginfoFlag3" indexed="false">
          <Name>ginfoFlag3</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the g filter stack photometry. Values listed in DetectionFlags3.]]></Description>
@@ -3192,7 +3192,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.gnFrames" indexed="false">
+      <Column ID="stackObjectThin.gnFrames" indexed="false">
          <Name>gnFrames</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Number of input frames/exposures contributing to the g filter stack detection.]]></Description>
@@ -3200,7 +3200,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rippDetectID" indexed="false">
+      <Column ID="stackObjectThin.rippDetectID" indexed="false">
          <Name>rippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -3208,7 +3208,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rstackDetectID" indexed="false">
+      <Column ID="stackObjectThin.rstackDetectID" indexed="false">
          <Name>rstackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -3216,7 +3216,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rstackImageID" indexed="false">
+      <Column ID="stackObjectThin.rstackImageID" indexed="false">
          <Name>rstackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for r filter detection.]]></Description>
@@ -3224,7 +3224,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rra" indexed="false">
+      <Column ID="stackObjectThin.rra" indexed="false">
          <Name>rra</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Right ascension from r filter stack detection.]]></Description>
@@ -3232,7 +3232,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rdec" indexed="false">
+      <Column ID="stackObjectThin.rdec" indexed="false">
          <Name>rdec</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Declination from r filter stack detection.]]></Description>
@@ -3240,7 +3240,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rraErr" indexed="false">
+      <Column ID="stackObjectThin.rraErr" indexed="false">
          <Name>rraErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Right ascension error from r filter stack detection.]]></Description>
@@ -3248,7 +3248,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rdecErr" indexed="false">
+      <Column ID="stackObjectThin.rdecErr" indexed="false">
          <Name>rdecErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Declination error from r filter stack detection.]]></Description>
@@ -3256,7 +3256,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rEpoch" indexed="false">
+      <Column ID="stackObjectThin.rEpoch" indexed="false">
          <Name>rEpoch</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the r-band stack (equinox J2000).]]></Description>
@@ -3264,7 +3264,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rPSFMag" indexed="false">
+      <Column ID="stackObjectThin.rPSFMag" indexed="false">
          <Name>rPSFMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF magnitude from r filter stack detection.]]></Description>
@@ -3272,7 +3272,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rPSFMagErr" indexed="false">
+      <Column ID="stackObjectThin.rPSFMagErr" indexed="false">
          <Name>rPSFMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF magnitude from r filter stack detection.]]></Description>
@@ -3280,7 +3280,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rApMag" indexed="false">
+      <Column ID="stackObjectThin.rApMag" indexed="false">
          <Name>rApMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture magnitude from r filter stack detection.]]></Description>
@@ -3288,7 +3288,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rApMagErr" indexed="false">
+      <Column ID="stackObjectThin.rApMagErr" indexed="false">
          <Name>rApMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture magnitude from r filter stack detection.]]></Description>
@@ -3296,7 +3296,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rKronMag" indexed="false">
+      <Column ID="stackObjectThin.rKronMag" indexed="false">
          <Name>rKronMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) magnitude from r filter stack detection.]]></Description>
@@ -3304,7 +3304,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rKronMagErr" indexed="false">
+      <Column ID="stackObjectThin.rKronMagErr" indexed="false">
          <Name>rKronMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) magnitude from r filter stack detection.]]></Description>
@@ -3312,7 +3312,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rinfoFlag" indexed="false">
+      <Column ID="stackObjectThin.rinfoFlag" indexed="false">
          <Name>rinfoFlag</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the r filter stack photometry. Values listed in DetectionFlags.]]></Description>
@@ -3320,7 +3320,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rinfoFlag2" indexed="false">
+      <Column ID="stackObjectThin.rinfoFlag2" indexed="false">
          <Name>rinfoFlag2</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the r filter stack photometry. Values listed in DetectionFlags2.]]></Description>
@@ -3328,7 +3328,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rinfoFlag3" indexed="false">
+      <Column ID="stackObjectThin.rinfoFlag3" indexed="false">
          <Name>rinfoFlag3</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the r filter stack photometry. Values listed in DetectionFlags3.]]></Description>
@@ -3336,7 +3336,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.rnFrames" indexed="false">
+      <Column ID="stackObjectThin.rnFrames" indexed="false">
          <Name>rnFrames</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Number of input frames/exposures contributing to the r filter stack detection.]]></Description>
@@ -3344,7 +3344,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iippDetectID" indexed="false">
+      <Column ID="stackObjectThin.iippDetectID" indexed="false">
          <Name>iippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -3352,7 +3352,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.istackDetectID" indexed="false">
+      <Column ID="stackObjectThin.istackDetectID" indexed="false">
          <Name>istackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -3360,7 +3360,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.istackImageID" indexed="false">
+      <Column ID="stackObjectThin.istackImageID" indexed="false">
          <Name>istackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for i filter detection.]]></Description>
@@ -3368,7 +3368,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ira" indexed="false">
+      <Column ID="stackObjectThin.ira" indexed="false">
          <Name>ira</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Right ascension from i filter stack detection.]]></Description>
@@ -3376,7 +3376,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.idec" indexed="false">
+      <Column ID="stackObjectThin.idec" indexed="false">
          <Name>idec</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Declination from i filter stack detection.]]></Description>
@@ -3384,7 +3384,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iraErr" indexed="false">
+      <Column ID="stackObjectThin.iraErr" indexed="false">
          <Name>iraErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Right ascension error from i filter stack detection.]]></Description>
@@ -3392,7 +3392,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.idecErr" indexed="false">
+      <Column ID="stackObjectThin.idecErr" indexed="false">
          <Name>idecErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Declination error from i filter stack detection.]]></Description>
@@ -3400,7 +3400,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iEpoch" indexed="false">
+      <Column ID="stackObjectThin.iEpoch" indexed="false">
          <Name>iEpoch</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the i-band stack (equinox J2000).]]></Description>
@@ -3408,7 +3408,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iPSFMag" indexed="false">
+      <Column ID="stackObjectThin.iPSFMag" indexed="false">
          <Name>iPSFMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF magnitude from i filter stack detection.]]></Description>
@@ -3416,7 +3416,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iPSFMagErr" indexed="false">
+      <Column ID="stackObjectThin.iPSFMagErr" indexed="false">
          <Name>iPSFMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF magnitude from i filter stack detection.]]></Description>
@@ -3424,7 +3424,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iApMag" indexed="false">
+      <Column ID="stackObjectThin.iApMag" indexed="false">
          <Name>iApMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture magnitude from i filter stack detection.]]></Description>
@@ -3432,7 +3432,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iApMagErr" indexed="false">
+      <Column ID="stackObjectThin.iApMagErr" indexed="false">
          <Name>iApMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture magnitude from i filter stack detection.]]></Description>
@@ -3440,7 +3440,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iKronMag" indexed="false">
+      <Column ID="stackObjectThin.iKronMag" indexed="false">
          <Name>iKronMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) magnitude from i filter stack detection.]]></Description>
@@ -3448,7 +3448,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iKronMagErr" indexed="false">
+      <Column ID="stackObjectThin.iKronMagErr" indexed="false">
          <Name>iKronMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) magnitude from i filter stack detection.]]></Description>
@@ -3456,7 +3456,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iinfoFlag" indexed="false">
+      <Column ID="stackObjectThin.iinfoFlag" indexed="false">
          <Name>iinfoFlag</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the i filter stack photometry. Values listed in DetectionFlags.]]></Description>
@@ -3464,7 +3464,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iinfoFlag2" indexed="false">
+      <Column ID="stackObjectThin.iinfoFlag2" indexed="false">
          <Name>iinfoFlag2</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the i filter stack photometry. Values listed in DetectionFlags2.]]></Description>
@@ -3472,7 +3472,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.iinfoFlag3" indexed="false">
+      <Column ID="stackObjectThin.iinfoFlag3" indexed="false">
          <Name>iinfoFlag3</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the i filter stack photometry. Values listed in DetectionFlags3.]]></Description>
@@ -3480,7 +3480,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.inFrames" indexed="false">
+      <Column ID="stackObjectThin.inFrames" indexed="false">
          <Name>inFrames</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Number of input frames/exposures contributing to the i filter stack detection.]]></Description>
@@ -3488,7 +3488,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zippDetectID" indexed="false">
+      <Column ID="stackObjectThin.zippDetectID" indexed="false">
          <Name>zippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -3496,7 +3496,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zstackDetectID" indexed="false">
+      <Column ID="stackObjectThin.zstackDetectID" indexed="false">
          <Name>zstackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -3504,7 +3504,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zstackImageID" indexed="false">
+      <Column ID="stackObjectThin.zstackImageID" indexed="false">
          <Name>zstackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for z filter detection.]]></Description>
@@ -3512,7 +3512,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zra" indexed="false">
+      <Column ID="stackObjectThin.zra" indexed="false">
          <Name>zra</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Right ascension from z filter stack detection.]]></Description>
@@ -3520,7 +3520,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zdec" indexed="false">
+      <Column ID="stackObjectThin.zdec" indexed="false">
          <Name>zdec</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Declination from z filter stack detection.]]></Description>
@@ -3528,7 +3528,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zraErr" indexed="false">
+      <Column ID="stackObjectThin.zraErr" indexed="false">
          <Name>zraErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Right ascension error from z filter stack detection.]]></Description>
@@ -3536,7 +3536,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zdecErr" indexed="false">
+      <Column ID="stackObjectThin.zdecErr" indexed="false">
          <Name>zdecErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Declination error from z filter stack detection.]]></Description>
@@ -3544,7 +3544,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zEpoch" indexed="false">
+      <Column ID="stackObjectThin.zEpoch" indexed="false">
          <Name>zEpoch</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the z-band stack (equinox J2000).]]></Description>
@@ -3552,7 +3552,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zPSFMag" indexed="false">
+      <Column ID="stackObjectThin.zPSFMag" indexed="false">
          <Name>zPSFMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF magnitude from z filter stack detection.]]></Description>
@@ -3560,7 +3560,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zPSFMagErr" indexed="false">
+      <Column ID="stackObjectThin.zPSFMagErr" indexed="false">
          <Name>zPSFMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF magnitude from z filter stack detection.]]></Description>
@@ -3568,7 +3568,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zApMag" indexed="false">
+      <Column ID="stackObjectThin.zApMag" indexed="false">
          <Name>zApMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture magnitude from z filter stack detection.]]></Description>
@@ -3576,7 +3576,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zApMagErr" indexed="false">
+      <Column ID="stackObjectThin.zApMagErr" indexed="false">
          <Name>zApMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture magnitude from z filter stack detection.]]></Description>
@@ -3584,7 +3584,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zKronMag" indexed="false">
+      <Column ID="stackObjectThin.zKronMag" indexed="false">
          <Name>zKronMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) magnitude from z filter stack detection.]]></Description>
@@ -3592,7 +3592,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zKronMagErr" indexed="false">
+      <Column ID="stackObjectThin.zKronMagErr" indexed="false">
          <Name>zKronMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) magnitude from z filter stack detection.]]></Description>
@@ -3600,7 +3600,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zinfoFlag" indexed="false">
+      <Column ID="stackObjectThin.zinfoFlag" indexed="false">
          <Name>zinfoFlag</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the z filter stack photometry. Values listed in DetectionFlags.]]></Description>
@@ -3608,7 +3608,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zinfoFlag2" indexed="false">
+      <Column ID="stackObjectThin.zinfoFlag2" indexed="false">
          <Name>zinfoFlag2</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the z filter stack photometry. Values listed in DetectionFlags2.]]></Description>
@@ -3616,7 +3616,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.zinfoFlag3" indexed="false">
+      <Column ID="stackObjectThin.zinfoFlag3" indexed="false">
          <Name>zinfoFlag3</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the z filter stack photometry. Values listed in DetectionFlags3.]]></Description>
@@ -3624,7 +3624,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.znFrames" indexed="false">
+      <Column ID="stackObjectThin.znFrames" indexed="false">
          <Name>znFrames</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Number of input frames/exposures contributing to the z filter stack detection.]]></Description>
@@ -3632,7 +3632,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yippDetectID" indexed="false">
+      <Column ID="stackObjectThin.yippDetectID" indexed="false">
          <Name>yippDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[IPP internal detection identifier.]]></Description>
@@ -3640,7 +3640,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ystackDetectID" indexed="false">
+      <Column ID="stackObjectThin.ystackDetectID" indexed="false">
          <Name>ystackDetectID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack detection identifier.]]></Description>
@@ -3648,7 +3648,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ystackImageID" indexed="false">
+      <Column ID="stackObjectThin.ystackImageID" indexed="false">
          <Name>ystackImageID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Unique stack identifier for y filter detection.]]></Description>
@@ -3656,7 +3656,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yra" indexed="false">
+      <Column ID="stackObjectThin.yra" indexed="false">
          <Name>yra</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Right ascension from y filter stack detection.]]></Description>
@@ -3664,7 +3664,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ydec" indexed="false">
+      <Column ID="stackObjectThin.ydec" indexed="false">
          <Name>ydec</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Declination from y filter stack detection.]]></Description>
@@ -3672,7 +3672,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yraErr" indexed="false">
+      <Column ID="stackObjectThin.yraErr" indexed="false">
          <Name>yraErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Right ascension error from y filter stack detection.]]></Description>
@@ -3680,7 +3680,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ydecErr" indexed="false">
+      <Column ID="stackObjectThin.ydecErr" indexed="false">
          <Name>ydecErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Declination error from y filter stack detection.]]></Description>
@@ -3688,7 +3688,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yEpoch" indexed="false">
+      <Column ID="stackObjectThin.yEpoch" indexed="false">
          <Name>yEpoch</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Modified Julian Date of the mean epoch of images contributing to the the y-band stack (equinox J2000).]]></Description>
@@ -3696,7 +3696,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yPSFMag" indexed="false">
+      <Column ID="stackObjectThin.yPSFMag" indexed="false">
          <Name>yPSFMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[PSF magnitude from y filter stack detection.]]></Description>
@@ -3704,7 +3704,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yPSFMagErr" indexed="false">
+      <Column ID="stackObjectThin.yPSFMagErr" indexed="false">
          <Name>yPSFMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in PSF magnitude from y filter stack detection.]]></Description>
@@ -3712,7 +3712,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yApMag" indexed="false">
+      <Column ID="stackObjectThin.yApMag" indexed="false">
          <Name>yApMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Aperture magnitude from y filter stack detection.]]></Description>
@@ -3720,7 +3720,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yApMagErr" indexed="false">
+      <Column ID="stackObjectThin.yApMagErr" indexed="false">
          <Name>yApMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in aperture magnitude from y filter stack detection.]]></Description>
@@ -3728,7 +3728,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yKronMag" indexed="false">
+      <Column ID="stackObjectThin.yKronMag" indexed="false">
          <Name>yKronMag</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Kron (1980) magnitude from y filter stack detection.]]></Description>
@@ -3736,7 +3736,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yKronMagErr" indexed="false">
+      <Column ID="stackObjectThin.yKronMagErr" indexed="false">
          <Name>yKronMagErr</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[Error in Kron (1980) magnitude from y filter stack detection.]]></Description>
@@ -3744,7 +3744,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yinfoFlag" indexed="false">
+      <Column ID="stackObjectThin.yinfoFlag" indexed="false">
          <Name>yinfoFlag</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the y filter stack photometry. Values listed in DetectionFlags.]]></Description>
@@ -3752,7 +3752,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yinfoFlag2" indexed="false">
+      <Column ID="stackObjectThin.yinfoFlag2" indexed="false">
          <Name>yinfoFlag2</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the y filter stack photometry. Values listed in DetectionFlags2.]]></Description>
@@ -3760,7 +3760,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.yinfoFlag3" indexed="false">
+      <Column ID="stackObjectThin.yinfoFlag3" indexed="false">
          <Name>yinfoFlag3</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Information flag bitmask indicating details of the y filter stack photometry. Values listed in DetectionFlags3.]]></Description>
@@ -3768,7 +3768,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="StackObjectThin.ynFrames" indexed="false">
+      <Column ID="stackObjectThin.ynFrames" indexed="false">
          <Name>ynFrames</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[Number of input frames/exposures contributing to the y filter stack detection.]]></Description>
