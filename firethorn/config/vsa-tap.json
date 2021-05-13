@@ -124,6 +124,16 @@
 	                    "catalog": "VMCDR4"
 	                }
 	            }, 
+                    {
+                        "jdbcid" : "avASDeA0",   
+                        "jdbcschema" : "dbo",         
+                        "jdbccatalog": "VMCDR5",
+                        "adqlschema": "VMCDR5",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/VMCDR5_TablesSchema.xml",
+                            "catalog": "VMCDR5"
+                        }
+                    },
 	            {
 	                "jdbcid" : "avASDeA0",   
 	                "jdbcschema" : "dbo",         
