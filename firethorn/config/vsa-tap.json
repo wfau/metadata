@@ -454,8 +454,17 @@
                             "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/PS1DR2_TablesSchema.xml",
                             "catalog": "PS1DR2"
                         }
-                 }  
-             
+                 },
+                 {
+                        "jdbcid" : "avASDeA0",
+                        "jdbcschema" : "dbo",
+                        "jdbccatalog": "GAIAXWISE",
+                        "adqlschema": "GAIAXWISE",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/GAIAXWISE_TablesSchema.xml",
+                            "catalog": "GAIAXWISE"
+                        }
+                  }
         ]
 	   
 	}],

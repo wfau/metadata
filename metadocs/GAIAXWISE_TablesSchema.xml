@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DatasetDescription xmlns='urn:astrogrid:schema:TableMetaDoc:v1.1'
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <Catalog>
+   <Name>GAIAXWISE</Name>
+   <Description></Description>
+
+   <Table ID="gaia_nonmatches">
+      <Column ID="gaia_nonmatches.gaia_designation" indexed="false">
+         <Name>gaia_designation</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Unique source designation.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaia_nonmatches.gaia_ra" indexed="false">
+         <Name>gaia_ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Right Ascension.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaia_nonmatches.gaia_dec" indexed="false">
+         <Name>gaia_dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Declination.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaia_nonmatches.gaia_bp" indexed="false">
+         <Name>gaia_bp</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[BP mean magnitude.]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phot.mag;em.op</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaia_nonmatches.gaia_g" indexed="false">
+         <Name>gaia_g</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[G-band mean magnitude.]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phot.mag;em.op</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaia_nonmatches.gaia_rp" indexed="false">
+         <Name>gaia_rp</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[RP mean magnitude.]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phot.mag;em.op</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaia_nonmatches.gaia_source_ID" indexed="false">
+         <Name>gaia_source_ID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Gaia integer unique source designation.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaia_nonmatches.gaia_p" indexed="false">
+         <Name>gaia_p</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[match probability.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="gaiaxwise_matches">
+      <Column ID="gaiaxwise_matches.gaia_designation" indexed="false">
+         <Name>gaia_designation</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Unique source designation.]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_ra" indexed="false">
+         <Name>gaia_ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Right Ascension.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_dec" indexed="false">
+         <Name>gaia_dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Declination.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_bp" indexed="false">
+         <Name>gaia_bp</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[BP mean magnitude.]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phot.mag;em.op</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_g" indexed="false">
+         <Name>gaia_g</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[G-band mean magnitude.]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phot.mag;em.op</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_rp" indexed="false">
+         <Name>gaia_rp</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[RP mean magnitude.]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+">phot.mag;em.op</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_designation" indexed="false">
+         <Name>wise_designation</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Sexagesimal, equatorial position-based source name in the form: hhmmss.ss+ddmmss.s. .]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_ra" indexed="false">
+         <Name>wise_ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Right Ascension.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_dec" indexed="false">
+         <Name>wise_dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Declination.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_w1mpro" indexed="false">
+         <Name>wise_w1mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[W1 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W1 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_w2mpro" indexed="false">
+         <Name>wise_w2mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[	W2 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W2 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_w3mpro" indexed="false">
+         <Name>wise_w3mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[W3 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W3 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_w4mpro" indexed="false">
+         <Name>wise_w4mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[W4 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W4 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.match_p" indexed="false">
+         <Name>match_p</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Overall probability that the Gaia and WISE sources are detections of the same object, as given by equation 26 of Wilson & Naylor (2018a, MNRAS, 473, 5570)..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.eta" indexed="false">
+         <Name>eta</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Photometric logarithmic likelihood ratio of Gaia-WISE match, as described by equation 37 of Wilson & Naylor (2018a, MNRAS, 473, 5570)..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.xi" indexed="false">
+         <Name>xi</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Astrometric logarithmic likelihood ratio of Gaia-WISE match, as described by equation 38 of Wilson & Naylor (2018a, MNRAS, 473, 5570)..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_avg_cont" indexed="false">
+         <Name>gaia_avg_cont</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Mean contaminating relative flux within PSFs when constructing h_offsets for Gaia sources at the local density, magnitude and intrinsic positional uncertainty of the primary source..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_avg_cont" indexed="false">
+         <Name>wise_avg_cont</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Mean contaminating relative flux within PSFs when constructing h_offsets for WISE sources at the local density, magnitude and intrinsic positional uncertainty of the primary source..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_cont_p1" indexed="false">
+         <Name>gaia_cont_p1</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Probability of Gaia source having contaminant of at least 1% relative flux given its separation from its corresponding WISE detection, as given by equation 12 of Wilson & Naylor (2018b, MNRAS, 481, 2148)..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_cont_p10" indexed="false">
+         <Name>gaia_cont_p10</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Probability of Gaia source having contaminant of at least 10% relative flux given its separation from its corresponding WISE detection..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_cont_p1" indexed="false">
+         <Name>wise_cont_p1</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Probability of WISE source having contaminant of at least 1% relative flux given its separation from its corresponding Gaia detection..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_cont_p10" indexed="false">
+         <Name>wise_cont_p10</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Probability of WISE source having contaminant of at least 10% relative flux given its separation from its corresponding Gaia detection..]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.sep" indexed="false">
+         <Name>sep</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Angular separation between sources.]]></Description>
+         <Units>arcsec</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.gaia_source_ID" indexed="false">
+         <Name>gaia_source_ID</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[Gaia integer unique source designation.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="gaiaxwise_matches.wise_cntr" indexed="false">
+         <Name>wise_cntr</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[WISE integer unique source designation.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   <Table ID="wise_nonmatches">
+      <Column ID="wise_nonmatches.wise_designation" indexed="false">
+         <Name>wise_designation</Name>
+         <Datatype>string</Datatype>
+         <Description><![CDATA[Sexagesimal, equatorial position-based source name in the form: hhmmss.ss+ddmmss.s. .]]></Description>
+         <Units> </Units>
+         <UCD version="1+">meta.id;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_ra" indexed="false">
+         <Name>wise_ra</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Right Ascension.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.ra;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_dec" indexed="false">
+         <Name>wise_dec</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[Celestial Declination.]]></Description>
+         <Units>degrees</Units>
+         <UCD version="1+">pos.eq.dec;meta.main</UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_w1mpro" indexed="false">
+         <Name>wise_w1mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[W1 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W1 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_w2mpro" indexed="false">
+         <Name>wise_w2mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[W2 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W2 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_w3mpro" indexed="false">
+         <Name>wise_w3mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[W3 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W3 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_w4mpro" indexed="false">
+         <Name>wise_w4mpro</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[W4 magnitude measured with profile-fitting photometry, or the magnitude of the 95% confidence brightness upper limit if the W4 flux measurement has SNR<2..]]></Description>
+         <Units>mag</Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_cntr" indexed="false">
+         <Name>wise_cntr</Name>
+         <Datatype>long</Datatype>
+         <Description><![CDATA[WISE integer unique source designation.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+      <Column ID="wise_nonmatches.wise_p" indexed="false">
+         <Name>wise_p</Name>
+         <Datatype>double</Datatype>
+         <Description><![CDATA[match probability.]]></Description>
+         <Units> </Units>
+         <UCD version="1+"></UCD>
+         <ErrorColumn></ErrorColumn>
+      </Column>
+   </Table>
+   </Catalog>
+</DatasetDescription>
