@@ -458,11 +458,11 @@
                  {
                         "jdbcid" : "avASDeA0",
                         "jdbcschema" : "dbo",
-                        "jdbccatalog": "GAIAXWISE",
-                        "adqlschema": "GAIAXWISE",
+                        "jdbccatalog": "GAIAxWISE",
+                        "adqlschema": "GAIAxWISE",
                         "metadata": {
                             "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/GAIAXWISE_TablesSchema.xml",
-                            "catalog": "GAIAXWISE"
+                            "catalog": "GAIAxWISE"
                         }
                   }
         ]
