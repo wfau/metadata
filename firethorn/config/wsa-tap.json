@@ -292,14 +292,23 @@
                             "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/WFCAMCAL08B_TablesSchema.xml",
                             "catalog": "WFCAMCAL08B"
                         }
+                },
+                {
+                        "jdbcid" : "avASDeA0",
+                        "jdbcschema" : "dbo",
+                        "jdbccatalog": "UHSDR2",
+                        "adqlschema": "UHSDR2",
+                        "metadata": {
+                            "metadoc": "https://raw.githubusercontent.com/wfau/metadata/master/metadocs/UHSDR2_TablesSchema.xml",
+                            "catalog": "UHSDR2"
+                        }
                 }
 
-      
-             
+
+
         ]
-	   
+
 	}],
-	
 	"JdbcResources": [{
 		 "id": "avASDeA0",
 		 "name" : "WSA JDBC",
