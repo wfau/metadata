@@ -111,7 +111,7 @@
 	"JdbcResources": [{
 		 "id": "avASDeA0",
 		 "name" : "SSA JDBC",
-		 "datahost": "192.168.137.53",
+		 "datahost": "192.168.137.11",
 		 "datadata": "SSA",
 		 "datauser": "{datauser}",
 		 "datapass": "{datapass}",
