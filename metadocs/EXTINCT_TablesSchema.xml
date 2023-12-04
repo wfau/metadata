@@ -217,66 +217,6 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="Gaia3DExtinctVals">
-      <Name>Gaia3DExtinctVals</Name>
-      <Description><![CDATA[ Contains the extinction values of the Gaia, 2Mass and APOGEE-DR14 3]]></Description>
-      <Column ID="Gaia3DExtinctVals.extID" indexed="true">
-         <Name>extID</Name>
-         <Datatype>long</Datatype>
-         <Description><![CDATA[UID of the 3D spatial position]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id;meta.main</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Gaia3DExtinctVals.pixelID" indexed="false">
-         <Name>pixelID</Name>
-         <Datatype>int</Datatype>
-         <Description><![CDATA[UID of the pixel]]></Description>
-         <Units> </Units>
-         <UCD version="1+">meta.id</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Gaia3DExtinctVals.r" indexed="false">
-         <Name>r</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Distance to map pixel]]></Description>
-         <Units>kpc</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Gaia3DExtinctVals.rErr" indexed="false">
-         <Name>rErr</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Uncertainty in distance]]></Description>
-         <Units>kpc</Units>
-         <UCD version="1+"></UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Gaia3DExtinctVals.eBVReddening" indexed="false">
-         <Name>eBVReddening</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[E(B-V) calculated from distance using isochrones and extinction from photometry and atmospheric parameters at distance r]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">phys.absorption.gal</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Gaia3DExtinctVals.eBVErrUp" indexed="false">
-         <Name>eBVErrUp</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Positive error on E(B-V) at distance r]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">star.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-      <Column ID="Gaia3DExtinctVals.eBVErrDown" indexed="false">
-         <Name>eBVErrDown</Name>
-         <Datatype>float</Datatype>
-         <Description><![CDATA[Negative error on E(B-V) at distance r]]></Description>
-         <Units>mag</Units>
-         <UCD version="1+">star.error</UCD>
-         <ErrorColumn></ErrorColumn>
-      </Column>
-   </Table>
    <Table ID="panSTARRS1ExtMapCoords">
       <Name>panSTARRS1ExtMapCoords</Name>
       <Description><![CDATA[ Contains details of the 2D pixel positions and scales of the panSTARRS 1 3D Galactic extinction Ma]]></Description>
