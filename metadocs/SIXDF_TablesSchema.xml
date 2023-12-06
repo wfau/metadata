@@ -277,10 +277,10 @@
          <ErrorColumn></ErrorColumn>
       </Column>
    </Table>
-   <Table ID="agntwomass">
-      <Name>agntwomass</Name>
+   <Table ID="agn2mass">
+      <Name>agn2mass</Name>
       <Description><![CDATA[ The AGN2MASS table contains candidate AGN from 2MASS red AGN survey]]></Description>
-      <Column ID="agntwomass.OBJID" indexed="false">
+      <Column ID="agn2mass.OBJID" indexed="false">
          <Name>OBJID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[unique ID number]]></Description>
@@ -288,7 +288,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.CATNAME" indexed="false">
+      <Column ID="agn2mass.CATNAME" indexed="false">
          <Name>CATNAME</Name>
          <Datatype>string</Datatype>
          <Description><![CDATA[supplied catalogue name]]></Description>
@@ -296,7 +296,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.TARGETNAME" indexed="false">
+      <Column ID="agn2mass.TARGETNAME" indexed="false">
          <Name>TARGETNAME</Name>
          <Datatype>string</Datatype>
          <Description><![CDATA[matching name in target table, used to name FITS files and generate thumbnail images]]></Description>
@@ -304,7 +304,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.TARGETID" indexed="false">
+      <Column ID="agn2mass.TARGETID" indexed="false">
          <Name>TARGETID</Name>
          <Datatype>long</Datatype>
          <Description><![CDATA[matching ID number in target]]></Description>
@@ -312,7 +312,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.RA" indexed="false">
+      <Column ID="agn2mass.RA" indexed="false">
          <Name>RA</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[RA J2000]]></Description>
@@ -320,7 +320,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.DEC" indexed="false">
+      <Column ID="agn2mass.DEC" indexed="false">
          <Name>DEC</Name>
          <Datatype>double</Datatype>
          <Description><![CDATA[Dec J2000]]></Description>
@@ -328,7 +328,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.PRIORITY" indexed="false">
+      <Column ID="agn2mass.PRIORITY" indexed="false">
          <Name>PRIORITY</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[survey weight]]></Description>
@@ -336,7 +336,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.MAG_1" indexed="false">
+      <Column ID="agn2mass.MAG_1" indexed="false">
          <Name>MAG_1</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[supplied magnitude 1]]></Description>
@@ -344,7 +344,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.PROGID" indexed="false">
+      <Column ID="agn2mass.PROGID" indexed="false">
          <Name>PROGID</Name>
          <Datatype>int</Datatype>
          <Description><![CDATA[programme ID]]></Description>
@@ -352,7 +352,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.MAG_2" indexed="false">
+      <Column ID="agn2mass.MAG_2" indexed="false">
          <Name>MAG_2</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[supplied magnitude 2]]></Description>
@@ -360,7 +360,7 @@
          <UCD version="1+"></UCD>
          <ErrorColumn></ErrorColumn>
       </Column>
-      <Column ID="agntwomass.MAG_3" indexed="false">
+      <Column ID="agn2mass.MAG_3" indexed="false">
          <Name>MAG_3</Name>
          <Datatype>float</Datatype>
          <Description><![CDATA[supplied magnitude 3]]></Description>
